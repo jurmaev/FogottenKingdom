@@ -14,9 +14,12 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
     private Vector2 mousePos;
+    // private ObjectPool objectPool;
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        // objectPool = GetComponent<ObjectPool>();
+        // objectPool.Initialize(projectilePrefab, projectileCount);
     }
 
     void Update()
