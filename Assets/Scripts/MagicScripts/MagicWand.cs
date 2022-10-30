@@ -6,7 +6,6 @@ using UnityEngine.Serialization;
 
 public class MagicWand : MonoBehaviour
 {
-    [SerializeField] private GameObject currentMagic;
     [SerializeField] private Transform firePoint;
     private Vector2 mousePos;
     private Camera camera;
@@ -20,9 +19,9 @@ public class MagicWand : MonoBehaviour
         RotateFirepoint();
     }
 
-    public void Shoot()
+    public void Shoot(GameObject magic)
     {
-        Instantiate(currentMagic, firePoint.position, firePoint.rotation);
+        Instantiate(magic, firePoint.position, firePoint.rotation);
     }
     
     private void RotateFirepoint()

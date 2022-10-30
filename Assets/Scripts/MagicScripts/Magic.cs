@@ -26,11 +26,11 @@ public abstract class Magic : MonoBehaviour
         magicRb.AddForce(transform.up * Speed, ForceMode2D.Impulse);
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.TryGetComponent(out Magic otherMagic))
-            OnCollisionWithMagic(gameObject);
+            OnCollisionWithMagic(col.gameObject);
     }
-    
+
     protected abstract void OnCollisionWithMagic(GameObject otherMagic);
 }

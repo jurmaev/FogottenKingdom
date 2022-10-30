@@ -129,8 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae84ffd224a1ef348b2315069075aef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 12
-  projectilePrefab: {fileID: 4422356285828469434, guid: db33efa80370b154c8fb90d633c7e2be, type: 3}
   firePoint: {fileID: 1295761317}
 --- !u!1 &4002006401481069905
 GameObject:
@@ -249,6 +247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicWand: {fileID: 1625160694}
+  currentMagic: {fileID: 0}
+  availableMagic:
+  - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
+  - {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
   movementSpeed: 10
 --- !u!50 &9047809464460413209
 Rigidbody2D:
