@@ -6,11 +6,13 @@ using Random = UnityEngine.Random;
 
 public class LevelGeneration : MonoBehaviour
 {
-    private readonly Vector2 worldSize = new(4, 4); // половина размеров
+    [SerializeField] private Transform mapRoot;
+    [SerializeField] private Vector2 worldSize = new(4, 4); // половина размеров
+    [SerializeField] private int numberOfRooms = 20;
     private Room[,] rooms;
     private readonly List<Vector2> takenPositions = new();
-    private int gridSizeX, gridSizeY, numberOfRooms = 20;
-    [SerializeField] private Transform mapRoot;
+    private int gridSizeX, gridSizeY;
+    
     private RoomSelector _roomSelector;
 
     private void Start()
@@ -104,7 +106,7 @@ public class LevelGeneration : MonoBehaviour
             do
             {
                 //instead of getting a room to find an adject empty space, we start with one that only 
-                //as one neighbor. This will make it more likely that it returns a room that branches out
+                //has one neighbor. This will make it more likely that it returns a room that branches out
                 index = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1));
                 inc++;
             } while (NumberOfNeighbors(takenPositions[index], takenPositions) > 1 && inc < 100);
@@ -132,11 +134,11 @@ public class LevelGeneration : MonoBehaviour
         } while (takenPositions.Contains(checkingPos) || x >= gridSizeX || x < -gridSizeX || y >= gridSizeY ||
                  y < -gridSizeY);
 
-        // if (inc >= 100)
-        // {
-        //     // break loop if it takes too long: this loop isnt garuanteed to find solution, which is fine for this
-        //     print("Error: could not find position with only one neighbor");
-        // }
+        if (inc >= 100)
+        {
+            // break loop if it takes too long: this loop isnt garuanteed to find solution, which is fine for this
+            print("Error: could not find position with only one neighbor");
+        }
 
         return checkingPos;
     }
@@ -153,7 +155,7 @@ public class LevelGeneration : MonoBehaviour
             if (room == null)
                 continue;
 
-            var drawPos = room.gridPos;
+            var drawPos = room.GridPos;
             drawPos.x *= 10; // домножаем на размеры комнаты
             drawPos.y *= 10;
             
@@ -171,10 +173,10 @@ public class LevelGeneration : MonoBehaviour
             {
                 if (rooms[x, y] == null)
                     continue;
-                rooms[x, y].doorBottom = y - 1 >= 0 && rooms[x, y - 1] != null;
-                rooms[x, y].doorTop = y + 1 < gridSizeY * 2 && rooms[x, y + 1] != null;
-                rooms[x, y].doorLeft = x - 1 >= 0 && rooms[x - 1, y] != null;
-                rooms[x, y].doorRight = x + 1 < gridSizeX * 2 && rooms[x + 1, y] != null;
+                rooms[x, y].DoorBottom = y - 1 >= 0 && rooms[x, y - 1] != null;
+                rooms[x, y].DoorTop = y + 1 < gridSizeY * 2 && rooms[x, y + 1] != null;
+                rooms[x, y].DoorLeft = x - 1 >= 0 && rooms[x - 1, y] != null;
+                rooms[x, y].DoorRight = x + 1 < gridSizeX * 2 && rooms[x + 1, y] != null;
             }
         }
     }

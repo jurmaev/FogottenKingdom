@@ -296,21 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b03d1edd86c0c40bfd73ebf7e3e34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spU: {fileID: 7445807186887717525, guid: 6cb5f293052883a4abbcf695bcbbd6e7, type: 3}
-  spD: {fileID: 7620514596515404982, guid: d60f146d247b182468b2052bef03a40e, type: 3}
-  spR: {fileID: 3520139418494880157, guid: e42ada174c17bfe4cb63319aecdb7cf4, type: 3}
-  spL: {fileID: 560618412265160806, guid: 999db747b7198014ab2dee822065542b, type: 3}
-  spUD: {fileID: 7364577986622121128, guid: b6e319171f3bed94b8782eecf43ff5b2, type: 3}
-  spRL: {fileID: 1499816438921545961, guid: 4a0c593e15e402e4187318c4d7fd6071, type: 3}
-  spUR: {fileID: 5411381874073120178, guid: 196afcffa16fc85469daf10291619a0b, type: 3}
-  spUL: {fileID: 6221843958496344205, guid: 153a0d05950232d43bbf7cc621ae40c6, type: 3}
-  spDR: {fileID: 2865481796586381404, guid: 7e9a91c970b6c13498583a26a80afa93, type: 3}
-  spDL: {fileID: 424967121379595834, guid: 798efe64f17b2b3429e8e3e8a5bfce1e, type: 3}
-  spULD: {fileID: 3228169297869602953, guid: 6c65cab2dfcf3ee48a41ddec3e0fedc2, type: 3}
-  spRUL: {fileID: 5272451957068596369, guid: 61b332c7d1aafd44aa847969662a15fd, type: 3}
-  spDRU: {fileID: 383980744910120836, guid: d6f2ae1f7c144734188bf1512f08db94, type: 3}
-  spLDR: {fileID: 1608845447876031268, guid: 00257a400205e9a4ca4ca23aa4dd21ff, type: 3}
-  spUDRL: {fileID: 2056552131251745919, guid: df253d6f500dd4e4086a3bf564ffd2d6, type: 3}
   rooms:
   - {fileID: 7620514596515404982, guid: d60f146d247b182468b2052bef03a40e, type: 3}
   - {fileID: 424967121379595834, guid: 798efe64f17b2b3429e8e3e8a5bfce1e, type: 3}
@@ -327,12 +312,6 @@ MonoBehaviour:
   - {fileID: 383980744910120836, guid: d6f2ae1f7c144734188bf1512f08db94, type: 3}
   - {fileID: 2056552131251745919, guid: df253d6f500dd4e4086a3bf564ffd2d6, type: 3}
   - {fileID: 5272451957068596369, guid: 61b332c7d1aafd44aa847969662a15fd, type: 3}
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  type: 0
-  roomPrefab: {fileID: 0}
 --- !u!114 &1417749529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,3 +325,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapRoot: {fileID: 1389322777}
+  worldSize: {x: 4, y: 4}
+  numberOfRooms: 10

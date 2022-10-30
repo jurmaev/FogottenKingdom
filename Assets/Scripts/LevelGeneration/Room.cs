@@ -2,28 +2,31 @@ using UnityEngine;
 
 public class Room
 {
-    public Vector2 gridPos;
-    public int type;
-    public bool doorTop, doorRight, doorBottom, doorLeft;
-    public string doorPositions;
+    public string DoorPositions { get; private set; }
+    public bool DoorRight { private get; set; }
+    public bool DoorTop { private get; set; }
+    public bool DoorBottom { private get; set; }
+    public bool DoorLeft { private get; set; }
+    public Vector2 GridPos { get; }
+    private int type;
 
     public Room(Vector2 gridPos, int type)
     {
-        this.gridPos = gridPos;
+        GridPos = gridPos;
         this.type = type;
     }
 
     public void SetDoorPositions()
     {
         var doors = "";
-        if (doorTop)
+        if (DoorTop)
             doors += "T";
-        if (doorRight)
+        if (DoorRight)
             doors += "R";
-        if (doorBottom)
+        if (DoorBottom)
             doors += "B";
-        if (doorLeft)
+        if (DoorLeft)
             doors += "L";
-        doorPositions = doors;
+        DoorPositions = doors;
     }
 }
