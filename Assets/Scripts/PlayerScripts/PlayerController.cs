@@ -33,16 +33,11 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if(Input.GetButtonUp("Fire1"))
-            UseMagicWand();
+            magicWand.Shoot();
     }
     
     private void Move()
     {
         playerRb.velocity = new Vector2(moveDirection.x, moveDirection.y) * movementSpeed;
-    }
-
-    private void UseMagicWand()
-    {
-        magicWand.Shoot();
     }
 }

@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MagicWand : MonoBehaviour
 {
-    [SerializeField] private float projectileSpeed;
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject currentMagic;
     [SerializeField] private Transform firePoint;
     private Vector2 mousePos;
     private Camera camera;
@@ -22,9 +22,7 @@ public class MagicWand : MonoBehaviour
 
     public void Shoot()
     {
-        var projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        var projectileRb = projectile.GetComponent<Rigidbody2D>();
-        projectileRb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+        Instantiate(currentMagic, firePoint.position, firePoint.rotation);
     }
     
     private void RotateFirepoint()
