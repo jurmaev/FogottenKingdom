@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class FireBall : Magic
+public class IceShard : Magic
 {
     protected override void InitializeElements()
     {
         base.InitializeElements();
-        Speed = 10f;
-        Damage = 3;
-        Mana = 1;
+        Speed = 8;
+        Damage = 4;
+        Mana = 2;
     }
 
     protected override void OnCollisionWithMagic(GameObject otherMagic)
     {
+        throw new System.NotImplementedException();
     }
 
     protected override void OnCollisionWithEnemy(Enemy enemy)
     {
-        enemy.Health -= Damage;
+        throw new System.NotImplementedException();
     }
+
+
 }

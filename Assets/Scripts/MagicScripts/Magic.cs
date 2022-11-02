@@ -1,13 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public abstract class Magic : MonoBehaviour
 {
-    public float Speed { get; protected set; }
-    public int Damage { get; protected set; }
-    public int Mana { get; protected set; }
+    [field: SerializeField] public float Speed { get; protected set; }
+    [field: SerializeField] public int Damage { get; protected set; }
+    [field: SerializeField] public int Mana { get; protected set; }
+    [field: SerializeField] public Debuff SuperimposedDebuff { get; private set; }
     private Rigidbody2D magicRb;
 
     void Start()
@@ -30,7 +32,16 @@ public abstract class Magic : MonoBehaviour
     {
         if (col.gameObject.TryGetComponent(out Magic otherMagic))
             OnCollisionWithMagic(col.gameObject);
+        else if (col.gameObject.TryGetComponent(out Enemy enemy))
+            OnCollisionWithEnemy(enemy);
+    }
+
+    private void AppendNewSuperimposedDebuff(Debuff anotherDebuff)
+    {
+        if (DebuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out Debuff mixedDebuff))
+            SuperimposedDebuff = mixedDebuff;
     }
 
     protected abstract void OnCollisionWithMagic(GameObject otherMagic);
+    protected abstract void OnCollisionWithEnemy(Enemy enemy);
 }

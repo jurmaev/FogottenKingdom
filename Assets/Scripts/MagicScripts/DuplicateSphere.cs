@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DuplicateSphere : Magic
 {
-    public int NumberOfDuplicates { get; private set; }
-    private bool isDuplicating;
-    
+    [field: SerializeField] public int NumberOfDuplicates { get; private set; }
+    [SerializeField] private bool isDuplicating;
+
     protected override void InitializeElements()
     {
         base.InitializeElements();
@@ -31,8 +31,13 @@ public class DuplicateSphere : Magic
                 startDirection.x = startDirection.x * Mathf.Cos(startAngle) - startDirection.y * Mathf.Sin(startAngle);
                 startDirection.y = startDirection.x * Mathf.Cos(startAngle) - startDirection.y * Mathf.Sin(startAngle);
             }
+
             Destroy(otherMagic);
             Destroy(gameObject);
         }
+    }
+
+    protected override void OnCollisionWithEnemy(Enemy enemy)
+    {
     }
 }
