@@ -326,4 +326,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapRoot: {fileID: 1389322777}
   worldSize: {x: 4, y: 4}
-  numberOfRooms: 10
+  numberOfRooms: 12
