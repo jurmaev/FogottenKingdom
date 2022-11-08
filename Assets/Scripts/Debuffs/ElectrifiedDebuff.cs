@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ElectrifiedDebuff : Debuff
 {
-    private float Damage;
-    public void ActivateEffectOnEnemy(Enemy enemy)
+    private float damage = 0.3f;
+
+    protected override void ActivateEffectOnEnemy(Enemy enemy)
     {
-        enemy.Health -= Damage;
+        enemy.GetDamage(damage);
     }
 }

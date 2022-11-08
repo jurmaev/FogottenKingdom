@@ -27,7 +27,16 @@ public abstract class Magic : MonoBehaviour
     {
         magicRb.AddForce(transform.up * Speed, ForceMode2D.Impulse);
     }
-
+    
+    protected abstract void OnCollisionWithMagic(GameObject otherMagic);
+    protected abstract void OnCollisionWithEnemy(Enemy enemy);
+    
+    private void UpdateSuperimposedDebuff(Debuff anotherDebuff)
+    {
+        if (DebuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out Debuff mixedDebuff))
+            SuperimposedDebuff = mixedDebuff;
+    }
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.TryGetComponent(out Magic otherMagic))
@@ -36,12 +45,4 @@ public abstract class Magic : MonoBehaviour
             OnCollisionWithEnemy(enemy);
     }
 
-    private void AppendNewSuperimposedDebuff(Debuff anotherDebuff)
-    {
-        if (DebuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out Debuff mixedDebuff))
-            SuperimposedDebuff = mixedDebuff;
-    }
-
-    protected abstract void OnCollisionWithMagic(GameObject otherMagic);
-    protected abstract void OnCollisionWithEnemy(Enemy enemy);
 }

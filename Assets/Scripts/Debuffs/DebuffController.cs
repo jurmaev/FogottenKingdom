@@ -18,16 +18,24 @@ public static class DebuffController
 
     public static bool TryMixDebuffs(Debuff firstDebuff, Debuff secondDebuff, out Debuff mixDebuff)
     {
+        if (firstDebuff == null || secondDebuff == null)
+        {
+            mixDebuff = null;
+            return false;
+        }
+
         if (debuffFormulas.TryGetValue((nameof(firstDebuff), nameof(secondDebuff)), out Debuff newDebuff1))
         {
             mixDebuff = newDebuff1;
             return true;
         }
+
         if (debuffFormulas.TryGetValue((nameof(secondDebuff), nameof(firstDebuff)), out Debuff newDebuff2))
         {
             mixDebuff = newDebuff2;
             return true;
         }
+
         mixDebuff = null;
         return false;
     }

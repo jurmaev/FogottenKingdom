@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChilledDebuff : Debuff
 {
-    public void ActivateEffectOnEnemy(Enemy enemy)
+    protected override void ActivateEffectOnEnemy(Enemy enemy)
     {
-        enemy.Speed = 4;
+        enemy.SetSpeed(6);
     }
 }

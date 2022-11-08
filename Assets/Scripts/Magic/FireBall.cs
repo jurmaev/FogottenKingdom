@@ -19,6 +19,6 @@ public class FireBall : Magic
 
     protected override void OnCollisionWithEnemy(Enemy enemy)
     {
-        enemy.Health -= Damage;
+        Destroy(gameObject);
     }
 }

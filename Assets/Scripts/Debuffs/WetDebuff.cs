@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WetDebuff : Debuff
 {
-    public void ActivateEffectOnEnemy(Enemy enemy)
+    protected override void ActivateEffectOnEnemy(Enemy enemy)
     {
         
     }

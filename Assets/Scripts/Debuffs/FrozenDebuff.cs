@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FrozenDebuff : Debuff
 {
-    public void ActivateEffectOnEnemy(Enemy enemy)
+    protected override void ActivateEffectOnEnemy(Enemy enemy)
     {
-        enemy.Speed = 1;
+        enemy.SetSpeed(3);
     }
 }

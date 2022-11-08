@@ -1,8 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public interface Debuff
+public abstract class Debuff: MonoBehaviour
 {
-    public void ActivateEffectOnEnemy(Enemy enemy);
+
+    protected float startTime = 0f;
+    protected float effectRepeatTime = 0.1f;
+    private void Start()
+    {
+        if(gameObject.TryGetComponent(out Enemy enemy))
+            InvokeRepeating(nameof(ActivateEffectOnEnemy), startTime, effectRepeatTime);
+    }
+    
+    protected abstract void ActivateEffectOnEnemy(Enemy enemy);
 }
