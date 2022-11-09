@@ -10,16 +10,21 @@ using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviour
 {
     public MagicWand magicWand;
+    [SerializeField] private float currentHealth;
+    [SerializeField] private int currentMana;
     [SerializeField] private GameObject currentMagic;
     [SerializeField] private List<GameObject> availableMagic;
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float invincibleTime;
+    [SerializeField] private bool isInvincible;
+    private float maxHealth;
+    private int maxMana;
     private Vector2 moveDirection;
     private Rigidbody2D playerRb;
 
     void Start()
     {
-        playerRb = GetComponent<Rigidbody2D>();
-        currentMagic = availableMagic[0];
+        InitializeElements();
     }
 
     void Update()
@@ -31,6 +36,21 @@ public class PlayerController : MonoBehaviour
     {
         Move();
     }
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.TryGetComponent(out Enemy enemy))
+            GetDamage(enemy.Damage);
+    }
+    
+
+    private void InitializeElements()
+    {
+        playerRb = GetComponent<Rigidbody2D>();
+        currentMagic = availableMagic[0];
+    }
+
 
     private void CheckInput()
     {
@@ -54,5 +74,28 @@ public class PlayerController : MonoBehaviour
         currentMagic = isNextMagic
             ? availableMagic[Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)]
             : availableMagic[Mathf.Max(currentMagicIndex - 1, 0)];
+    }
+
+    private void GetDamage(float amountOfDamage)
+    {
+        if (!isInvincible)
+        {
+            currentHealth -= amountOfDamage;
+            if(currentHealth <= 0)
+                Die();
+            StartCoroutine(nameof(BecomeInvincible));
+        }
+    }
+
+    private IEnumerator BecomeInvincible()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibleTime);
+        isInvincible = false;
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

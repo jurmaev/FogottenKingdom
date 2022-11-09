@@ -9,7 +9,7 @@ public abstract class Magic : MonoBehaviour
     [field: SerializeField] public float Speed { get; protected set; }
     [field: SerializeField] public int Damage { get; protected set; }
     [field: SerializeField] public int Mana { get; protected set; }
-    [field: SerializeField] public Debuff SuperimposedDebuff { get; private set; }
+    [field: SerializeField] public Debuff SuperimposedDebuff { get; protected set; }
     private Rigidbody2D magicRb;
 
     void Start()
@@ -44,5 +44,4 @@ public abstract class Magic : MonoBehaviour
         else if (col.gameObject.TryGetComponent(out Enemy enemy))
             OnCollisionWithEnemy(enemy);
     }
-
 }

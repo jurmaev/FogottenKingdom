@@ -5,75 +5,54 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    protected float maxSpeed;
-    protected float maxHealth;
-    protected float maxDamage;
-
-    [SerializeField] protected float currentSpeed;
-    [SerializeField] protected float currentHealth;
-    [SerializeField] protected float currentDamage;
+    [field: SerializeField] public float Health { get; private set; }
+    [field: SerializeField] public float Speed { get; private set; }
+    [field: SerializeField] public float Damage { get; private set; }
     [SerializeField] protected Debuff imposedDebuff;
-    protected Rigidbody2D rigidbody;
+    protected Rigidbody2D enemyRigidbody;
 
-
-    void Start()
+    protected virtual void Start()
     {
         InitializeElements();
     }
-    
 
-    public virtual void ReturnSpeedToMax()
+    public virtual void GetDamage(float amountOfDamage)
     {
-        currentSpeed = maxSpeed;
+        Health -= amountOfDamage;
+        if (Health < 0)
+            Die();
     }
 
     public virtual void SetSpeed(float speed)
     {
-        if(speed >= 0)
-            currentSpeed = speed;
-    }
-    
-    public virtual void ReduceDamageBy(float amountOfDamage)
-    {
-        currentDamage -= amountOfDamage;
-        if (currentDamage < 0)
-            currentDamage = 0;
+        Speed = speed;
     }
 
-    public virtual void ReduceSpeedBy(float amountOfSpeed)
+    public virtual void SetDamage(float damage)
     {
-        currentSpeed -= amountOfSpeed;
-        if (currentSpeed < 0)
-            currentSpeed = 0;
-    }
-    
-
-    public virtual void GetDamage(float amountOfDamage)
-    {
-        currentHealth -= amountOfDamage;
-        if (currentHealth <= 0)
-            Die();
+        Damage = damage;
     }
 
-    protected virtual void Die()
-    {
-        Destroy(gameObject);
-    }
-    
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.TryGetComponent(out Magic magic))
             CollideWithMagic(magic);
     }
+
 
     private void CollideWithMagic(Magic magic)
     {
         GetDamage(magic.Damage);
         DebuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff, out imposedDebuff);
     }
-    
+
     protected virtual void InitializeElements()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        enemyRigidbody = GetComponent<Rigidbody2D>();
+    }
+    
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
     }
 }
