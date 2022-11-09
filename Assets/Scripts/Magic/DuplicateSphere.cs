@@ -1,20 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class DuplicateSphere : Magic
 {
     [field: SerializeField] public int NumberOfDuplicates { get; private set; }
     [SerializeField] private bool isDuplicating;
-
-    protected override void InitializeElements()
-    {
-        base.InitializeElements();
-        Speed = 1;
-        Damage = 0;
-        Mana = 3;
-        NumberOfDuplicates = 8;
-    }
+    
 
     protected override void OnCollisionWithMagic(GameObject otherMagic)
     {
@@ -39,5 +32,6 @@ public class DuplicateSphere : Magic
 
     protected override void OnCollisionWithEnemy(Enemy enemy)
     {
+        Destroy(gameObject);
     }
 }

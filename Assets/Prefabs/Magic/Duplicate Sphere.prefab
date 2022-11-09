@@ -136,3 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4784dd0a786dc74e9e8c39840521ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Speed>k__BackingField: 4
+  <Damage>k__BackingField: 0
+  <Mana>k__BackingField: 3
+  <SuperimposedDebuff>k__BackingField: {fileID: 0}
+  <NumberOfDuplicates>k__BackingField: 8
+  isDuplicating: 0
