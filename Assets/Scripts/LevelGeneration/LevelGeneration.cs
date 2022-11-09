@@ -154,13 +154,14 @@ public class LevelGeneration : MonoBehaviour
         {
             if (room == null)
                 continue;
-
             var drawPos = room.GridPos;
-            drawPos.x *= 10; // домножаем на размеры комнаты
-            drawPos.y *= 10;
+            drawPos.x *= room.RoomSize.x; // домножаем на размеры комнаты
+            drawPos.y *= room.RoomSize.y;
             
             var selector = _roomSelector;
             var newRoom = Instantiate(selector.PickRoom(room), drawPos, quaternion.identity);
+            var roomStats = newRoom.GetComponent<RoomPrefab>();
+            roomStats.Room = room;
             newRoom.transform.parent = mapRoot;
         }
     }
