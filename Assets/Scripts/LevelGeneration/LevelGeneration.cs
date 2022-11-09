@@ -12,132 +12,83 @@ public class LevelGeneration : MonoBehaviour
     private Room[,] rooms;
     private readonly List<Vector2> takenPositions = new();
     private int gridSizeX, gridSizeY;
-    
-    private RoomSelector _roomSelector;
+    private RoomSelector roomSelector;
 
     private void Start()
     {
         if (numberOfRooms >= worldSize.x * 2 * worldSize.y * 2)
             numberOfRooms = Mathf.RoundToInt(worldSize.x * 2 * worldSize.y * 2);
 
-        _roomSelector = GetComponent<RoomSelector>();
-        gridSizeX = Mathf.RoundToInt(worldSize.x); 
+        roomSelector = GetComponent<RoomSelector>();
+        gridSizeX = Mathf.RoundToInt(worldSize.x);
         gridSizeY = Mathf.RoundToInt(worldSize.y);
-        CreateRooms(); // создаем саму карту
-        SetRoomDoors(); // задаем двери у комнат
-        DrawMap(); // создаем объекты комнат
+        CreateMap();
+        SetDoors();
+        InstantiateRooms();
     }
 
-    private void CreateRooms()
+    private void CreateMap()
     {
         rooms = new Room[gridSizeX * 2, gridSizeY * 2];
         rooms[gridSizeX, gridSizeY] = new Room(Vector2.zero, 1);
-        takenPositions.Insert(0, Vector2.zero);
-        //magic numbers
-        const float  randomCompareStart = 0.2f, randomCompareEnd = 0.01f;
+        takenPositions.Add(Vector2.zero);
+        const float randomCompareStart = 0.01f, randomCompareEnd = 0.2f;
         for (var i = 0; i < numberOfRooms - 1; i++)
         {
-            var randomPerc = i / (float) numberOfRooms - 1;
-            var randomCompare = Mathf.Lerp(randomCompareStart, randomCompareEnd, randomPerc);
-            var checkPos = NewPosition();
-            if (NumberOfNeighbors(checkPos, takenPositions) > 1 && Random.value > randomCompare) // проверяем новую позицию
+            var lerpValue = i / ((float) numberOfRooms - 1);
+            var randomCompare = Mathf.Lerp(randomCompareStart, randomCompareEnd, lerpValue);
+            var checkPos = NewPosition(false);
+            if (NumberOfNeighbors(checkPos, takenPositions) > 1 &&
+                Random.value > randomCompare) // проверяем новую позицию
             {
                 var iterations = 0;
-                do
+                while (NumberOfNeighbors(checkPos, takenPositions) > 1 && iterations < 100)
                 {
-                    checkPos = SelectiveNewPosition();
+                    checkPos = NewPosition(true);
                     iterations++;
-                } while (NumberOfNeighbors(checkPos, takenPositions) > 1 && iterations < 100);
-
+                }
                 if (iterations >= 50)
-                    print("error: could not create with fewer neighbors than : " +
+                    print("could not create with fewer neighbors than: " +
                           NumberOfNeighbors(checkPos, takenPositions));
             }
-
-            //finalize position
+            // итоговая позиция
             rooms[(int) checkPos.x + gridSizeX, (int) checkPos.y + gridSizeY] = new Room(checkPos, 0);
             takenPositions.Insert(0, checkPos);
         }
     }
 
-    private Vector2 NewPosition()
+    private Vector2 NewPosition(bool isOneNeighbour)
     {
-        int x, y;
+        var x = 0;
+        var y = 0;
+        var counter = 0;
         var checkingPos = Vector2.zero;
-        do
+        while (takenPositions.Contains(checkingPos) || x >= gridSizeX || x < -gridSizeX || y >= gridSizeY ||
+               y < -gridSizeY) // убеждаемся, что позиция дейстительна
         {
-            var index = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1)); // pick a random room
-            x = (int) takenPositions[index].x; //capture its x, y position
-            y = (int) takenPositions[index].y;
-            var UpDown = Random.value < 0.5f; //randomly pick wether to look on hor or vert axis
-            var positive = Random.value < 0.5f; //pick whether to be positive or negative on that axis
-            if (UpDown)
+            var randIndex = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1));
+            if (isOneNeighbour)
             {
-                //find the position bnased on the above bools
-                if (positive)
-                    y += 1;
-                else
-                    y -= 1;
+                while (NumberOfNeighbors(takenPositions[randIndex], takenPositions) > 1 && counter < 100)
+                {
+                    // вместо того, чтобы искать комнату без соседей, мы ищем ту, 
+                    // у которой есть один сосед. Это повысит вероятность того, что вернется комната, котороая ответвляется 
+                    randIndex = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1));
+                    counter++;
+                }
+                if (counter >= 100)
+                    // Прервать цикл, если он занимает слишком много времени. Этот цикл не гарантирует нахождения решения, что нас устраивает
+                    print("Error: could not find position with only one neighbor");
             }
+            x = (int) takenPositions[randIndex].x;
+            y = (int) takenPositions[randIndex].y;
+            var axis = Random.value < 0.5f;
+            var positive = Random.value < 0.5f;
+            if (axis)
+                y += positive ? 1 : -1;
             else
-            {
-                if (positive)
-                    x += 1;
-                else
-                    x -= 1;
-            }
-
+                x += positive ? 1 : -1;
             checkingPos = new Vector2(x, y);
-        } while (takenPositions.Contains(checkingPos) || x >= gridSizeX || x < -gridSizeX || y >= gridSizeY ||
-                 y < -gridSizeY); //make sure the position is valid
-
-        return checkingPos;
-    }
-
-    private Vector2 SelectiveNewPosition()
-    {
-        // method differs from the above in the two commented ways
-
-        int x, y, inc = 0;
-        var checkingPos = Vector2.zero;
-        do
-        {
-            int index;
-            do
-            {
-                //instead of getting a room to find an adject empty space, we start with one that only 
-                //has one neighbor. This will make it more likely that it returns a room that branches out
-                index = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1));
-                inc++;
-            } while (NumberOfNeighbors(takenPositions[index], takenPositions) > 1 && inc < 100);
-
-            x = (int) takenPositions[index].x;
-            y = (int) takenPositions[index].y;
-            var upDown = (Random.value < 0.5f);
-            var positive = (Random.value < 0.5f);
-            if (upDown)
-            {
-                if (positive)
-                    y += 1;
-                else
-                    y -= 1;
-            }
-            else
-            {
-                if (positive)
-                    x += 1;
-                else
-                    x -= 1;
-            }
-
-            checkingPos = new Vector2(x, y);
-        } while (takenPositions.Contains(checkingPos) || x >= gridSizeX || x < -gridSizeX || y >= gridSizeY ||
-                 y < -gridSizeY);
-
-        if (inc >= 100)
-        {
-            // break loop if it takes too long: this loop isnt garuanteed to find solution, which is fine for this
-            print("Error: could not find position with only one neighbor");
         }
 
         return checkingPos;
@@ -145,20 +96,21 @@ public class LevelGeneration : MonoBehaviour
 
     private int NumberOfNeighbors(Vector2 checkingPos, List<Vector2> usedPositions)
     {
-        return new[] {Vector2.right, Vector2.left, Vector2.down, Vector2.up}.Count(direction => usedPositions.Contains(checkingPos + direction));
+        return new[] {Vector2.right, Vector2.left, Vector2.down, Vector2.up}.Count(direction =>
+            usedPositions.Contains(checkingPos + direction));
     }
 
-    private void DrawMap()
+    private void InstantiateRooms()
     {
         foreach (var room in rooms)
         {
             if (room == null)
                 continue;
             var drawPos = room.GridPos;
-            drawPos.x *= room.RoomSize.x; // домножаем на размеры комнаты
+            drawPos.x *= room.RoomSize.x;
             drawPos.y *= room.RoomSize.y;
-            
-            var selector = _roomSelector;
+
+            var selector = roomSelector;
             var newRoom = Instantiate(selector.PickRoom(room), drawPos, quaternion.identity);
             var roomStats = newRoom.GetComponent<RoomPrefab>();
             roomStats.Room = room;
@@ -166,7 +118,7 @@ public class LevelGeneration : MonoBehaviour
         }
     }
 
-    private void SetRoomDoors()
+    private void SetDoors()
     {
         for (var x = 0; x < gridSizeX * 2; x++)
         {

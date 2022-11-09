@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
     {
         transform.position = Vector3.SmoothDamp(transform.position,
             new Vector3(currentPos.x, currentPos.y, transform.position.z), ref velocity, speed * Time.deltaTime);
-        
     }
 
     public void MoveToPos(Vector2 newPos)

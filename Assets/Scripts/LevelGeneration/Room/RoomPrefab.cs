@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -7,10 +6,9 @@ using Random = UnityEngine.Random;
 public class RoomPrefab : MonoBehaviour
 {
     public Room Room { get; set; }
-    private CameraController controller;
-    // [SerializeField] private bool isActive;
     [SerializeField] private Tilemap floorTilemap;
     [SerializeField] private List<Tile> tiles;
+    private CameraController controller;
 
     private void Start()
     {
