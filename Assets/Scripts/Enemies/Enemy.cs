@@ -2,25 +2,35 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [field: SerializeField] public float Health { get; private set; }
+    [field: SerializeField] public float MaxHealth { get; private set; }
+    [SerializeField] protected float currentHealth; 
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public float Damage { get; private set; }
     [SerializeField] protected Debuff imposedDebuff;
+    [SerializeField] protected Slider healthBar;
     protected Rigidbody2D enemyRigidbody;
 
     protected virtual void Start()
     {
         InitializeElements();
+        currentHealth = MaxHealth;
     }
 
     public virtual void GetDamage(float amountOfDamage)
     {
-        Health -= amountOfDamage;
-        if (Health < 0)
+        currentHealth -= amountOfDamage;
+        if (currentHealth < 0)
             Die();
+        healthBar.value = GetSliderFill();
+    }
+
+    private float GetSliderFill()
+    {
+        return currentHealth / MaxHealth;
     }
 
     public virtual void SetSpeed(float speed)
