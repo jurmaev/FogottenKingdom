@@ -16,6 +16,9 @@ public static class DebuffController
         };
     }
 
+    /// <summary>
+    /// Если переданные дебаффы можно соединить, то возращает новый дебафф, в обратном случае возращает null
+    /// </summary>
     public static bool TryMixDebuffs(Debuff firstDebuff, Debuff secondDebuff, out Debuff mixDebuff)
     {
         if (firstDebuff == null || secondDebuff == null)

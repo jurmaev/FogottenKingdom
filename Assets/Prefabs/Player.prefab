@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1295761317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 501425185200938055}
   - component: {fileID: 3690692423774412187}
   - component: {fileID: 1625160694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Magic Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 4002006401481069909}
   - component: {fileID: 4026313679623478104}
   - component: {fileID: 9047809464460413209}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,13 +247,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicWand: {fileID: 1625160694}
-  currentHealth: 0
-  currentMana: 0
+  currentHealth: 20
+  currentMana: 10
   currentMagic: {fileID: 0}
   availableMagic:
   - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
   - {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
   movementSpeed: 10
+  invincibleTime: 2
+  isInvincible: 0
 --- !u!50 &9047809464460413209
 Rigidbody2D:
   serializedVersion: 4
@@ -262,7 +264,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4002006401481069905}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

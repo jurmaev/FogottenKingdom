@@ -9,13 +9,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker10
+AssetImportWorker5
 -projectPath
 C:/Users/Kroflex/Desktop/FogottenKingdom
 -logFile
-Logs/AssetImportWorker10.log
+Logs/AssetImportWorker5.log
 -srvPort
-49779
+56080
 Successfully changed project path to: C:/Users/Kroflex/Desktop/FogottenKingdom
 C:/Users/Kroflex/Desktop/FogottenKingdom
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Kroflex/Desktop/FogottenKingdom
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 1012.72 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 631.35 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,46 +63,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.072932 seconds.
+Registered in 0.052428 seconds.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1218.49 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 863.54 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 17.915 seconds
+- Completed reload, in  7.652 seconds
 Domain Reload Profiling:
-	ReloadAssembly (17917ms)
-		BeginReloadAssembly (671ms)
+	ReloadAssembly (7653ms)
+		BeginReloadAssembly (563ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (15843ms)
-			LoadAssemblies (668ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (11012ms)
+			CreateAndSetChildDomain (4ms)
+		EndReloadAssembly (6334ms)
+			LoadAssemblies (539ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (963ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (584ms)
-			SetupLoadedEditorAssemblies (3531ms)
+			RebuildScriptCaches (243ms)
+			SetupLoadedEditorAssemblies (3977ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (516ms)
+				InitializePlatformSupportModulesInManaged (40ms)
 				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (1221ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (1494ms)
-				ProcessInitializeOnLoadMethodAttributes (281ms)
+				RefreshPlugins (864ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (1528ms)
+				ProcessInitializeOnLoadMethodAttributes (1530ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (2ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.445645 seconds.
+Registered in 0.156153 seconds.

@@ -6,14 +6,28 @@ using UnityEngine;
 
 public abstract class Debuff: MonoBehaviour
 {
-
-    protected float startTime = 0f;
-    protected float effectRepeatTime = 0.1f;
+    protected float timeOfAction;
+    protected float activationDelay;
+    protected float repeatRate;
+    
+    protected Enemy target;
     private void Start()
     {
-        if(gameObject.TryGetComponent(out Enemy enemy))
-            InvokeRepeating(nameof(ActivateEffectOnEnemy), startTime, effectRepeatTime);
+        if (gameObject.TryGetComponent(out Enemy enemy))
+        {
+            target = enemy;
+            StartCoroutine(nameof(AwakeDebuff));
+        }
     }
     
-    protected abstract void ActivateEffectOnEnemy(Enemy enemy);
+
+    private  IEnumerator AwakeDebuff()
+    {
+        InvokeRepeating(nameof(ActivateEffectOnEnemy), activationDelay, repeatRate);
+        yield return new WaitForSeconds(timeOfAction);
+        CancelInvoke(nameof(ActivateEffectOnEnemy));
+    }
+
+    protected abstract void InitializeElements();
+    protected abstract void ActivateEffectOnEnemy();
 }

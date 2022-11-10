@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
@@ -8,7 +9,6 @@ public abstract class Enemy : MonoBehaviour
     [field: SerializeField] public float Health { get; private set; }
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public float Damage { get; private set; }
-    [SerializeField] protected Debuff imposedDebuff;
     protected Rigidbody2D enemyRigidbody;
 
     protected virtual void Start()
@@ -43,7 +43,20 @@ public abstract class Enemy : MonoBehaviour
     private void CollideWithMagic(Magic magic)
     {
         GetDamage(magic.Damage);
-        DebuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff, out imposedDebuff);
+        
+        Debuff currentDebuff;
+        if (TryGetComponent(out currentDebuff))
+        {
+            DebuffController.TryMixDebuffs(currentDebuff, magic.SuperimposedDebuff, out Debuff combinedDebuff);
+            if (combinedDebuff != null)
+            {
+                Debuff oldDebuff = GetComponent<Debuff>();
+                Destroy(oldDebuff);
+                gameObject.AddComponent(combinedDebuff.GetType());
+            }
+        }
+        else
+            gameObject.AddComponent(magic.SuperimposedDebuff.GetType());
     }
 
     protected virtual void InitializeElements()
