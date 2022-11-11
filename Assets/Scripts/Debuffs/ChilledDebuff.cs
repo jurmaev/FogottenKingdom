@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class ChilledDebuff : Debuff
 {
-    protected override void ActivateEffectOnEnemy(Enemy enemy)
+    protected override void InitializeElements()
     {
-        enemy.SetSpeed(6);
+        timeOfAction = 4;
+        activationDelay = 0;
+        repeatRate = 0.1f;
+    }
+
+    protected override void ActivateEffectOnEnemy()
+    {
+        target.SetSpeed(3);
     }
 }
