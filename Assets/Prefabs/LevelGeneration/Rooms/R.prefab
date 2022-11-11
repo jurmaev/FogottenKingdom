@@ -1239,12 +1239,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8f9e79124a7d24fb56ecab80fe736b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
   floorTilemap: {fileID: 2125570014129404711}
   tiles:
   - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
   - {fileID: 11400000, guid: c9093765d45f77a4d80ff553f9d4a511, type: 2}
   - {fileID: 11400000, guid: 5056f60bbb478674d9927257b0395692, type: 2}
+  - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
+  - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
+  - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
 --- !u!61 &913034233625920586
 BoxCollider2D:
   m_ObjectHideFlags: 0
