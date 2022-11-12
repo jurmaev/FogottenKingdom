@@ -8,11 +8,13 @@ public class RoomPrefab : MonoBehaviour
     public Room Room { get; set; }
     [SerializeField] private Tilemap floorTilemap;
     [SerializeField] private List<Tile> tiles;
+    [SerializeField] private Room.RoomType roomType;
     private CameraController controller;
 
     private void Start()
     {
         controller = Camera.main.GetComponent<CameraController>();
+        roomType = Room.Type;
         PaintFloor();
     }
 
