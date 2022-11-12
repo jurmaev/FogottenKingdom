@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: -6208675299576256355}
   - component: {fileID: 306933274084587179}
   - component: {fileID: -2103753877102019171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TRB
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1311,6 +1311,10 @@ PrefabInstance:
     - target: {fileID: 9144303202668010377, guid: 85d5c60131795184981ca3a448ecc1a3, type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144303202668010377, guid: 85d5c60131795184981ca3a448ecc1a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9144303202668010382, guid: 85d5c60131795184981ca3a448ecc1a3, type: 3}
       propertyPath: m_Size.x

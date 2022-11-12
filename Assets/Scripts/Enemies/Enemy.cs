@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -53,16 +54,27 @@ public abstract class Enemy : MonoBehaviour
     private void CollideWithMagic(Magic magic)
     {
         GetDamage(magic.Damage);
-        DebuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff, out imposedDebuff);
+        
+        DebuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff, out Debuff mixDebuff);
+        
     }
 
     protected virtual void InitializeElements()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
+        Component imposedDebuffComponent = FindDebuffComponent();
+        imposedDebuff = null;
     }
     
     protected virtual void Die()
     {
         Destroy(gameObject);
+    }
+
+    private Component FindDebuffComponent()
+    {
+        var allComponents = GetComponents<Component>();
+        var debuffComponent = allComponents.FirstOrDefault(component => component.ToString().Contains("Debuff"));
+        return debuffComponent;
     }
 }
