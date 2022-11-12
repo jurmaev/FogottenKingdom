@@ -247,8 +247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicWand: {fileID: 1625160694}
-  currentHealth: 0
-  currentMana: 0
+  maxHealth: 30
+  maxMana: 20
+  currentHealth: 30
+  currentMana: 20
   currentMagic: {fileID: 0}
   availableMagic:
   - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}

@@ -10,6 +10,8 @@ using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviour
 {
     public MagicWand magicWand;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private int maxMana;
     [SerializeField] private float currentHealth;
     [SerializeField] private int currentMana;
     [SerializeField] private GameObject currentMagic;
@@ -17,8 +19,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
-    private float maxHealth;
-    private int maxMana;
     private Vector2 moveDirection;
     private Rigidbody2D playerRb;
 

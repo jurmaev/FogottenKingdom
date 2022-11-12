@@ -6,14 +6,14 @@ using UnityEngine;
 public class DuplicateSphere : Magic
 {
     [field: SerializeField] public int NumberOfDuplicates { get; private set; }
-    [SerializeField] private bool isDuplicating;
+    [SerializeField] private bool isDuplicatingNow;
     
 
     protected override void OnCollisionWithMagic(GameObject otherMagic)
     {
-        if (!otherMagic.TryGetComponent(out DuplicateSphere duplicateSphere) && !isDuplicating)
+        if (!otherMagic.TryGetComponent(out DuplicateSphere duplicateSphere) && !isDuplicatingNow)
         {
-            isDuplicating = true;
+            isDuplicatingNow = true;
             var angleBetweenDuplicates = 360.0f / NumberOfDuplicates;
             var startAngle = 0f;
             var startDirection = new Vector2(1, 0);
