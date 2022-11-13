@@ -72,7 +72,6 @@ public class PlayerController : MonoBehaviour
     {
         var currentMagicIndex =
             availableMagic.FindIndex(magic => magic.GetType().ToString() == currentMagic.GetType().ToString());
-        Debug.Log(currentMagicIndex);
         currentMagic = isNextMagic
             ? availableMagic[Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)]
             : availableMagic[Mathf.Max(currentMagicIndex - 1, 0)];

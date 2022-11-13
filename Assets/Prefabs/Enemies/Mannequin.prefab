@@ -146,8 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22c3839fe64b3441bc40015baff9b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Health>k__BackingField: 10000
+  <MaxHealth>k__BackingField: 100000
+  currentHealth: 100000
   <Speed>k__BackingField: 0
   <Damage>k__BackingField: 0
-  imposedDebuff: {fileID: 0}
+  healthBar: {fileID: 0}
   flashTime: 0.5

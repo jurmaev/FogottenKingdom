@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6544101978164655799
+--- !u!1 &6459054686249385910
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2262666982732350045}
-  - component: {fileID: 2798379535425525759}
+  - component: {fileID: 245860113001106703}
+  - component: {fileID: 2007955913936348993}
   m_Layer: 0
   m_Name: WetDebuff
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2262666982732350045
+--- !u!4 &245860113001106703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544101978164655799}
+  m_GameObject: {fileID: 6459054686249385910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1766672, y: 1.2546026, z: 0.13186117}
+  m_LocalPosition: {x: 0.46527028, y: 0.48311043, z: -0.055365562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2798379535425525759
+--- !u!114 &2007955913936348993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544101978164655799}
+  m_GameObject: {fileID: 6459054686249385910}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82292424d61aec44e96a775054502cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOfAction: 5
-  activationDelay: 0
-  repeatRate: 0.54
+  <Name>k__BackingField: WetDebuff
+  timeOfAction: 6
+  repeatRate: 2
+  target: {fileID: 0}

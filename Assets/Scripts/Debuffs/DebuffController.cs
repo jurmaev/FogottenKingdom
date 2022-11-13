@@ -1,45 +1,72 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public static class DebuffController
+public class DebuffController : MonoBehaviour
 {
-    private static readonly Dictionary<(string, string), Debuff> debuffFormulas;
+    [SerializeField] private List<GameObject> allDebuffs;
+    private Dictionary<(string, string), string> debuffFormulas;
 
-    static DebuffController()
+    private void Start()
     {
-        debuffFormulas = new Dictionary<(string, string), Debuff>()
+        debuffFormulas = new Dictionary<(string, string), string>()
         {
-            {(nameof(WetDebuff), nameof(ChilledDebuff)), new FrozenDebuff()},
+            {("WetDebuff", "ChilledDebuff"), "FrozenDebuff"},
+            {("WetDebuff", "ElectrifiedDebuff"), "ElectrifiedDebuff"}
         };
     }
 
     /// <summary>
-    /// Если переданные дебаффы можно соединить, то возращает новый дебафф, в обратном случае возращает null
+    /// Если переданные дебаффы можно соединить, то возращает новый дебафф; если один из дебаффов null, то возвращает тот, что не null;
+    /// если переданные дебаффы не null и нельзя соединить, то возращает null
     /// </summary>
-    public static bool TryMixDebuffs(Debuff firstDebuff, Debuff secondDebuff, out Debuff mixDebuff)
+    public bool TryMixDebuffs(GameObject firstDebuff, GameObject secondDebuff, out GameObject mixDebuff)
     {
-        if (firstDebuff == null || secondDebuff == null)
+        if (firstDebuff == null && secondDebuff == null)
         {
+            Debug.Log("Оба null");
             mixDebuff = null;
             return false;
         }
 
-        if (debuffFormulas.TryGetValue((nameof(firstDebuff), nameof(secondDebuff)), out Debuff newDebuff1))
+        if (firstDebuff != null && secondDebuff == null)
         {
-            mixDebuff = newDebuff1;
+            Debug.Log("Второй дебафф нулл");
+            mixDebuff = Instantiate(firstDebuff);
             return true;
         }
 
-        if (debuffFormulas.TryGetValue((nameof(secondDebuff), nameof(firstDebuff)), out Debuff newDebuff2))
+        if (secondDebuff != null && firstDebuff == null)
         {
-            mixDebuff = newDebuff2;
+            Debug.Log("Первый дебафф нулл");
+            mixDebuff = Instantiate(secondDebuff);
+            return true;
+        }
+        Debug.Log(firstDebuff.GetComponent<Debuff>().Name);
+
+        if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().Name, secondDebuff.GetComponent<Debuff>().Name), out string newDebuffName1))
+        {
+            mixDebuff = GetDebuffByName(newDebuffName1);
+            return true;
+        }
+
+        if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().Name, secondDebuff.GetComponent<Debuff>().Name), out string newDebuffName2))
+        {
+            mixDebuff = GetDebuffByName(newDebuffName2);
             return true;
         }
 
         mixDebuff = null;
         return false;
+    }
+
+    private GameObject GetDebuffByName(string debuffName)
+    {
+        var debuffPrefub = allDebuffs.FirstOrDefault(debuff => debuff.name == debuffName);
+        var debuff = Instantiate(debuffPrefub);
+        return debuff;
     }
 }

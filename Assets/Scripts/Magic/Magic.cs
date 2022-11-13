@@ -9,8 +9,20 @@ public abstract class Magic : MonoBehaviour
     [field: SerializeField] public float Speed { get; protected set; }
     [field: SerializeField] public int Damage { get; protected set; }
     [field: SerializeField] public int Mana { get; protected set; }
-    [field: SerializeField] public Debuff SuperimposedDebuff { get; protected set; }
+
+    [field: SerializeField]
+    public GameObject SuperimposedDebuff
+    {
+        get
+        {
+            if (transform.childCount != 0)
+                return transform.GetChild(0).gameObject;
+            return null;
+        }
+    }
+
     private Rigidbody2D magicRb;
+    private DebuffController debuffController;
 
     void Start()
     {
@@ -21,8 +33,9 @@ public abstract class Magic : MonoBehaviour
     protected virtual void InitializeElements()
     {
         magicRb = GetComponent<Rigidbody2D>();
+        debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
     }
-    
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.TryGetComponent(out Magic otherMagic))
@@ -40,16 +53,18 @@ public abstract class Magic : MonoBehaviour
 
     protected virtual void OnCollisionWithMagic(GameObject otherMagic)
     {
-        UpdateSuperimposedDebuff(otherMagic.GetComponent<Magic>().SuperimposedDebuff);
+        GameObject anotherDebuff = otherMagic.GetComponent<Magic>().SuperimposedDebuff;
+        UpdateSuperimposedDebuff(anotherDebuff);
     }
+
     protected abstract void OnCollisionWithEnemy(Enemy enemy);
 
-    private void UpdateSuperimposedDebuff(Debuff anotherDebuff)
+    private void UpdateSuperimposedDebuff(GameObject anotherDebuff)
     {
-        if (DebuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out Debuff mixedDebuff))
+        if (debuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out GameObject mixedDebuff))
         {
-            if(mixedDebuff != null)
-                SuperimposedDebuff = mixedDebuff;
+            Destroy(SuperimposedDebuff);
+            mixedDebuff.transform.SetParent(gameObject.transform);
         }
     }
 }

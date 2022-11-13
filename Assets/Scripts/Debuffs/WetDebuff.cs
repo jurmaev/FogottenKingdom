@@ -10,4 +10,9 @@ public class WetDebuff : Debuff
     {
         
     }
+
+    protected override void DeactivateEffectOnEnemy()
+    {
+        
+    }
 }

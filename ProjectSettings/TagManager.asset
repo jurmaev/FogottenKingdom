@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Magic
   - Obstacle
+  - DebuffController
   layers:
   - Default
   - TransparentFX

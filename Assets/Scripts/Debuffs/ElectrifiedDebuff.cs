@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class ElectrifiedDebuff : Debuff
 {
-   [SerializeField][Tooltip("Урон который будет наноситься ближайшим врагам")] private float damage;
-   [SerializeField][Tooltip("Радиус круга")] private float radius;
+   [SerializeField]private float damage;
+   [SerializeField]private float radius;
    
     protected override void ActivateEffectOnEnemy()
     {
         target.GetDamage(damage);
+    }
+
+    protected override void DeactivateEffectOnEnemy()
+    {
+        Destroy(gameObject);
     }
 }

@@ -8,17 +8,16 @@ using System.Linq;
 public abstract class Enemy : MonoBehaviour
 {
     [field: SerializeField] public float MaxHealth { get; private set; }
-    [SerializeField] protected float currentHealth; 
+    [SerializeField] protected float currentHealth;
     [field: SerializeField] public float Speed { get; private set; }
     [field: SerializeField] public float Damage { get; private set; }
-    [SerializeField] protected Debuff imposedDebuff;
     [SerializeField] protected Slider healthBar;
     protected Rigidbody2D enemyRigidbody;
+    private DebuffController debuffController;
 
     protected virtual void Start()
     {
         InitializeElements();
-        currentHealth = MaxHealth;
     }
 
     public virtual void GetDamage(float amountOfDamage)
@@ -50,31 +49,42 @@ public abstract class Enemy : MonoBehaviour
             CollideWithMagic(magic);
     }
 
-
-    private void CollideWithMagic(Magic magic)
+    protected virtual void CollideWithMagic(Magic magic)
     {
         GetDamage(magic.Damage);
-        
-        DebuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff, out Debuff mixDebuff);
-        
+        ApplyDebuffFromMagic(magic);
     }
 
     protected virtual void InitializeElements()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
-        Component imposedDebuffComponent = FindDebuffComponent();
-        imposedDebuff = null;
+        debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
     }
-    
+
     protected virtual void Die()
     {
         Destroy(gameObject);
     }
 
-    private Component FindDebuffComponent()
+    private void ApplyDebuffFromMagic(Magic magic)
     {
-        var allComponents = GetComponents<Component>();
-        var debuffComponent = allComponents.FirstOrDefault(component => component.ToString().Contains("Debuff"));
-        return debuffComponent;
+        if (transform.childCount != 0)
+        {
+            Debug.Log("Зашёл");
+            if (debuffController.TryMixDebuffs(transform.GetChild(0).gameObject, magic.SuperimposedDebuff,
+                    out GameObject mixedDebuff))
+            {
+                Debug.Log("Сочетание произошло");
+                Destroy(transform.GetChild(0).gameObject);
+                mixedDebuff.transform.SetParent(gameObject.transform);
+                mixedDebuff.GetComponent<Debuff>().Activate(this);
+            }
+        }
+        else
+        {
+            var imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
+            imposedDebuff.transform.SetParent(gameObject.transform);
+            imposedDebuff.GetComponent<Debuff>().Activate(this);
+        }
     }
 }
