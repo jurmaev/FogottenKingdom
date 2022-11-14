@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] private Transform mapRoot;
+    [SerializeField] private Transform minimapRoot;
     [SerializeField] private Vector2 worldSize; // половина размеров
     [SerializeField] private int numberOfRooms;
     private Room[,] rooms;
@@ -100,8 +101,8 @@ public class LevelGenerator : MonoBehaviour
             if (room == null)
                 continue;
             var drawPos = room.GridPos;
-            drawPos.x *= room.RoomSize.x;
-            drawPos.y *= room.RoomSize.y;
+            drawPos.x *= Room.RoomSize.x;
+            drawPos.y *= Room.RoomSize.y;
 
             var selector = roomSelector;
             room.SetDoorPositions();
@@ -109,6 +110,14 @@ public class LevelGenerator : MonoBehaviour
             var roomStats = newRoom.GetComponent<RoomPrefab>();
             roomStats.Room = room;
             newRoom.transform.parent = mapRoot;
+
+            var minimapDrawPos = room.GridPos;
+            minimapDrawPos.x *= Room.MinimapRoomSize.x + 2;
+            minimapDrawPos.y *= Room.MinimapRoomSize.y + 2;
+            var newMinimapRoom = Instantiate(selector.MinimapRoom, minimapDrawPos, quaternion.identity);
+            var minimapRoomStats = newMinimapRoom.GetComponent<MinimapRoom>();
+            minimapRoomStats.Room = room;
+            newMinimapRoom.transform.parent = minimapRoot;
         }
     }
 

@@ -2,18 +2,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private Vector2 currentPos;
-    private Vector3 velocity = Vector3.zero;
+    [SerializeField] private bool isMinimapCamera;
 
-    private void Update()
+    private void Awake()
     {
-        transform.position = Vector3.SmoothDamp(transform.position,
-            new Vector3(currentPos.x, currentPos.y, transform.position.z), ref velocity, speed * Time.deltaTime);
-    }
-
-    public void MoveToPos(Vector2 newPos)
-    {
-        currentPos = newPos;
+        var size = isMinimapCamera
+            ? new Vector2(Room.MinimapRoomSize.x + 2, Room.MinimapRoomSize.y + 2)
+            : Room.RoomSize;
+        EventManager.OnCameraPosChanged.AddListener(newPos =>
+            transform.position = new Vector3(newPos.x * size.x, newPos.y * size.y, transform.position.z));
     }
 }
