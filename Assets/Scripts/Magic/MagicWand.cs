@@ -4,9 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+public enum Hand
+{
+    Right,
+    Left
+}
+
 public class MagicWand : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform rightHandPoint;
+    [SerializeField] private Transform leftHandPoint;
     private Vector2 mousePos;
     private Camera camera;
     void Start()
@@ -21,7 +29,15 @@ public class MagicWand : MonoBehaviour
 
     public void Shoot(GameObject magic)
     {
-        Instantiate(magic, firePoint.position, firePoint.rotation);
+        Instantiate(magic, firePoint.position, transform.rotation);
+    }
+
+    public void MoveToHand(Hand hand)
+    {
+        if(hand == Hand.Right)
+            transform.position = rightHandPoint.position;
+        else if(hand == Hand.Left)
+            transform.position = leftHandPoint.position;
     }
     
     private void RotateFirepoint()

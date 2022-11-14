@@ -8,9 +8,9 @@ public abstract class Magic : MonoBehaviour
 {
     [field: SerializeField] public float Speed { get; protected set; }
     [field: SerializeField] public int Damage { get; protected set; }
-    [field: SerializeField] public int Mana { get; protected set; }
+    private Rigidbody2D magicRb;
+    private DebuffController debuffController;
 
-    [field: SerializeField]
     public GameObject SuperimposedDebuff
     {
         get
@@ -21,8 +21,6 @@ public abstract class Magic : MonoBehaviour
         }
     }
 
-    private Rigidbody2D magicRb;
-    private DebuffController debuffController;
 
     void Start()
     {

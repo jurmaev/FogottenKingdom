@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 846574653
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.22605905, g: 0.7409535, b: 0.9433962, a: 1}
@@ -149,7 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 12
   <Damage>k__BackingField: 4
-  <Mana>k__BackingField: 2
 --- !u!1001 &9173806320538684429
 PrefabInstance:
   m_ObjectHideFlags: 0

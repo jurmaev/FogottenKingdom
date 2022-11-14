@@ -27,21 +27,18 @@ public class DebuffController : MonoBehaviour
     {
         if (firstDebuff == null && secondDebuff == null)
         {
-            Debug.Log("Оба null");
             mixDebuff = null;
             return false;
         }
 
         if (firstDebuff != null && secondDebuff == null)
         {
-            Debug.Log("Второй дебафф нулл");
             mixDebuff = Instantiate(firstDebuff);
             return true;
         }
 
         if (secondDebuff != null && firstDebuff == null)
         {
-            Debug.Log("Первый дебафф нулл");
             mixDebuff = Instantiate(secondDebuff);
             return true;
         }
@@ -53,7 +50,7 @@ public class DebuffController : MonoBehaviour
             return true;
         }
 
-        if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().Name, secondDebuff.GetComponent<Debuff>().Name), out string newDebuffName2))
+        if (debuffFormulas.TryGetValue((secondDebuff.GetComponent<Debuff>().Name, firstDebuff.GetComponent<Debuff>().Name), out string newDebuffName2))
         {
             mixDebuff = GetDebuffByName(newDebuffName2);
             return true;

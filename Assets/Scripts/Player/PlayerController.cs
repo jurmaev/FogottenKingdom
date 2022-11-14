@@ -11,16 +11,20 @@ public class PlayerController : MonoBehaviour
 {
     public MagicWand magicWand;
     [SerializeField] private float maxHealth;
-    [SerializeField] private int maxMana;
     [SerializeField] private float currentHealth;
-    [SerializeField] private int currentMana;
+    [SerializeField] private float movementSpeed;
+
     [SerializeField] private GameObject currentMagic;
     [SerializeField] private List<GameObject> availableMagic;
-    [SerializeField] private float movementSpeed;
+
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
+
     private Vector2 moveDirection;
     private Rigidbody2D playerRb;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
 
     void Start()
     {
@@ -37,6 +41,13 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
+    private void InitializeElements()
+    {
+        currentMagic = availableMagic[0];
+        playerRb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -44,23 +55,16 @@ public class PlayerController : MonoBehaviour
             GetDamage(enemy.Damage);
     }
 
-
-    private void InitializeElements()
-    {
-        playerRb = GetComponent<Rigidbody2D>();
-        currentMagic = availableMagic[0];
-    }
-
-
     private void CheckInput()
     {
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        UpdateAnimation();
+        if (Input.GetButtonUp("Fire1"))
+            magicWand.Shoot(currentMagic);
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             SwitchCurrentMagic(true);
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             SwitchCurrentMagic(false);
-        if (Input.GetButtonUp("Fire1"))
-            magicWand.Shoot(currentMagic);
     }
 
     private void Move()
@@ -75,6 +79,27 @@ public class PlayerController : MonoBehaviour
         currentMagic = isNextMagic
             ? availableMagic[Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)]
             : availableMagic[Mathf.Max(currentMagicIndex - 1, 0)];
+    }
+
+    private void UpdateAnimation()
+    {
+        if (moveDirection.x != 0 || moveDirection.y != 0)
+        {
+            animator.SetBool("Moving", true);
+            if (moveDirection.x > 0)
+            {
+                spriteRenderer.flipX = false;
+                magicWand.MoveToHand(Hand.Right);
+            }
+
+            if (moveDirection.x < 0)
+            {
+                spriteRenderer.flipX = true;
+                magicWand.MoveToHand(Hand.Left);
+            }
+        }
+        else
+            animator.SetBool("Moving", false);
     }
 
     private void GetDamage(float amountOfDamage)
