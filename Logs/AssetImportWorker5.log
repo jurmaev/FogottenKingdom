@@ -1111,3 +1111,1017 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 123.303952 seconds.
+  path: Assets/Sprites/Magic
+  artifactKey: Guid(07fc87a5a2b322d41a62774163dcd8f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic using Guid(07fc87a5a2b322d41a62774163dcd8f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad19323032418c7c6546a61b1dfb9e4c') in 0.087285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 252.891089 seconds.
+  path: Assets/Sprites/Magic/FireBall
+  artifactKey: Guid(e508863d9ff0e0c4bbff8f45022d6b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall using Guid(e508863d9ff0e0c4bbff8f45022d6b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba789fef9de40ebd2711859b5c99be74') in 0.012610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.739024 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bdc06dd5fb3ce2fac2da04a5a322553') in 0.198313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.337175 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9b7dcd50cd397c51aea259f5114ec3') in 0.189710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.982630 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b773643ed8884c2ed73e3f2da5b61a47') in 0.103963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.706792 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ba08b48a6083880307bc3dbf415d7f') in 0.069722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.617437 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10327d258f01072ad5f7ad35042c0441') in 0.193449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.901521 seconds.
+  path: Assets/Sprites/Magic/FireBall/FireBall-Sheet.png
+  artifactKey: Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall/FireBall-Sheet.png using Guid(0aadbf9cf9c12314194d2290e053d641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65806088c3003d0a5b163419321ef62') in 0.105601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 133.341001 seconds.
+  path: Assets/Sprites/Magic/WaterBullet
+  artifactKey: Guid(93c2688ca8064334da213d16474ae8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBullet using Guid(93c2688ca8064334da213d16474ae8ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abe11bbef707b5a3216144f5c57afc1e') in 0.072205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 257.210547 seconds.
+  path: Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png
+  artifactKey: Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png using Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbce0a78f3976f4d882d13dfe0eba133') in 0.072271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.173542 seconds.
+  path: Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png
+  artifactKey: Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png using Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c573f934ea33964fc6c3d3104a49c4e0') in 0.132562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.241775 seconds.
+  path: Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png
+  artifactKey: Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png using Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e853b1d381c38941f545363e02c65a34') in 0.055870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.823030 seconds.
+  path: Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png
+  artifactKey: Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBullet/WaterBall-Sheet (1).png using Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc260103c4e67a0bf14e3047c7a7524') in 2.172723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 132.975596 seconds.
+  path: Assets/Animation/Magic
+  artifactKey: Guid(83afcbb5b50f5294bbfd92918da792ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Magic using Guid(83afcbb5b50f5294bbfd92918da792ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d0e82c755adea9c7b8689daeb879df') in 0.099781 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.023896 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.16 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.766 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4777ms)
+		BeginReloadAssembly (887ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (87ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (307ms)
+		EndReloadAssembly (3444ms)
+			LoadAssemblies (493ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1089ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (174ms)
+			SetupLoadedEditorAssemblies (1611ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (51ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (365ms)
+				ProcessInitializeOnLoadAttributes (966ms)
+				ProcessInitializeOnLoadMethodAttributes (196ms)
+				AfterProcessingInitializeOnLoad (27ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (48ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 17.81 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (24.7 KB). Loaded Objects now: 4743.
+Memory consumption went from 160.8 MB to 160.8 MB.
+Total: 26.099800 ms (FindLiveObjects: 6.273500 ms CreateObjectMapping: 0.962000 ms MarkObjects: 18.775300 ms  DeleteObjects: 0.085900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.032334 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.10 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.962 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7964ms)
+		BeginReloadAssembly (577ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (22ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (104ms)
+		EndReloadAssembly (6922ms)
+			LoadAssemblies (531ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (923ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (334ms)
+			SetupLoadedEditorAssemblies (4828ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (96ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (710ms)
+				ProcessInitializeOnLoadAttributes (3567ms)
+				ProcessInitializeOnLoadMethodAttributes (399ms)
+				AfterProcessingInitializeOnLoad (50ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (55ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 18.70 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (24.7 KB). Loaded Objects now: 4746.
+Memory consumption went from 160.8 MB to 160.8 MB.
+Total: 11.021200 ms (FindLiveObjects: 1.260700 ms CreateObjectMapping: 2.901500 ms MarkObjects: 6.777800 ms  DeleteObjects: 0.078200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 221.465709 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '37afe6998376bb55b8470e17794e9985') in 0.236259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.060827 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '538123ae10edfc27ec0087a81c065c6b') in 0.112606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.475393 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '296f294a29ce5e53881642c4ddf4b7c5') in 0.182732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.589807 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '4df44b82cffa390f3fe4a2cec553d4ae') in 0.108591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.091585 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Water Bullet) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '32c2ee6509d027df5e3a0da0605b3c09') in 0.179246 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.023877 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.90 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.730 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3731ms)
+		BeginReloadAssembly (389ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (19ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (6ms)
+			CreateAndSetChildDomain (106ms)
+		EndReloadAssembly (3010ms)
+			LoadAssemblies (263ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (949ms)
+			ReleaseScriptCaches (7ms)
+			RebuildScriptCaches (165ms)
+			SetupLoadedEditorAssemblies (1444ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (375ms)
+				ProcessInitializeOnLoadAttributes (800ms)
+				ProcessInitializeOnLoadMethodAttributes (193ms)
+				AfterProcessingInitializeOnLoad (27ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (38ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 9.55 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (25.8 KB). Loaded Objects now: 4749.
+Memory consumption went from 161.0 MB to 161.0 MB.
+Total: 14.495400 ms (FindLiveObjects: 1.230000 ms CreateObjectMapping: 0.589000 ms MarkObjects: 12.583600 ms  DeleteObjects: 0.089800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1011.187462 seconds.
+  path: Assets/Sprites/Magic/FireBall-Sheet (1).png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall-Sheet (1).png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2225d87ef991e087befe5a12e38eb52c') in 0.586820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.568184 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ff61ca9e16c0cb9f9b3c7e617c3eea') in 0.135905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.693708 seconds.
+  path: Assets/Sprites/Magic/WaterBall.png
+  artifactKey: Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/WaterBall.png using Guid(f9751347d7bc15f4fa764729d5a55dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cccb2408156e612e194d77261831d4') in 0.158877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.603039 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa121447dd36fdb9bb0a076db4e77f3a') in 0.073955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.208845 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caab09ff3b9ec0751d31fe058b16e2be') in 0.125207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 144.085994 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c59ae78140d21197b5483b08dcac05d') in 0.079716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 125.416529 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e459b81f0f61147e3cffaf1ce4cb1189') in 0.221962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.521411 seconds.
+  path: Assets/Sprites/Magic/FireBall.png
+  artifactKey: Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/FireBall.png using Guid(101482a59b6314f4c80d56322bb8528d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea02569fdba9a0081456be1328830fd') in 0.134143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.332957 seconds.
+  path: Assets/Prefabs/Magic/FireBall.controller
+  artifactKey: Guid(39a08b43451f9d7439eac8504f3231e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.controller using Guid(39a08b43451f9d7439eac8504f3231e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8421080d7f28cc262b0b6dcb2be2024c') in 0.054471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 106.736229 seconds.
+  path: Assets/Animation/Magic/WaterBullet.anim
+  artifactKey: Guid(6086cbc4683bd5a478fbc9136d7788d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Magic/WaterBullet.anim using Guid(6086cbc4683bd5a478fbc9136d7788d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a43780aafcde2264b287a9b059065c60') in 0.015162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.354175 seconds.
+  path: Assets/Animation/Magic/FireBall.anim
+  artifactKey: Guid(2c7bb8305a0baa8449f3e2f020fa60fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Magic/FireBall.anim using Guid(2c7bb8305a0baa8449f3e2f020fa60fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e6e6e5ecf2b4f2be0e628eac17410a') in 0.008058 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.027395 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.30 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  9.040 seconds
+Domain Reload Profiling:
+	ReloadAssembly (9043ms)
+		BeginReloadAssembly (1623ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (136ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (656ms)
+		EndReloadAssembly (4979ms)
+			LoadAssemblies (917ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1571ms)
+			ReleaseScriptCaches (9ms)
+			RebuildScriptCaches (290ms)
+			SetupLoadedEditorAssemblies (2213ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (86ms)
+				SetLoadedEditorAssemblies (7ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (440ms)
+				ProcessInitializeOnLoadAttributes (1407ms)
+				ProcessInitializeOnLoadMethodAttributes (238ms)
+				AfterProcessingInitializeOnLoad (31ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (43ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 8.39 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (24.7 KB). Loaded Objects now: 4752.
+Memory consumption went from 161.0 MB to 161.0 MB.
+Total: 11.998900 ms (FindLiveObjects: 2.813400 ms CreateObjectMapping: 1.203800 ms MarkObjects: 7.902200 ms  DeleteObjects: 0.077300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 98.237084 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '74cca57d60928414112914b76bd95aa2') in 0.178588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.526805 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '04cb33555470ee725c0c923ab560f553') in 0.039829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.707021 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: 'afc204ded83f6df3ed5ffe7a75bce1bd') in 0.558381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.210601 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '2243f16c3b1afed8643e750d39e99e2d') in 0.114976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.402255 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: 'bb06211766fcd75d7e6b14ead2248353') in 0.532889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.731735 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: 'a08d7c6077b38b3dd4fb70a78fbfa724') in 0.082171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.942624 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '4c9803cd061345eb08e1b6ac1d90c92d') in 0.137130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.302196 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (FireBall) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '0a35214ced9cc66a4ea4e0fd3c726568') in 0.065734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.366642 seconds.
+  path: Assets/Prefabs/Magic/FireBall.prefab
+  artifactKey: Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/FireBall.prefab using Guid(1d7be699b120afa4aa94d261a71fdf2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148347d441515e1cfd7f92d4504259a2') in 0.114172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.358185 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d6cbceee8fb3e0dd2ff4c6e97516ab3') in 0.043154 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031860 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.76 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.450 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3452ms)
+		BeginReloadAssembly (396ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (21ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (132ms)
+		EndReloadAssembly (2749ms)
+			LoadAssemblies (270ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (759ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (171ms)
+			SetupLoadedEditorAssemblies (1385ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (319ms)
+				ProcessInitializeOnLoadAttributes (862ms)
+				ProcessInitializeOnLoadMethodAttributes (137ms)
+				AfterProcessingInitializeOnLoad (22ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 12.35 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (24.7 KB). Loaded Objects now: 4755.
+Memory consumption went from 161.1 MB to 161.0 MB.
+Total: 11.818100 ms (FindLiveObjects: 1.244200 ms CreateObjectMapping: 0.614900 ms MarkObjects: 9.854400 ms  DeleteObjects: 0.101900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 150.390393 seconds.
+  path: Assets/Sprites/Magic/DuplicateSphere.png
+  artifactKey: Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/DuplicateSphere.png using Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '689d7b953ced5e804c46db0f7a738c60') in 0.235924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.810416 seconds.
+  path: Assets/Sprites/Magic/DuplicateSphere.png
+  artifactKey: Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/DuplicateSphere.png using Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ade2ce33da68e78df443dc4e4d3381e') in 0.105914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.360710 seconds.
+  path: Assets/Sprites/Magic/DuplicateSphere.png
+  artifactKey: Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/DuplicateSphere.png using Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f78b952bf35925a9bb146d1c1baba422') in 0.148163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 132.050190 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(05806f28192c23d45a28cd9587587b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(05806f28192c23d45a28cd9587587b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36a93b18edf645502c760881f7aca50') in 0.142669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.377901 seconds.
+  path: Assets/Prefabs/Magic/Water Bullet.prefab
+  artifactKey: Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Water Bullet.prefab using Guid(b61e87de94adc7d48bec57511b886c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2786e47dd881265f2f6f9985831f756f') in 0.033993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 136.636012 seconds.
+  path: Assets/Sprites/Magic/DuplicateSphere.png
+  artifactKey: Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Magic/DuplicateSphere.png using Guid(fff8af5aa099d8d40bdac66c7fa56bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865482405d3392af4c5fece5200cf072') in 0.271753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 101.324864 seconds.
+  path: Assets/Prefabs/Magic/Duplicate Sphere.prefab
+  artifactKey: Guid(3cfe5dd26f970f94b8550aa0cf04f6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Duplicate Sphere.prefab using Guid(3cfe5dd26f970f94b8550aa0cf04f6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Duplicate Sphere) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Duplicate Sphere) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules\Animation\Director\AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '4a98a88bb07d58560331f8f3c3143415') in 0.037775 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.026481 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kroflex\Desktop\FogottenKingdom\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 8.94 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.196 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6198ms)
+		BeginReloadAssembly (608ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (25ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (140ms)
+		EndReloadAssembly (5017ms)
+			LoadAssemblies (503ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (2194ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (278ms)
+			SetupLoadedEditorAssemblies (1808ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (75ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (9ms)
+				BeforeProcessingInitializeOnLoad (342ms)
+				ProcessInitializeOnLoadAttributes (1167ms)
+				ProcessInitializeOnLoadMethodAttributes (186ms)
+				AfterProcessingInitializeOnLoad (27ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (60ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 9.66 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4213 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (24.7 KB). Loaded Objects now: 4758.
+Memory consumption went from 161.1 MB to 161.1 MB.
+Total: 20.360900 ms (FindLiveObjects: 1.756500 ms CreateObjectMapping: 1.306700 ms MarkObjects: 17.218600 ms  DeleteObjects: 0.076200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 35.288667 seconds.
+  path: Assets/Prefabs/Magic/Duplicate Sphere.prefab
+  artifactKey: Guid(3cfe5dd26f970f94b8550aa0cf04f6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Magic/Duplicate Sphere.prefab using Guid(3cfe5dd26f970f94b8550aa0cf04f6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ada4b8360f1e09e04c92a56df8d58b') in 0.258198 seconds 

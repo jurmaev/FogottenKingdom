@@ -296,7 +296,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1417749528
 MonoBehaviour:
@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[0]
       value: 
-      objectReference: {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
+      objectReference: {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[1]
       value: 
@@ -451,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8690938611034601430, guid: e511a8392ed1ca941af5c2b6977eaabe, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8690938611034601430, guid: e511a8392ed1ca941af5c2b6977eaabe, type: 3}
       propertyPath: m_LocalPosition.x
