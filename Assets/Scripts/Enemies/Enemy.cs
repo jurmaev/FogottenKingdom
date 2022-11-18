@@ -28,11 +28,15 @@ public abstract class Enemy : MonoBehaviour
         healthBar.value = GetSliderFill();
     }
 
-    private float GetSliderFill()
+    /// <summary>
+    /// Возращает локльные координаты полоски здоровья, нужел для того, чтобы 
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetHealthBarCoordinates()
     {
-        return currentHealth / MaxHealth;
+        return healthBar.transform.position;
     }
-
+    
     public virtual void SetSpeed(float speed)
     {
         Speed = speed;
@@ -42,6 +46,12 @@ public abstract class Enemy : MonoBehaviour
     {
         Damage = damage;
     }
+    
+    private float GetSliderFill()
+    {
+        return currentHealth / MaxHealth;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -60,11 +70,7 @@ public abstract class Enemy : MonoBehaviour
         enemyRigidbody = GetComponent<Rigidbody2D>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
     }
-
-    protected virtual void Die()
-    {
-        Destroy(gameObject);
-    }
+    
 
     private void ApplyDebuffFromMagic(Magic magic)
     {
@@ -100,5 +106,10 @@ public abstract class Enemy : MonoBehaviour
         
         imposedDebuff = null;
         return false;
+    }
+    
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
     }
 }

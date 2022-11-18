@@ -17,11 +17,16 @@ public abstract class Debuff : MonoBehaviour
 
     [SerializeField] protected Enemy target;
 
+    [SerializeField] protected float heightAboveHealthBar;
+
 
     public void Activate(Enemy target)
     {
         this.target = target;
         StartCoroutine(nameof(AwakeDebuff));
+        transform.position = target.GetHealthBarCoordinates() +
+                             new Vector3(0, heightAboveHealthBar + gameObject.GetComponent<SpriteRenderer>().size.y / 2,
+                                 0);
     }
 
 
