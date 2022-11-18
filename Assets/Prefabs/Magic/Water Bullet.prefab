@@ -211,9 +211,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4359192295178751617, guid: 174026d490035944682bff21ab221f4f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6459054686249385910, guid: 174026d490035944682bff21ab221f4f, type: 3}
       propertyPath: m_Name
       value: WetDebuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459054686249385910, guid: 174026d490035944682bff21ab221f4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 174026d490035944682bff21ab221f4f, type: 3}

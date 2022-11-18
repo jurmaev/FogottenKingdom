@@ -177,6 +177,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6089975528523439890}
     m_Modifications:
+    - target: {fileID: 130252843560041631, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130252843560041631, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4214667213543318819, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -228,6 +236,10 @@ PrefabInstance:
     - target: {fileID: 5008543140095295131, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}
       propertyPath: m_Name
       value: ChilledDebuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008543140095295131, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8066b2c77c68b04392827ab5ec547bd, type: 3}

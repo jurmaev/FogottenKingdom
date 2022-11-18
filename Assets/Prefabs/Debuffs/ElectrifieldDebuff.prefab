@@ -49,6 +49,7 @@ MonoBehaviour:
   timeOfAction: 4
   repeatRate: 0.5
   target: {fileID: 0}
+  heightAboveHealthBar: 0
   damage: 6
   radius: 20
 --- !u!212 &3660618556541837143

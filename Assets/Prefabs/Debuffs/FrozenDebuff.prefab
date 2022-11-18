@@ -49,7 +49,6 @@ MonoBehaviour:
   timeOfAction: 0.8
   repeatRate: 0.1
   target: {fileID: 0}
-  heightAboveHealthBar: 0
   enemySpeedDuringEffect: 1
 --- !u!212 &1284275947201796006
 SpriteRenderer:

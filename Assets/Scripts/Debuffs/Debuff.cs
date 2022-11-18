@@ -16,17 +16,14 @@ public abstract class Debuff : MonoBehaviour
     protected float repeatRate;
 
     [SerializeField] protected Enemy target;
-
-    [SerializeField] protected float heightAboveHealthBar;
-
-
+    
     public void Activate(Enemy target)
     {
         this.target = target;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         StartCoroutine(nameof(AwakeDebuff));
         transform.position = target.GetHealthBarCoordinates() +
-                             new Vector3(0, heightAboveHealthBar + gameObject.GetComponent<SpriteRenderer>().size.y / 2,
-                                 0);
+                             new Vector3(0, gameObject.GetComponent<SpriteRenderer>().size.y / 2, 0);
     }
 
 
