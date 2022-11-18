@@ -631,10 +631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896fe2cd644c8cd4583dab2aab76e062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 10
-  currentHealth: 0
+  <MaxHealth>k__BackingField: 30
+  currentHealth: 30
   <Speed>k__BackingField: 3
   <Damage>k__BackingField: 1
-  imposedDebuff: {fileID: 0}
   healthBar: {fileID: 2002708036}
   playerTarget: {fileID: 0}

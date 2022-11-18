@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4842817818390002758}
   m_Layer: 0
   m_Name: FrozenDebuff
-  m_TagString: Untagged
+  m_TagString: Debuff
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: FrozenDebuff
-  timeOfAction: 3
+  timeOfAction: 0.8
   repeatRate: 0.1
   target: {fileID: 0}
-  enemySpeedDuringEffect: 3
+  enemySpeedDuringEffect: 1

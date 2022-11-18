@@ -68,23 +68,37 @@ public abstract class Enemy : MonoBehaviour
 
     private void ApplyDebuffFromMagic(Magic magic)
     {
-        if (transform.childCount != 0)
+        GameObject imposedDebuff;
+        if (TryGetImposedDebuff(out imposedDebuff))
         {
-            Debug.Log("Зашёл");
-            if (debuffController.TryMixDebuffs(transform.GetChild(0).gameObject, magic.SuperimposedDebuff,
+            if (debuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff,
                     out GameObject mixedDebuff))
             {
-                Debug.Log("Сочетание произошло");
-                Destroy(transform.GetChild(0).gameObject);
+                Destroy(imposedDebuff);
                 mixedDebuff.transform.SetParent(gameObject.transform);
                 mixedDebuff.GetComponent<Debuff>().Activate(this);
             }
         }
         else
         {
-            var imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
+            imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
             imposedDebuff.transform.SetParent(gameObject.transform);
             imposedDebuff.GetComponent<Debuff>().Activate(this);
         }
+    }
+
+    private bool TryGetImposedDebuff(out GameObject imposedDebuff)
+    {
+        foreach(Transform child in transform)
+        {
+            if (child.tag == "Debuff")
+            {
+                imposedDebuff = child.gameObject;
+                return true;
+            }
+        }
+        
+        imposedDebuff = null;
+        return false;
     }
 }
