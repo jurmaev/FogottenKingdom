@@ -33,7 +33,6 @@ public class MinimapRoom : MonoBehaviour
 
     private void PaintDoor(int x1, int y1, int x2, int y2, Tile paintTile)
     {
-        Debug.Log($"{x1} {y1} {x2} {y2}");
         for (var i = x1; i <= x2; i++)
         for (var j = y1; j <= y2; j++)
             floorTilemap.SetTile(new Vector3Int(i, j, 0), paintTile);
