@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float movementSpeed;
 
     [SerializeField] private GameObject currentMagic;
+    [SerializeField] private int currentMagicIndex;
     [SerializeField] private List<GameObject> availableMagic;
 
     [SerializeField] private float invincibleTime;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private void InitializeElements()
     {
         currentMagic = availableMagic[0];
+        currentMagicIndex = 0;
         playerRb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -74,11 +76,16 @@ public class PlayerController : MonoBehaviour
 
     private void SwitchCurrentMagic(bool isNextMagic)
     {
-        var currentMagicIndex =
-            availableMagic.FindIndex(magic => magic.GetType().ToString() == currentMagic.GetType().ToString());
-        currentMagic = isNextMagic
-            ? availableMagic[Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)]
-            : availableMagic[Mathf.Max(currentMagicIndex - 1, 0)];
+        if (isNextMagic)
+        {
+            currentMagicIndex = Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1);
+            currentMagic = availableMagic[currentMagicIndex];
+        }
+        else
+        {
+            currentMagicIndex = Mathf.Max(currentMagicIndex - 1, 0);
+            currentMagic = availableMagic[currentMagicIndex];
+        }
     }
 
     private void UpdateAnimation()

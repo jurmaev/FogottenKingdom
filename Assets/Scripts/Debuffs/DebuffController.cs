@@ -43,6 +43,12 @@ public class DebuffController : MonoBehaviour
             return true;
         }
 
+        if (firstDebuff.GetComponent<Debuff>().Equals(secondDebuff.GetComponent<Debuff>()))
+        {
+            mixDebuff = Instantiate(firstDebuff);
+            return true;
+        }
+
         if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().Name, secondDebuff.GetComponent<Debuff>().Name), out string newDebuffName1))
         {
             mixDebuff = GetDebuffByName(newDebuffName1);

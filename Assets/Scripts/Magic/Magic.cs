@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.UIElements;
 using UnityEngine;
 
 public abstract class Magic : MonoBehaviour
 {
-    [field: SerializeField] public float Speed { get; protected set; }
+    [field: SerializeField] public float StartSpeed { get; protected set; }
+    public float CurrentSpeed { get; protected set; }
     [field: SerializeField] public int Damage { get; protected set; }
     private Rigidbody2D magicRb;
     private DebuffController debuffController;
@@ -25,13 +27,18 @@ public abstract class Magic : MonoBehaviour
     void Start()
     {
         InitializeElements();
-        Move();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveForward();
     }
 
     protected virtual void InitializeElements()
     {
         magicRb = GetComponent<Rigidbody2D>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
+        CurrentSpeed = StartSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -44,9 +51,9 @@ public abstract class Magic : MonoBehaviour
             Destroy(gameObject);
     }
 
-    protected virtual void Move()
+    protected virtual void MoveForward()
     {
-        magicRb.AddForce(transform.up * Speed, ForceMode2D.Impulse);
+        magicRb.velocity = transform.up * CurrentSpeed;
     }
 
     protected virtual void OnCollisionWithMagic(GameObject otherMagic)

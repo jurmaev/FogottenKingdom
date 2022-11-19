@@ -80,7 +80,7 @@ public abstract class Enemy : MonoBehaviour
             if (debuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff,
                     out GameObject mixedDebuff))
             {
-                Destroy(imposedDebuff);
+                imposedDebuff.GetComponent<Debuff>().DeactivateEffect();
                 mixedDebuff.transform.SetParent(gameObject.transform);
                 mixedDebuff.GetComponent<Debuff>().Activate(this);
             }

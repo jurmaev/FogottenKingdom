@@ -11,9 +11,5 @@ public class ElectrifiedDebuff : Debuff
     {
         target.GetDamage(damage);
     }
-
-    protected override void DeactivateEffectOnEnemy()
-    {
-        Destroy(gameObject);
-    }
+    
 }
