@@ -87,9 +87,12 @@ public abstract class Enemy : MonoBehaviour
         }
         else
         {
-            imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
-            imposedDebuff.transform.SetParent(gameObject.transform);
-            imposedDebuff.GetComponent<Debuff>().Activate(this);
+            if (magic.SuperimposedDebuff != null)
+            {
+                imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
+                imposedDebuff.transform.SetParent(gameObject.transform);
+                imposedDebuff.GetComponent<Debuff>().Activate(this);
+            }
         }
     }
 
@@ -103,7 +106,6 @@ public abstract class Enemy : MonoBehaviour
                 return true;
             }
         }
-        
         imposedDebuff = null;
         return false;
     }

@@ -12,6 +12,8 @@ TagManager:
   - Obstacle
   - DebuffController
   - Enemy
+  - Debuff
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
