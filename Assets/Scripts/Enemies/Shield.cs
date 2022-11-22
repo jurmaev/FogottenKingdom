@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-    [SerializeField] private float reboundAngle = 45f;
     private CircleCollider2D collider;
 
     private void Start()

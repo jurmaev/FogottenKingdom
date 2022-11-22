@@ -22,16 +22,25 @@ public abstract class Magic : MonoBehaviour
             return null;
         }
     }
-
-
+    
     void Start()
     {
         InitializeElements();
     }
 
+    public virtual void Disappear()
+    {
+        Destroy(gameObject);
+    }
+
     private void FixedUpdate()
     {
         MoveForward();
+    }
+    
+    protected virtual void MoveForward()
+    {
+        magicRb.velocity = transform.up * CurrentSpeed;
     }
 
     protected virtual void InitializeElements()
@@ -48,28 +57,17 @@ public abstract class Magic : MonoBehaviour
         else if (col.gameObject.TryGetComponent(out Enemy enemy))
             OnCollisionWithEnemy(enemy);
         else if (col.gameObject.CompareTag("Obstacle") && !col.isTrigger)
-            Destroy(gameObject);
+            Disappear();
     }
 
-    protected virtual void MoveForward()
+    protected virtual void OnCollisionWithEnemy(Enemy enemy)
     {
-        magicRb.velocity = transform.up * CurrentSpeed;
+        Disappear();
     }
+
 
     protected virtual void OnCollisionWithMagic(GameObject otherMagic)
     {
-        GameObject anotherDebuff = otherMagic.GetComponent<Magic>().SuperimposedDebuff;
-        UpdateSuperimposedDebuff(anotherDebuff);
-    }
-
-    protected abstract void OnCollisionWithEnemy(Enemy enemy);
-
-    private void UpdateSuperimposedDebuff(GameObject anotherDebuff)
-    {
-        if (debuffController.TryMixDebuffs(SuperimposedDebuff, anotherDebuff, out GameObject mixedDebuff))
-        {
-            Destroy(SuperimposedDebuff);
-            mixedDebuff.transform.SetParent(gameObject.transform);
-        }
+        
     }
 }

@@ -5,8 +5,4 @@ using UnityEngine;
 public class IceShard : Magic
 {
     
-    protected override void OnCollisionWithEnemy(Enemy enemy)
-    {
-        Destroy(gameObject);
-    }
 }

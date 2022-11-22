@@ -26,8 +26,8 @@ public class DuplicateSphere : Magic
                 startDirection.y = startDirection.x * Mathf.Cos(startAngle) - startDirection.y * Mathf.Sin(startAngle);
             }
 
-            Destroy(otherMagic);
-            Destroy(gameObject);
+            otherMagic.GetComponent<Magic>().Disappear();
+            Disappear();
         }
     }
     
@@ -38,10 +38,5 @@ public class DuplicateSphere : Magic
             CurrentSpeed = 0;
         else
             CurrentSpeed -= speedReduction;
-    }
-
-    protected override void OnCollisionWithEnemy(Enemy enemy)
-    {
-        Destroy(gameObject);
     }
 }

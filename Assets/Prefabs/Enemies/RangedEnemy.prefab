@@ -105,7 +105,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 2
   <Damage>k__BackingField: 2
   healthBar: {fileID: 9170393166758187750}
-  minDistance: 3
+  minDistance: 6
   projectile: {fileID: 6941461319726342393, guid: ba3f9fff426397f42b23fa3e01d27400, type: 3}
   cooldown: 2
 --- !u!70 &7334075072790419239
