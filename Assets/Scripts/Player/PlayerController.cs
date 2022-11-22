@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
+    [SerializeField] private Slider healthBar;
+    [SerializeField] private Image fillImage;
 
     private Vector2 moveDirection;
     private Rigidbody2D playerRb;
@@ -109,8 +112,16 @@ public class PlayerController : MonoBehaviour
             currentHealth -= amountOfDamage;
             if (currentHealth <= 0)
                 Die();
+            UpdateHealthbar();
             StartCoroutine(nameof(BecomeInvincible));
         }
+    }
+
+    private void UpdateHealthbar()
+    {
+        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth/ maxHealth, 0.3f);
+        var healthColor = Color.Lerp(Color.red, Color.green, currentHealth / maxHealth);
+        fillImage.color = healthColor;
     }
 
     private IEnumerator BecomeInvincible()
