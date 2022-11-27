@@ -138,10 +138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 12
+  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 0
   <NumberOfDuplicates>k__BackingField: 8
   isDuplicatingNow: 0
   speedReduction: 0.1
+  exceptions:
+  - {fileID: 2942945379375696043}
+  - {fileID: 6973623158933146676, guid: 60230447134b5e94a95a9c3d62e4b106, type: 3}
 --- !u!95 &7555651500797157597
 Animator:
   serializedVersion: 4

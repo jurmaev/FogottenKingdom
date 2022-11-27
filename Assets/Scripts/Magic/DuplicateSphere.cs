@@ -7,12 +7,17 @@ public class DuplicateSphere : Magic
 {
     [field: SerializeField] public int NumberOfDuplicates { get; private set; }
     [SerializeField] private bool isDuplicatingNow;
-    [SerializeField][Tooltip("На сколько будет понижаться скорость каждый кадр")] private float speedReduction;
-    
+
+    [SerializeField] [Tooltip("На сколько будет понижаться скорость каждый кадр")]
+    private float speedReduction;
+
+    [SerializeField] [Tooltip("Магия, которая не будет копироваться")]
+    private List<Magic> exceptions;
+
 
     protected override void OnCollisionWithMagic(GameObject otherMagic)
     {
-        if (!otherMagic.TryGetComponent(out DuplicateSphere duplicateSphere) && !isDuplicatingNow)
+        if (CheckMagicForDuplication(otherMagic) && !isDuplicatingNow)
         {
             isDuplicatingNow = true;
             var angleBetweenDuplicates = 360.0f / NumberOfDuplicates;
@@ -30,7 +35,7 @@ public class DuplicateSphere : Magic
             Disappear();
         }
     }
-    
+
     protected override void MoveForward()
     {
         base.MoveForward();
@@ -38,5 +43,18 @@ public class DuplicateSphere : Magic
             CurrentSpeed = 0;
         else
             CurrentSpeed -= speedReduction;
+    }
+
+    private bool CheckMagicForDuplication(GameObject otherMagic)
+    {
+        if (otherMagic.TryGetComponent(out Magic someMagic))
+        {
+            string magicName = someMagic.GetType().Name;
+            return !exceptions.Exists(magic =>
+            {
+                return magic.GetType().Name == magicName;
+            });
+        }
+        return false;
     }
 }

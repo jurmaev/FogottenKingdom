@@ -46,11 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: ElectrifiedDebuff
-  timeOfAction: 4
-  repeatRate: 0.5
+  timeOfAction: 2
+  repeatRate: 0.8
   target: {fileID: 0}
-  heightAboveHealthBar: 0
-  damage: 6
+  damage: 0
   radius: 20
 --- !u!212 &3660618556541837143
 SpriteRenderer:

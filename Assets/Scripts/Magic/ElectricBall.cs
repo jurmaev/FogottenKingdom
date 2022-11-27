@@ -54,4 +54,9 @@ public class ElectricBall : Magic
         destroy.Invoke();
         base.Disappear();
     }
+    
+    protected override void OnCollisionWithObstacle()
+    {
+        CurrentSpeed = 0;
+    }
 }

@@ -8,8 +8,8 @@ using UnityEngine;
 public abstract class Magic : MonoBehaviour
 {
     [field: SerializeField] public float StartSpeed { get; protected set; }
-    public float CurrentSpeed { get; protected set; }
-    [field: SerializeField] public int Damage { get; protected set; }
+    [field: SerializeField] public float CurrentSpeed { get; protected set; }
+    [field: SerializeField] public float Damage { get; protected set; }
     private Rigidbody2D magicRb;
     private DebuffController debuffController;
 
@@ -17,8 +17,12 @@ public abstract class Magic : MonoBehaviour
     {
         get
         {
-            if (transform.childCount != 0)
-                return transform.GetChild(0).gameObject;
+            foreach(Transform child in transform)
+            {
+                if (child.tag == "Debuff")
+                    return child.gameObject;
+            }
+
             return null;
         }
     }
@@ -33,7 +37,7 @@ public abstract class Magic : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         MoveForward();
     }
@@ -57,7 +61,7 @@ public abstract class Magic : MonoBehaviour
         else if (col.gameObject.TryGetComponent(out Enemy enemy))
             OnCollisionWithEnemy(enemy);
         else if (col.gameObject.CompareTag("Obstacle") && !col.isTrigger)
-            Disappear();
+            OnCollisionWithObstacle();
     }
 
     protected virtual void OnCollisionWithEnemy(Enemy enemy)
@@ -65,7 +69,11 @@ public abstract class Magic : MonoBehaviour
         Disappear();
     }
 
-
+    protected virtual void OnCollisionWithObstacle()
+    {
+        Disappear();
+    }
+    
     protected virtual void OnCollisionWithMagic(GameObject otherMagic)
     {
         
