@@ -8,8 +8,8 @@ using UnityEngine.PlayerLoop;
 public class ElectricBall : Magic
 {
     public UnityEvent destroy;
-    private static GameObject lastElectricBall;
-    private GameObject previousElectricBall;
+    private static List<GameObject> allElectricBalls;
+    public GameObject electricChainToStart;
     [SerializeField] protected GameObject electricalChainPrefab;
 
     [SerializeField] [Tooltip("Через сколько электрический шар исчезнет")]
@@ -21,10 +21,9 @@ public class ElectricBall : Magic
     protected override void InitializeElements()
     {
         base.InitializeElements();
+        allElectricBalls ??= new List<GameObject>();
         SpawnElectricalChain();
-        if (lastElectricBall != null)
-            previousElectricBall = lastElectricBall;
-        lastElectricBall = this.gameObject;
+        allElectricBalls.Add(gameObject);
         Invoke(nameof(Disappear), lifeTime);
     }
 
@@ -40,17 +39,27 @@ public class ElectricBall : Magic
     
     private void SpawnElectricalChain()
     {
-        if (lastElectricBall != null)
+        if (allElectricBalls.Count >= 2)
+        {
+            electricChainToStart = Instantiate(electricalChainPrefab);
+            electricChainToStart.GetComponent<ElectricalChain>().SetPosition(gameObject, allElectricBalls[0]);
+            
+            GameObject lastElectricBall = allElectricBalls[^1];
+            GameObject electricalChainToEnd = Instantiate(electricalChainPrefab);
+            electricalChainToEnd.GetComponent<ElectricalChain>().SetPosition(gameObject, lastElectricBall);
+            Destroy(lastElectricBall.GetComponent<ElectricBall>().electricChainToStart);
+        }
+
+        if (allElectricBalls.Count == 1)
         {
             GameObject newElectricalChain = Instantiate(electricalChainPrefab);
-            newElectricalChain.GetComponent<ElectricalChain>().SetPosition(gameObject, lastElectricBall);
+            newElectricalChain.GetComponent<ElectricalChain>().SetPosition(gameObject, allElectricBalls[0]);
         }
     }
 
     public override void Disappear()
     {
-        if (lastElectricBall == gameObject)
-            lastElectricBall = previousElectricBall;
+        allElectricBalls.Remove(gameObject);
         destroy.Invoke();
         base.Disappear();
     }

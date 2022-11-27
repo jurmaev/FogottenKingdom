@@ -57,4 +57,9 @@ public class DuplicateSphere : Magic
         }
         return false;
     }
+
+    protected override void OnCollisionWithObstacle()
+    {
+        speedReduction = 0;
+    }
 }
