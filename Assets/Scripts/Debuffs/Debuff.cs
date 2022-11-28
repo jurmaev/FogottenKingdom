@@ -35,6 +35,7 @@ public abstract class Debuff : MonoBehaviour
 
     public virtual void DeactivateEffect()
     {
+        Debug.Log("Сукааааааааааааа");
         Destroy(gameObject);
     }
 
