@@ -7,6 +7,7 @@ public class DuplicateSphere : Magic
 {
     [field: SerializeField] public int NumberOfDuplicates { get; private set; }
     [SerializeField] private bool isDuplicatingNow;
+    [SerializeField][Tooltip("На сколько будет понижаться скорость каждый кадр")] private float speedReduction;
     
 
     protected override void OnCollisionWithMagic(GameObject otherMagic)
@@ -28,6 +29,15 @@ public class DuplicateSphere : Magic
             Destroy(otherMagic);
             Destroy(gameObject);
         }
+    }
+    
+    protected override void MoveForward()
+    {
+        base.MoveForward();
+        if (CurrentSpeed - speedReduction < 0)
+            CurrentSpeed = 0;
+        else
+            CurrentSpeed -= speedReduction;
     }
 
     protected override void OnCollisionWithEnemy(Enemy enemy)

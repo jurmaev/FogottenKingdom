@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb24401628daa441bdc71f151530f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 10
+  <StartSpeed>k__BackingField: 6
   <Damage>k__BackingField: 1
 --- !u!58 &2552156122598068887
 CircleCollider2D:
@@ -137,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0.12}
+  m_Offset: {x: -0.010000002, y: 0.09699285}
   serializedVersion: 2
-  m_Radius: 0.16422805
+  m_Radius: 0.18723519
 --- !u!95 &1044672590
 Animator:
   serializedVersion: 4
@@ -211,9 +211,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4359192295178751617, guid: 174026d490035944682bff21ab221f4f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6459054686249385910, guid: 174026d490035944682bff21ab221f4f, type: 3}
       propertyPath: m_Name
       value: WetDebuff
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459054686249385910, guid: 174026d490035944682bff21ab221f4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 174026d490035944682bff21ab221f4f, type: 3}
