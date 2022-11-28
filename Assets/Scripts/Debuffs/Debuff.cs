@@ -29,7 +29,6 @@ public abstract class Debuff : MonoBehaviour
 
     public virtual void DeactivateEffect()
     {
-        Debug.Log("Сукааааааааааааа");
         Destroy(gameObject);
     }
 
@@ -39,7 +38,7 @@ public abstract class Debuff : MonoBehaviour
         InvokeRepeating(nameof(ActivateEffectOnEnemy), 0, repeatRate);
         yield return new WaitForSeconds(timeOfAction);
         CancelInvoke(nameof(ActivateEffectOnEnemy));
-        DeactivateEffectOnEnemy();
+        DeactivateEffect();
         Destroy(gameObject);
     }
 

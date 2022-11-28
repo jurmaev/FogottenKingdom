@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a042d8e3b240ff4b855bfd97060b72d
-      internalID: 308842020
+      spriteID: 5f685e43f7ea8664eb3f11f00749f2dc
+      internalID: -2075790696
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a59ac30c99fcb784a8d4fcef58efd711
-      internalID: -36729404
+      spriteID: b7458e42f2cc69d40968e0a4a1ec8b78
+      internalID: 1105964762
       vertices: []
       indices: 
       edges: []
@@ -185,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ba82a6bb66a0db478be8c7080fc632e
-      internalID: 1105399536
+      spriteID: 700943564c1c976419cdc796e478f678
+      internalID: 581437396
       vertices: []
       indices: 
       edges: []
@@ -206,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df341970fc8dea346b2bdc9375b9283b
-      internalID: 169103455
+      spriteID: 33c06f27eaa4620458ee986121f9aecd
+      internalID: -1369675022
       vertices: []
       indices: 
       edges: []
@@ -223,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IceShard_2: 1105399536
-      IceShard_0: 308842020
-      IceShard_1: -36729404
-      IceShard_3: 169103455
+      IceShard_2: 581437396
+      IceShard_0: -2075790696
+      IceShard_1: 1105964762
+      IceShard_3: -1369675022
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
