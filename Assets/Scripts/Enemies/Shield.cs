@@ -22,12 +22,12 @@ public class Shield : MonoBehaviour
         collider.enabled = !collider.enabled;
     }
 
-    // private void OnTriggerEnter2D(Collider2D col)
-    // {
-    //     if (col.gameObject.CompareTag("Magic"))
-    //     {
-    //         var magicRotation = col.gameObject.transform.rotation;
-    //         col.gameObject.transform.rotation = Quaternion.Euler(magicRotation.x, magicRotation.y + 180, magicRotation.z);
-    //     }
-    // }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Magic"))
+        {
+            var magicTransform = col.gameObject.transform;
+            // magicTransform.rotation = Quaternion.Euler(0, 0, 180f - 2 *);
+        }
+    }
 }

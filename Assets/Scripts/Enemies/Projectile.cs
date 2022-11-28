@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [field:SerializeField] public float Damage { get; protected set; }
+    [SerializeField] protected float speed;
     private Rigidbody2D rb;
 
     private void Start()
@@ -17,6 +18,8 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Obstacle") && !col.isTrigger)
+            Destroy(gameObject);
+        if (col.gameObject.CompareTag("Player"))
             Destroy(gameObject);
     }
 }
