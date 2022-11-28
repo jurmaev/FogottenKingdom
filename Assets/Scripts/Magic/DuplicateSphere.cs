@@ -60,6 +60,7 @@ public class DuplicateSphere : Magic
 
     protected override void OnCollisionWithObstacle()
     {
+        CurrentSpeed = 0;
         speedReduction = 0;
     }
 }

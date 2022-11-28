@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float movementSpeed;
 
     [SerializeField] private GameObject currentMagic;
+    [SerializeField] private int currentMagicIndex;
     [SerializeField] private List<GameObject> availableMagic;
 
     [SerializeField] private float invincibleTime;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private void InitializeElements()
     {
         currentMagic = availableMagic[0];
+        currentMagicIndex = 0;
         playerRb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -56,8 +58,6 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.TryGetComponent(out Enemy enemy))
             GetDamage(enemy.Damage);
-      
-           
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,11 +88,11 @@ public class PlayerController : MonoBehaviour
 
     private void SwitchCurrentMagic(bool isNextMagic)
     {
-        var currentMagicIndex =
-            availableMagic.FindIndex(magic => magic.GetType().ToString() == currentMagic.GetType().ToString());
-        currentMagic = isNextMagic
-            ? availableMagic[Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)]
-            : availableMagic[Mathf.Max(currentMagicIndex - 1, 0)];
+        currentMagicIndex = isNextMagic
+            ? Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)
+            : Mathf.Max(currentMagicIndex - 1, 0);
+
+        currentMagic = availableMagic[currentMagicIndex];
     }
 
     private void UpdateAnimation()
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateHealthbar()
     {
-        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth/ maxHealth, 0.3f);
+        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth / maxHealth, 0.3f);
         var healthColor = Color.Lerp(Color.red, Color.green, currentHealth / maxHealth);
         fillImage.color = healthColor;
     }
