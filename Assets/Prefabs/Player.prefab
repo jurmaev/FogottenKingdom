@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5cdddee1473e5054e9a4715699e38f70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 323e4a6b4993175468518b61d9f87f59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -271,6 +271,8 @@ MonoBehaviour:
   - {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
   invincibleTime: 0.5
   isInvincible: 0
+  healthBar: {fileID: 0}
+  fillImage: {fileID: 0}
 --- !u!50 &9047809464460413209
 Rigidbody2D:
   serializedVersion: 4
