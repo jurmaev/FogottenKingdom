@@ -22,6 +22,15 @@ public abstract class Debuff : MonoBehaviour
     {
         this.target = target;
         StartCoroutine(nameof(AwakeDebuff));
+
+        transform.position = target.GetHealthBarCoordinates() +
+                             new Vector3(0, gameObject.GetComponent<SpriteRenderer>().size.y / 2, 0);
+    }
+
+    public virtual void DeactivateEffect()
+    {
+        Debug.Log("Сукааааааааааааа");
+        Destroy(gameObject);
     }
 
 
@@ -35,5 +44,4 @@ public abstract class Debuff : MonoBehaviour
     }
 
     protected abstract void ActivateEffectOnEnemy();
-    protected abstract void DeactivateEffectOnEnemy();
 }
