@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6281553448502120012}
   - component: {fileID: 1956790036215062326}
   m_Layer: 0
-  m_Name: Chilleddebuff
+  m_Name: ChilledDebuff
   m_TagString: Debuff
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

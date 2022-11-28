@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7838607935786212140}
   - component: {fileID: 3660618556541837143}
   m_Layer: 0
-  m_Name: ElectrifieldDebuff
+  m_Name: ElectrifiedDebuff
   m_TagString: Debuff
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
