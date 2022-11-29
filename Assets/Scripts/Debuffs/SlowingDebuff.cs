@@ -17,9 +17,10 @@ public class SlowingDebuff : Debuff
         target.SetSpeed(enemySpeedDuringEffect);
     }
 
-    protected override void DeactivateEffectOnEnemy()
+    public override void DeactivateEffect()
     {
         if(target != null)
             target.SetSpeed(startEnemySpedd);
+        base.DeactivateEffect();
     }
 }

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
-  currentHealth: 30
+  currentHealth: 100
   <Speed>k__BackingField: 2
   <Damage>k__BackingField: 0
   healthBar: {fileID: 145495741401307235}
