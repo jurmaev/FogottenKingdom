@@ -49,7 +49,7 @@ MonoBehaviour:
   timeOfAction: 3
   repeatRate: 0.1
   target: {fileID: 0}
-  enemySpeedDuringEffect: 3
+  enemySpeedDuringEffect: 0.5
 --- !u!212 &-2110197785158684679
 SpriteRenderer:
   m_ObjectHideFlags: 0

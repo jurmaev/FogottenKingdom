@@ -23,7 +23,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void GetDamage(float amountOfDamage)
     {
         currentHealth -= amountOfDamage;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
             Die();
         healthBar.value = GetSliderFill();
     }
@@ -36,7 +36,7 @@ public abstract class Enemy : MonoBehaviour
     {
         return healthBar.transform.position;
     }
-    
+
     public virtual void SetSpeed(float speed)
     {
         Speed = speed;
@@ -46,7 +46,7 @@ public abstract class Enemy : MonoBehaviour
     {
         Damage = damage;
     }
-    
+
     private float GetSliderFill()
     {
         return currentHealth / MaxHealth;
@@ -70,35 +70,30 @@ public abstract class Enemy : MonoBehaviour
         enemyRigidbody = GetComponent<Rigidbody2D>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
     }
-    
+
 
     private void ApplyDebuffFromMagic(Magic magic)
     {
-        GameObject imposedDebuff;
-        if (TryGetImposedDebuff(out imposedDebuff))
+        if (TryGetImposedDebuff(out GameObject imposedDebuff) && debuffController.TryMixDebuffs(imposedDebuff,
+                magic.SuperimposedDebuff,
+                out GameObject mixedDebuff))
         {
-            if (debuffController.TryMixDebuffs(imposedDebuff, magic.SuperimposedDebuff,
-                    out GameObject mixedDebuff))
-            {
-                imposedDebuff.GetComponent<Debuff>().DeactivateEffect();
-                mixedDebuff.transform.SetParent(gameObject.transform);
-                mixedDebuff.GetComponent<Debuff>().Activate(this);
-            }
+            imposedDebuff.GetComponent<Debuff>().DeactivateEffect();
+            mixedDebuff.transform.SetParent(gameObject.transform);
+            mixedDebuff.GetComponent<Debuff>().Activate(this);
         }
-        else
+        
+        else if (magic.SuperimposedDebuff != null)
         {
-            if (magic.SuperimposedDebuff != null)
-            {
-                imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
-                imposedDebuff.transform.SetParent(gameObject.transform);
-                imposedDebuff.GetComponent<Debuff>().Activate(this);
-            }
+            imposedDebuff = Instantiate(magic.SuperimposedDebuff, transform.position, Quaternion.identity);
+            imposedDebuff.transform.SetParent(gameObject.transform);
+            imposedDebuff.GetComponent<Debuff>().Activate(this);
         }
     }
 
     private bool TryGetImposedDebuff(out GameObject imposedDebuff)
     {
-        foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
             if (child.tag == "Debuff")
             {
@@ -109,7 +104,7 @@ public abstract class Enemy : MonoBehaviour
         imposedDebuff = null;
         return false;
     }
-    
+
     protected virtual void Die()
     {
         Destroy(gameObject);

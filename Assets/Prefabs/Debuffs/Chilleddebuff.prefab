@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: ChilledDebuff
-  timeOfAction: 5
+  timeOfAction: 3
   repeatRate: 1
   target: {fileID: 0}
-  enemySpeedDuringEffect: 6
+  enemySpeedDuringEffect: 1.5
 --- !u!212 &1956790036215062326
 SpriteRenderer:
   m_ObjectHideFlags: 0
