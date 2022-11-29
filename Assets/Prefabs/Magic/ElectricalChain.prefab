@@ -109,7 +109,7 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6973623159278991525}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 2
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 0
+  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 0.001
 --- !u!68 &79225697043237162
 EdgeCollider2D:
