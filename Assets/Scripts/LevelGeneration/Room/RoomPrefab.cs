@@ -25,6 +25,8 @@ public class RoomPrefab : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            var obstaclesPrefab = GetComponentInChildren<ObstaclesPrefab>();
+            if(obstaclesPrefab != null) obstaclesPrefab.SpawnEnemies();
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
         }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1569208114015141590}
   - component: {fileID: 1569208114015141592}
   - component: {fileID: 1569208114015141593}
+  - component: {fileID: 490348456}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MonoBehaviour:
   - {fileID: 2056552131251745919, guid: df253d6f500dd4e4086a3bf564ffd2d6, type: 3}
   - {fileID: 5272451957068596369, guid: 61b332c7d1aafd44aa847969662a15fd, type: 3}
   MinimapRoom: {fileID: 1977428006616039865, guid: b10a14898521a29458e433699e6fbb90, type: 3}
+--- !u!114 &490348456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569208114015141591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013e7baa70d163e469d410824b1f7f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 2882579770781969748, guid: 3c68a0cb174d6664c992e17fc797cc47, type: 3}
