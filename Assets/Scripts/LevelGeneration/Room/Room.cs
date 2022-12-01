@@ -33,17 +33,17 @@ public class Room
         return new[] {DoorBottom, DoorLeft, DoorRight, DoorTop}.Count(door => door);
     }
 
-    public void SetDoorPositions()
-    {
-        var doors = "";
-        if (DoorTop)
-            doors += "T";
-        if (DoorRight)
-            doors += "R";
-        if (DoorBottom)
-            doors += "B";
-        if (DoorLeft)
-            doors += "L";
-        DoorPositions = doors;
-    }
+    // public void SetDoorPositions()
+    // {
+    //     var doors = "";
+    //     if (DoorTop)
+    //         doors += "T";
+    //     if (DoorRight)
+    //         doors += "R";
+    //     if (DoorBottom)
+    //         doors += "B";
+    //     if (DoorLeft)
+    //         doors += "L";
+    //     DoorPositions = doors;
+    // }
 }

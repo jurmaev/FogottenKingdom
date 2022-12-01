@@ -7,16 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private Animator crossfadeTransition;
     private bool isPaused;
 
     private void Update()
     {
+        EventManager.OnPlayCrossfade.AddListener(PlayCrossfade);
         if (pausePanel != null && Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
-                PauseGame();
-            else
-                ContinueGame();
+            if (!isPaused) PauseGame();
+            else ContinueGame();
         }
     }
 
@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         isPaused = true;
+    }
+
+    private void PlayCrossfade()
+    {
+        crossfadeTransition.SetTrigger("start");
     }
 
     public void ContinueGame()
