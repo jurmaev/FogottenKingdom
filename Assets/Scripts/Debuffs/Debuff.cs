@@ -45,7 +45,6 @@ public abstract class Debuff : MonoBehaviour
         yield return new WaitForSeconds(timeOfAction);
         CancelInvoke(nameof(ActivateEffectOnEnemy));
         DeactivateEffect();
-        Destroy(gameObject);
     }
 
     protected abstract void ActivateEffectOnEnemy();

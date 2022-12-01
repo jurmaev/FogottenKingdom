@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5cdddee1473e5054e9a4715699e38f70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 4002006401481069904}
   - component: {fileID: 7118241604197896150}
   - component: {fileID: 4026313679623478104}
+  - component: {fileID: 5604568485528212625}
   - component: {fileID: 9047809464460413209}
   - component: {fileID: 341353259}
   m_Layer: 0
@@ -210,7 +211,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 323e4a6b4993175468518b61d9f87f59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -266,6 +267,7 @@ MonoBehaviour:
   currentHealth: 30
   movementSpeed: 5
   currentMagic: {fileID: 0}
+  currentMagicIndex: 0
   availableMagic:
   - {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
   - {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
@@ -273,6 +275,18 @@ MonoBehaviour:
   isInvincible: 0
   healthBar: {fileID: 0}
   fillImage: {fileID: 0}
+--- !u!114 &5604568485528212625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002006401481069905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46cb480dd0f6b142a0877fdd0799c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &9047809464460413209
 Rigidbody2D:
   serializedVersion: 4

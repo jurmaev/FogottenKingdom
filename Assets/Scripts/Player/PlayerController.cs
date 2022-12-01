@@ -138,9 +138,17 @@ public class PlayerController : MonoBehaviour
     private IEnumerator BecomeInvincible()
     {
         isInvincible = true;
+        Blink();
         yield return new WaitForSeconds(invincibleTime);
         isInvincible = false;
     }
+
+    private void Blink()
+    {
+        ColorController colorController = GetComponent<ColorController>();
+        colorController.MakeBlink(gameObject, 160, invincibleTime, 0.2f);
+    }
+    
 
     private void Die()
     {

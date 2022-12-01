@@ -15,6 +15,8 @@ public class DebuffController : MonoBehaviour
         debuffFormulas = new Dictionary<(string, string), string>()
         {
             {("WetDebuff", "ChilledDebuff"), "FrozenDebuff"},
+            {("WetDebuff", "FrozenDebuff"), "FrozenDebuff"},
+            {("ChilledDebuff", "FrozenDebuff"), "FrozenDebuff"},
             {("WetDebuff", "ElectrifiedDebuff"), "ElectrifiedDebuff"}
         };
     }

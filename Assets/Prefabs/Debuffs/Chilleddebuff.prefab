@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6281553448502120012}
   - component: {fileID: 1956790036215062326}
   m_Layer: 0
-  m_Name: ChilledDebuff
+  m_Name: Chilleddebuff
   m_TagString: Debuff
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   timeOfAction: 3
   repeatRate: 1
   target: {fileID: 0}
-  enemySpeedDuringEffect: 1.5
+  enemySpeedDuring: 60
 --- !u!212 &1956790036215062326
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class SlowingDebuff : Debuff
 {
-    [SerializeField] [Tooltip("Скорость противника во время дебаффа")] private float enemySpeedDuringEffect;
-    private float startEnemySpedd;
+    [SerializeField] [Range(0,100)] [Tooltip("Какую скорость будет иметь противник в процентах")] private float enemySpeedDuring;
+    private float startEnemySpeed;
     protected override IEnumerator AwakeDebuff()
     {
-        startEnemySpedd = target.Speed;
+        startEnemySpeed = target.Speed;
         return base.AwakeDebuff();
     }
 
     protected override void ActivateEffectOnEnemy()
     {
-        target.SetSpeed(enemySpeedDuringEffect);
+        target.SetSpeed(startEnemySpeed * enemySpeedDuring / 100);
     }
 
     public override void DeactivateEffect()
     {
         if(target != null)
-            target.SetSpeed(startEnemySpedd);
+            target.SetSpeed(startEnemySpeed);
         base.DeactivateEffect();
     }
 }

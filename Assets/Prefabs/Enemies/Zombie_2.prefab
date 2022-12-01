@@ -124,7 +124,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 100
   currentHealth: 100
   <Speed>k__BackingField: 2
-  <Damage>k__BackingField: 0
+  <Damage>k__BackingField: 3
   healthBar: {fileID: 145495741401307235}
   playerTarget: {fileID: 0}
 --- !u!61 &1765690394548443697
