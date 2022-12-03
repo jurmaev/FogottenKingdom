@@ -18,10 +18,8 @@ public class Zombie : Enemy
 
     private void Update()
     {
-        if (playerTarget != null)
-        {
-            var direction = (playerTarget.transform.position - transform.position).normalized;
-            enemyRigidbody.velocity = new Vector2(direction.x, direction.y) * Speed;
-        }
+        // Debug.Log("Текущее здоровье:" + currentHealth);
+        var direction = (playerTarget.transform.position - transform.position).normalized;
+        enemyRigidbody.velocity = new Vector2(direction.x, direction.y) * Speed;
     }
 }

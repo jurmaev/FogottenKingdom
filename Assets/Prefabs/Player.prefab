@@ -162,9 +162,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4002006401481069905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16574758, y: -0.7120245, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 501425185200938055}
   - {fileID: 7275965097934566232}
@@ -237,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011645786, y: -0.079624}
+  m_Offset: {x: -0.011645794, y: -0.34178108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -248,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36621922, y: 0.71644676}
+  m_Size: {x: 0.36621922, y: 0.19213256}
   m_EdgeRadius: 0
 --- !u!114 &4026313679623478104
 MonoBehaviour:
@@ -269,8 +269,11 @@ MonoBehaviour:
   currentMagic: {fileID: 0}
   currentMagicIndex: 0
   availableMagic:
+  - {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
   - {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
   - {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
+  - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
+  - {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
   invincibleTime: 0.5
   isInvincible: 0
   healthBar: {fileID: 0}

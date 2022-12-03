@@ -10,10 +10,13 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform minimapRoot;
     [SerializeField] private Vector2 worldSize; // половина размеров
     [SerializeField] private int numberOfRooms;
+    [SerializeField] private GameObject roomPrefab;
+    [SerializeField] private GameObject minimapRoom;
     private Room[,] rooms;
     private List<Vector2> takenPositions;
     private int gridSizeX, gridSizeY;
-    private RoomSelector roomSelector;
+    // private RoomSelector roomSelector;
+    private ObstaclesSelector obstaclesSelector;
     private List<Room> deadEnds;
 
     private void GenerateRooms()
@@ -27,7 +30,8 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        roomSelector = GetComponent<RoomSelector>();
+        // roomSelector = GetComponent<RoomSelector>();
+        obstaclesSelector = GetComponent<ObstaclesSelector>();
         if (numberOfRooms >= worldSize.x * 2 * worldSize.y * 2)
             numberOfRooms = Mathf.RoundToInt(worldSize.x * 2 * worldSize.y * 2);
         gridSizeX = Mathf.RoundToInt(worldSize.x);
@@ -104,17 +108,22 @@ public class LevelGenerator : MonoBehaviour
             drawPos.x *= Room.RoomSize.x;
             drawPos.y *= Room.RoomSize.y;
 
-            var selector = roomSelector;
-            room.SetDoorPositions();
-            var newRoom = Instantiate(selector.PickRoom(room), drawPos, quaternion.identity);
+            // room.SetDoorPositions();
+            var newRoom = Instantiate(roomPrefab, drawPos, quaternion.identity);
             var roomStats = newRoom.GetComponent<RoomPrefab>();
             roomStats.Room = room;
             newRoom.transform.parent = mapRoot;
 
+            if (roomStats.Room.Type == Room.RoomType.NormalRoom)
+            {
+                var obstacles = Instantiate(obstaclesSelector.PickObstacles(), drawPos, quaternion.identity);
+                obstacles.transform.parent = newRoom.transform;
+            }
+            
             var minimapDrawPos = room.GridPos;
             minimapDrawPos.x *= Room.MinimapRoomSize.x + 2;
             minimapDrawPos.y *= Room.MinimapRoomSize.y + 2;
-            var newMinimapRoom = Instantiate(selector.MinimapRoom, minimapDrawPos, quaternion.identity);
+            var newMinimapRoom = Instantiate(minimapRoom, minimapDrawPos, quaternion.identity);
             var minimapRoomStats = newMinimapRoom.GetComponent<MinimapRoom>();
             minimapRoomStats.Room = room;
             newMinimapRoom.transform.parent = minimapRoot;

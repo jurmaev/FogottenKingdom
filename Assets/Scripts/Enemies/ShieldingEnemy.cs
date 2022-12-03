@@ -18,7 +18,7 @@ public class ShieldingEnemy : Enemy
         lineRenderer = GetComponentInChildren<LineRenderer>();
         shield.SetShieldRadius(shieldRadius + lineRenderer.widthMultiplier / 2);
         lineRenderer.enabled = false;
-        lineRenderer.SetVertexCount (segments + 1);
+        lineRenderer.positionCount = segments + 1;
         lineRenderer.useWorldSpace = false;
         SetShieldLine();
         InvokeRepeating("ToggleShield", 0, shieldCooldown);
