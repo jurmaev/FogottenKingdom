@@ -7,7 +7,7 @@ using UnityEngine.PlayerLoop;
 
 public abstract class Debuff : MonoBehaviour
 {
-    [field: SerializeField] public string Name { get; protected set; }
+    [field: SerializeField] public string DebuffName { get; protected set; }
 
     [SerializeField] [Tooltip("Время действия дебаффа")]
     protected float timeOfAction;

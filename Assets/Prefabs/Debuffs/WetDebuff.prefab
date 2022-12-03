@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82292424d61aec44e96a775054502cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: WetDebuff
+  <DebuffName>k__BackingField: WetDebuff
   timeOfAction: 6
   repeatRate: 2
   target: {fileID: 0}

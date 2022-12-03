@@ -355,7 +355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -81.8569, y: -11.4761}
+  m_AnchoredPosition: {x: -81.8569, y: -11.476099}
   m_SizeDelta: {x: 37.016, y: -22.9524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298931345
@@ -804,21 +804,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 445773662}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
+      propertyPath: invincibleTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.size
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[0]
       value: 
-      objectReference: {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
+      objectReference: {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[1]
       value: 
-      objectReference: {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
+      objectReference: {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[2]
       value: 
-      objectReference: {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
+      objectReference: {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: availableMagic.Array.data[3]
       value: 
@@ -1388,7 +1392,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1036357396}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1396,7 +1400,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 846574653
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1859745057

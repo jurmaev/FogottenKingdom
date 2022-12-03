@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac59d9c8722a584d8e62abb1801c10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: ElectrifiedDebuff
+  <DebuffName>k__BackingField: ElectrifiedDebuff
   timeOfAction: 2
   repeatRate: 0.8
   target: {fileID: 0}

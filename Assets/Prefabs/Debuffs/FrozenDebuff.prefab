@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e6878aeafdaff449d6602cce4094d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: FrozenDebuff
+  <DebuffName>k__BackingField: FrozenDebuff
   timeOfAction: 3
   repeatRate: 0.1
   target: {fileID: 0}

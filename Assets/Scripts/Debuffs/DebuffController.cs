@@ -23,7 +23,7 @@ public class DebuffController : MonoBehaviour
 
     /// <summary>
     /// Если переданные дебаффы можно соединить, то возращает новый дебафф; если один из дебаффов null, то возвращает тот, что не null;
-    /// если переданные дебаффы не null и нельзя соединить, то возращает null
+    /// если переданные дебаффы не null и их нельзя соединить, то возращает null
     /// </summary>
     public bool TryMixDebuffs(GameObject firstDebuff, GameObject secondDebuff, out GameObject mixDebuff)
     {
@@ -44,15 +44,20 @@ public class DebuffController : MonoBehaviour
             mixDebuff = Instantiate(secondDebuff);
             return true;
         }
-        Debug.Log(firstDebuff.GetComponent<Debuff>().Name);
 
-        if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().Name, secondDebuff.GetComponent<Debuff>().Name), out string newDebuffName1))
+        if (firstDebuff.GetComponent<Debuff>().DebuffName == secondDebuff.GetComponent<Debuff>().DebuffName)
+        {
+            mixDebuff = Instantiate(firstDebuff);
+            return true;
+        }
+        
+        if (debuffFormulas.TryGetValue((firstDebuff.GetComponent<Debuff>().DebuffName, secondDebuff.GetComponent<Debuff>().DebuffName), out string newDebuffName1))
         {
             mixDebuff = GetDebuffByName(newDebuffName1);
             return true;
         }
 
-        if (debuffFormulas.TryGetValue((secondDebuff.GetComponent<Debuff>().Name, firstDebuff.GetComponent<Debuff>().Name), out string newDebuffName2))
+        if (debuffFormulas.TryGetValue((secondDebuff.GetComponent<Debuff>().DebuffName, firstDebuff.GetComponent<Debuff>().DebuffName), out string newDebuffName2))
         {
             mixDebuff = GetDebuffByName(newDebuffName2);
             return true;
