@@ -9,7 +9,7 @@ public abstract class Magic : MonoBehaviour
 {
     [field: SerializeField] public float StartSpeed { get; protected set; }
     protected float currentSpeed;
-    [field: SerializeField] public float Damage { get; protected set; }
+    [field: SerializeField] public float Damage { get;  set; }
     [field: SerializeField] public float CooldownTime { get; protected set; }
     public bool IsCooldown;
     private Rigidbody2D magicRb;
@@ -29,6 +29,7 @@ public abstract class Magic : MonoBehaviour
         }
     }
     
+
     void Start()
     {
         InitializeElements();

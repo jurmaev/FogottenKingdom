@@ -59,6 +59,7 @@ public class MagicWand : MonoBehaviour
             StartCoroutine(currentMagic.GetComponent<Magic>().StartCountdown());
             EventManager.SendMagicStartCooldown(currentMagicIndex,
                 currentMagic.GetComponent<Magic>().CooldownTime);
+            currentMagic.GetComponent<Magic>().Damage = 100;
         }
     }
 

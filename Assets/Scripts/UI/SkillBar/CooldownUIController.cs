@@ -20,7 +20,7 @@ public class CooldownUIController : MonoBehaviour
     {
         if (isCooldown)
         {
-            if(Math.Abs(cooldownImage.fillAmount - 1f) > 4.94065645841247E-324)
+            if(cooldownImage.fillAmount == 0)
                 cooldownImage.fillAmount = 1;
             cooldownImage.fillAmount -= 1 / cooldownTime * Time.deltaTime;
             if (cooldownImage.fillAmount <= 0)
