@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject currentMagic;
     [SerializeField] private int currentMagicIndex;
-    [SerializeField] private List<GameObject> availableMagic;
+    [field: SerializeField] public List<GameObject> availableMagic { get; protected set; }
 
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         ColorController colorController = GetComponent<ColorController>();
         colorController.MakeBlink(gameObject, 160, invincibleTime, 0.2f);
     }
-    
+
 
     private void Die()
     {
