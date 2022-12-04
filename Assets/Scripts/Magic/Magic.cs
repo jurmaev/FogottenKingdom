@@ -61,6 +61,7 @@ public abstract class Magic : MonoBehaviour
         magicRb = GetComponent<Rigidbody2D>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
         currentSpeed = StartSpeed;
+        IsCooldown = false;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

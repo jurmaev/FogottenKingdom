@@ -17,10 +17,12 @@ public class FrameController : MonoBehaviour
                 frameImage.GetComponent<Image>().color = new Color(1, 1, 1);
         }
     }
-
+    
     private bool isActive;
     [SerializeField] private GameObject skillImagePrefab;
     [SerializeField] private GameObject frameImage;
+    [field: SerializeField] public CooldownUIController Cooldown { get; private set; }
+
 
 
     public void SetSkillImage(SpriteRenderer skillSprite)

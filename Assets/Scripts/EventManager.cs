@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +8,7 @@ public class EventManager : MonoBehaviour
     public static UnityEvent<Vector2> OnActiveRoomChanged = new UnityEvent<Vector2>();
     public static UnityEvent OnPlayCrossfade = new UnityEvent();
     public static UnityEvent<int> OnChangeMagic = new UnityEvent<int>();
+    public static UnityEvent<int, float> OnMagicStartCooldown = new UnityEvent<int, float>();
 
     public static void SendCameraPosChanged(Vector2 newGridPos)
     {
@@ -26,5 +28,10 @@ public class EventManager : MonoBehaviour
     public static void SendChangeMagic(int magicNumber)
     {
         OnChangeMagic.Invoke(magicNumber);
+    }
+
+    public static void SendMagicStartCooldown(int magicNumber, float magicCooldownTime)
+    {
+        OnMagicStartCooldown.Invoke(magicNumber, magicCooldownTime);
     }
 }

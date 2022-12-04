@@ -57,6 +57,8 @@ public class MagicWand : MonoBehaviour
         {
             Instantiate(currentMagic, firePoint.position, transform.rotation);
             StartCoroutine(currentMagic.GetComponent<Magic>().StartCountdown());
+            EventManager.SendMagicStartCooldown(currentMagicIndex,
+                currentMagic.GetComponent<Magic>().CooldownTime);
         }
     }
 
