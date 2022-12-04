@@ -6,21 +6,18 @@ public class SkillBarController : MonoBehaviour
 {
     private PlayerController player;
     private List<FrameController> frames;
+    private FrameController currentActiveFrame;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         frames = GetAllFrames();
         DrawStartPlayerSkills();
-    }
-    
-    void Update()
-    {
-        
+        EventManager.OnChangeMagic.AddListener(ActivateFrame);
     }
 
     private void AddNewSkill(GameObject skill)
     {
-        
     }
 
     private void DrawStartPlayerSkills()
@@ -31,7 +28,6 @@ public class SkillBarController : MonoBehaviour
             frames[currentFrameIndex].SetSkillImage(magic.GetComponent<SpriteRenderer>());
             currentFrameIndex++;
         }
-        
     }
 
     private List<FrameController> GetAllFrames()
@@ -40,5 +36,18 @@ public class SkillBarController : MonoBehaviour
         foreach (Transform child in transform)
             frames.Add(child.gameObject.GetComponent<FrameController>());
         return frames;
+    }
+
+    private void ActivateFrame(int frameNumber)
+    {
+        if (currentActiveFrame != null)
+        {
+            currentActiveFrame.IsActive = false;
+            currentActiveFrame = frames[frameNumber];
+        }
+        else
+            currentActiveFrame = frames[frameNumber];
+
+        currentActiveFrame.IsActive = true;
     }
 }

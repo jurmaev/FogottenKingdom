@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float currentHealth;
     [SerializeField] private float movementSpeed;
 
-    [SerializeField] private GameObject currentMagic;
     [SerializeField] private int currentMagicIndex;
+    private GameObject currentMagic => availableMagic[currentMagicIndex];
+
     [field: SerializeField] public List<GameObject> availableMagic { get; protected set; }
 
     [SerializeField] private float invincibleTime;
@@ -28,8 +29,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
-
+    
+    
     void Start()
     {
         InitializeElements();
@@ -47,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
     private void InitializeElements()
     {
-        currentMagic = availableMagic[0];
         currentMagicIndex = 0;
         playerRb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -73,12 +73,30 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         UpdateAnimation();
+
+        CheckMagicChange();
         if (Input.GetButtonUp("Fire1"))
             magicWand.Shoot(currentMagic);
+    }
+
+    private void CheckMagicChange()
+    {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             SwitchCurrentMagic(true);
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             SwitchCurrentMagic(false);
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+            SwitchCurrentMagic(0);
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && availableMagic.Count >= 2)
+            SwitchCurrentMagic(1);
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && availableMagic.Count >= 3)
+            SwitchCurrentMagic(2);
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && availableMagic.Count >= 4)
+            SwitchCurrentMagic(3);
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && availableMagic.Count >= 4)
+            SwitchCurrentMagic(4);
+        else if (Input.GetKeyDown(KeyCode.Alpha6) && availableMagic.Count >= 4)
+            SwitchCurrentMagic(5);
     }
 
     private void Move()
@@ -88,11 +106,18 @@ public class PlayerController : MonoBehaviour
 
     private void SwitchCurrentMagic(bool isNextMagic)
     {
-        currentMagicIndex = isNextMagic
-            ? Mathf.Min(currentMagicIndex + 1, availableMagic.Count - 1)
-            : Mathf.Max(currentMagicIndex - 1, 0);
+        currentMagicIndex = isNextMagic ? currentMagicIndex + 1 : currentMagicIndex - 1;
+        if (currentMagicIndex >= availableMagic.Count)
+            currentMagicIndex = 0;
+        else if (currentMagicIndex < 0)
+            currentMagicIndex = availableMagic.Count - 1;
+        EventManager.SendChangeMagic(currentMagicIndex);
+    }
 
-        currentMagic = availableMagic[currentMagicIndex];
+    private void SwitchCurrentMagic(int magicIndex)
+    {
+        currentMagicIndex = magicIndex;
+        EventManager.SendChangeMagic(currentMagicIndex);
     }
 
     private void UpdateAnimation()
