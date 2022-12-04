@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1569208114015141590}
   - component: {fileID: 1569208114015141592}
-  - component: {fileID: 1569208114015141593}
   - component: {fileID: 490348456}
   m_Layer: 0
   m_Name: LevelGenerator
@@ -50,35 +49,8 @@ MonoBehaviour:
   minimapRoot: {fileID: 0}
   worldSize: {x: 4, y: 4}
   numberOfRooms: 12
---- !u!114 &1569208114015141593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569208114015141591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b03d1edd86c0c40bfd73ebf7e3e34e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rooms:
-  - {fileID: 7620514596515404982, guid: d60f146d247b182468b2052bef03a40e, type: 3}
-  - {fileID: 424967121379595834, guid: 798efe64f17b2b3429e8e3e8a5bfce1e, type: 3}
-  - {fileID: 560618412265160806, guid: 999db747b7198014ab2dee822065542b, type: 3}
-  - {fileID: 3520139418494880157, guid: e42ada174c17bfe4cb63319aecdb7cf4, type: 3}
-  - {fileID: 2865481796586381404, guid: 7e9a91c970b6c13498583a26a80afa93, type: 3}
-  - {fileID: 1608845447876031268, guid: 00257a400205e9a4ca4ca23aa4dd21ff, type: 3}
-  - {fileID: 1499816438921545961, guid: 4a0c593e15e402e4187318c4d7fd6071, type: 3}
-  - {fileID: 7445807186887717525, guid: 6cb5f293052883a4abbcf695bcbbd6e7, type: 3}
-  - {fileID: 7364577986622121128, guid: b6e319171f3bed94b8782eecf43ff5b2, type: 3}
-  - {fileID: 3228169297869602953, guid: 6c65cab2dfcf3ee48a41ddec3e0fedc2, type: 3}
-  - {fileID: 6221843958496344205, guid: 153a0d05950232d43bbf7cc621ae40c6, type: 3}
-  - {fileID: 5411381874073120178, guid: 196afcffa16fc85469daf10291619a0b, type: 3}
-  - {fileID: 383980744910120836, guid: d6f2ae1f7c144734188bf1512f08db94, type: 3}
-  - {fileID: 2056552131251745919, guid: df253d6f500dd4e4086a3bf564ffd2d6, type: 3}
-  - {fileID: 5272451957068596369, guid: 61b332c7d1aafd44aa847969662a15fd, type: 3}
-  MinimapRoom: {fileID: 1977428006616039865, guid: b10a14898521a29458e433699e6fbb90, type: 3}
+  roomPrefab: {fileID: 1186735955013747647, guid: 5693ea7185c6bf442b685d69fb54ad95, type: 3}
+  minimapRoom: {fileID: 1977428006616039865, guid: b10a14898521a29458e433699e6fbb90, type: 3}
 --- !u!114 &490348456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,3 +65,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 2882579770781969748, guid: 3c68a0cb174d6664c992e17fc797cc47, type: 3}
+  entryRoom: {fileID: 2549368573195575749, guid: 78d92132802379443ba1c3d21e08ed39, type: 3}

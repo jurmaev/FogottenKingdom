@@ -583,3 +583,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 877257038531546857, guid: e2908195d3da2c14aa57bfd25f84f2a0, type: 3}
+  lights:
+  - {fileID: 6938600955198239262, guid: fd7aaf5b487758c44bfccb471b6b0785, type: 3}
