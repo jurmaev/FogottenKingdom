@@ -458,15 +458,15 @@ PrefabInstance:
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: <availableMagic>k__BackingField.Array.data[0]
       value: 
-      objectReference: {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
+      objectReference: {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: <availableMagic>k__BackingField.Array.data[1]
       value: 
-      objectReference: {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
+      objectReference: {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
     - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: <availableMagic>k__BackingField.Array.data[2]
       value: 
-      objectReference: {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
+      objectReference: {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
 --- !u!1 &1239162708
