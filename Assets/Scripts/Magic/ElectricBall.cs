@@ -30,10 +30,10 @@ public class ElectricBall : Magic
     protected override void MoveForward()
     {
         base.MoveForward();
-        if (CurrentSpeed - speedReduction < 0)
-            CurrentSpeed = 0;
+        if (currentSpeed - speedReduction < 0)
+            currentSpeed = 0;
         else
-            CurrentSpeed -= speedReduction;
+            currentSpeed -= speedReduction;
     }
     
     
@@ -66,6 +66,6 @@ public class ElectricBall : Magic
     
     protected override void OnCollisionWithObstacle()
     {
-        CurrentSpeed = 0;
+        currentSpeed = 0;
     }
 }

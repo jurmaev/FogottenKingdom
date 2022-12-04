@@ -23,7 +23,7 @@ public class SkillBarController : MonoBehaviour
     private void DrawStartPlayerSkills()
     {
         var currentFrameIndex = 0;
-        foreach (var magic in player.availableMagic)
+        foreach (var magic in player.magicWand.availableMagic)
         {
             frames[currentFrameIndex].SetSkillImage(magic.GetComponent<SpriteRenderer>());
             currentFrameIndex++;

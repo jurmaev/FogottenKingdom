@@ -215,7 +215,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.011731545}
   serializedVersion: 2
-  m_Radius: 0.23352511
+  m_Radius: 0.44
 --- !u!50 &2737543360629134123
 Rigidbody2D:
   serializedVersion: 4
@@ -250,8 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 12
-  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 0
+  <CooldownTime>k__BackingField: 2
+  IsCooldown: 0
   <NumberOfDuplicates>k__BackingField: 8
   isDuplicatingNow: 0
   speedReduction: 0.1

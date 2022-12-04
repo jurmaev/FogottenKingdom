@@ -123,8 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 8
-  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 1
+  <CooldownTime>k__BackingField: 0.1
+  IsCooldown: 0
 --- !u!58 &2552156122598068887
 CircleCollider2D:
   m_ObjectHideFlags: 0

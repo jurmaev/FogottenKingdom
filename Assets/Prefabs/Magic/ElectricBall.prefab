@@ -225,7 +225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!50 &9014062529468532616
 Rigidbody2D:
@@ -261,14 +261,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 12
-  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 15
+  <CooldownTime>k__BackingField: 4
+  IsCooldown: 0
   destroy:
     m_PersistentCalls:
       m_Calls: []
   electricChainToStart: {fileID: 0}
   electricalChainPrefab: {fileID: 6973623159278991525, guid: 60230447134b5e94a95a9c3d62e4b106, type: 3}
-  lifeTime: 100
+  lifeTime: 12
   speedReduction: 0.2
 --- !u!95 &3938716411353020822
 Animator:

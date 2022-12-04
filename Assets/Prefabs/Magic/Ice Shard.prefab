@@ -149,8 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 15
-  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 4
+  <CooldownTime>k__BackingField: 0.3
+  IsCooldown: 0
 --- !u!95 &-4685029722321372551
 Animator:
   serializedVersion: 4

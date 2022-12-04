@@ -8,8 +8,10 @@ using UnityEngine;
 public abstract class Magic : MonoBehaviour
 {
     [field: SerializeField] public float StartSpeed { get; protected set; }
-    [field: SerializeField] public float CurrentSpeed { get; protected set; }
+    protected float currentSpeed;
     [field: SerializeField] public float Damage { get; protected set; }
+    [field: SerializeField] public float CooldownTime { get; protected set; }
+    public bool IsCooldown;
     private Rigidbody2D magicRb;
     private DebuffController debuffController;
 
@@ -37,6 +39,13 @@ public abstract class Magic : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public IEnumerator StartCountdown()
+    {
+        IsCooldown = true;
+        yield return new WaitForSeconds(CooldownTime);
+        IsCooldown = false;
+    }
+
     protected virtual void FixedUpdate()
     {
         MoveForward();
@@ -44,14 +53,14 @@ public abstract class Magic : MonoBehaviour
     
     protected virtual void MoveForward()
     {
-        magicRb.velocity = transform.up * CurrentSpeed;
+        magicRb.velocity = transform.up * currentSpeed;
     }
 
     protected virtual void InitializeElements()
     {
         magicRb = GetComponent<Rigidbody2D>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
-        CurrentSpeed = StartSpeed;
+        currentSpeed = StartSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
