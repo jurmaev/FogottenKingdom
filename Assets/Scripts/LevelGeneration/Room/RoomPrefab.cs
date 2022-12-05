@@ -21,7 +21,11 @@ public class RoomPrefab : MonoBehaviour
         doors = new List<GameObject>();
         PaintFloor();
         PaintDoors(false);
-        if(Room.Type == Room.RoomType.EntryRoom) ActivateDoors();
+        if (Room.Type == Room.RoomType.EntryRoom)
+        {
+            ActivateDoors();
+            GetComponentInChildren<ObstaclesPrefab>().GenerateLights();
+        }
     }
 
     private void PaintFloor()
@@ -92,7 +96,11 @@ public class RoomPrefab : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             var obstaclesPrefab = GetComponentInChildren<ObstaclesPrefab>();
-            if (obstaclesPrefab != null) obstaclesPrefab.SpawnEnemies();
+            if (obstaclesPrefab != null && Room.Type != Room.RoomType.EntryRoom)
+            {
+                obstaclesPrefab.SpawnEnemies();
+                obstaclesPrefab.GenerateLights();
+            }
             Invoke(nameof(ActivateDoors), .5f);
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);

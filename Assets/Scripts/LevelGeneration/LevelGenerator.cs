@@ -108,15 +108,14 @@ public class LevelGenerator : MonoBehaviour
             drawPos.x *= Room.RoomSize.x;
             drawPos.y *= Room.RoomSize.y;
 
-            // room.SetDoorPositions();
             var newRoom = Instantiate(roomPrefab, drawPos, quaternion.identity);
             var roomStats = newRoom.GetComponent<RoomPrefab>();
             roomStats.Room = room;
             newRoom.transform.parent = mapRoot;
 
-            if (roomStats.Room.Type == Room.RoomType.NormalRoom)
+            if (roomStats.Room.Type == Room.RoomType.NormalRoom || roomStats.Room.Type == Room.RoomType.EntryRoom)
             {
-                var obstacles = Instantiate(obstaclesSelector.PickObstacles(), drawPos, quaternion.identity);
+                var obstacles = Instantiate(obstaclesSelector.PickObstacles(roomStats.Room.Type == Room.RoomType.EntryRoom), drawPos, quaternion.identity);
                 obstacles.transform.parent = newRoom.transform;
             }
             

@@ -4,8 +4,9 @@ using UnityEngine;
 public class ObstaclesSelector : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstacles;
-    public GameObject PickObstacles()
+    [SerializeField] private GameObject entryRoom;
+    public GameObject PickObstacles(bool isEntry)
     {
-        return obstacles[Random.Range(0, obstacles.Length)];
+        return isEntry ? entryRoom :  obstacles[Random.Range(0, obstacles.Length)];
     }
 }
