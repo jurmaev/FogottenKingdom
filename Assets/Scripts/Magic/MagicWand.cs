@@ -12,10 +12,12 @@ public enum Hand
 
 public class MagicWand : MonoBehaviour
 {
+    [field: SerializeField] public List<GameObject> availableMagic { get; protected set; }
     [SerializeField] private int currentMagicIndex;
     private GameObject currentMagic => availableMagic[currentMagicIndex];
-    [field: SerializeField] public List<GameObject> availableMagic { get; protected set; }
-
+    private MagicController magicController;
+    
+    
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform rightHandPoint;
     [SerializeField] private Transform leftHandPoint;
@@ -27,6 +29,8 @@ public class MagicWand : MonoBehaviour
     {
         camera = Camera.main;
         SwitchCurrentMagic(0);
+        magicController = GetComponent<MagicController>();
+        magicController.SetMagic(availableMagic);
     }
 
     private void Update()
@@ -53,14 +57,7 @@ public class MagicWand : MonoBehaviour
 
     private void Shoot()
     {
-        if (!currentMagic.GetComponent<Magic>().IsCooldown)
-        {
-            Instantiate(currentMagic, firePoint.position, transform.rotation);
-            StartCoroutine(currentMagic.GetComponent<Magic>().StartCountdown());
-            EventManager.SendMagicStartCooldown(currentMagicIndex,
-                currentMagic.GetComponent<Magic>().CooldownTime);
-            currentMagic.GetComponent<Magic>().Damage = 100;
-        }
+        magicController.InstantiateMagic(currentMagic, currentMagicIndex ,firePoint.position, transform.rotation);
     }
 
     private void CheckMagicChange()
