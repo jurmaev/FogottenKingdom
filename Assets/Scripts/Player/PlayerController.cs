@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
         {
-            Debug.Log("Попал");
             GetDamage(projectile.Damage);
         }
     }
