@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 501425185200938055}
   - component: {fileID: 3690692423774412187}
   - component: {fileID: 1625160694}
+  - component: {fileID: 1246290817}
   m_Layer: 0
   m_Name: Magic Wand
   m_TagString: Untagged
@@ -129,9 +130,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae84ffd224a1ef348b2315069075aef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <availableMagic>k__BackingField:
+  - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
+  - {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
+  - {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
+  - {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
+  - {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
+  currentMagicIndex: 0
   firePoint: {fileID: 1295761317}
   rightHandPoint: {fileID: 7275965097934566232}
   leftHandPoint: {fileID: 7303226660470962255}
+--- !u!114 &1246290817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386770556495187053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96283a37869522c43ba854984b49147c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4002006401481069905
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,14 +286,6 @@ MonoBehaviour:
   maxHealth: 30
   currentHealth: 30
   movementSpeed: 5
-  currentMagic: {fileID: 0}
-  currentMagicIndex: 0
-  availableMagic:
-  - {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
-  - {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
-  - {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
-  - {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
-  - {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
   invincibleTime: 0.5
   isInvincible: 0
   healthBar: {fileID: 0}

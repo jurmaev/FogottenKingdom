@@ -411,30 +411,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[0]
-      value: 
-      objectReference: {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[1]
-      value: 
-      objectReference: {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[2]
-      value: 
-      objectReference: {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[3]
-      value: 
-      objectReference: {fileID: 4106640078191319958, guid: a1f759a9a0c764b4ca5d28d55f32e3dd, type: 3}
-    - target: {fileID: 1625160694, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[4]
-      value: 
-      objectReference: {fileID: 2765003537624789464, guid: b61e87de94adc7d48bec57511b886c44, type: 3}
     - target: {fileID: 4002006401481069905, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -491,26 +467,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 445773662}
-    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: currentMagic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[0]
-      value: 
-      objectReference: {fileID: 3806941413914479727, guid: 66b0fa3b4a5843b45b0b5260dc452f65, type: 3}
-    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[1]
-      value: 
-      objectReference: {fileID: 5633763096428850152, guid: 3cfe5dd26f970f94b8550aa0cf04f6bc, type: 3}
-    - target: {fileID: 4026313679623478104, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-      propertyPath: <availableMagic>k__BackingField.Array.data[2]
-      value: 
-      objectReference: {fileID: 4779686109161442471, guid: 1d7be699b120afa4aa94d261a71fdf2d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
 --- !u!1 &1239162708
@@ -544,23 +500,6 @@ Transform:
   m_Father: {fileID: 1389322777}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1246290813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3386770556495187053, guid: 05806f28192c23d45a28cd9587587b9c, type: 3}
-  m_PrefabInstance: {fileID: 1238172284}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1246290817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246290813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96283a37869522c43ba854984b49147c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1257062014 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6532138686439119771, guid: 015787f19d14faf4aa998813d49043ac, type: 3}
