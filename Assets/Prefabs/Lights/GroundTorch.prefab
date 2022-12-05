@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720983510}
   - component: {fileID: 720983511}
+  - component: {fileID: 562682275247519289}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -111,6 +112,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &562682275247519289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720983509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b299610fcf40c44a9e6633221d40695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpDuration: 2
+  radiusDifference: 0.1
+  intensityDifference: 0.5
 --- !u!1 &8609988735936744977
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +138,6 @@ GameObject:
   - component: {fileID: 8609988735936744983}
   - component: {fileID: 8609988735936744976}
   - component: {fileID: 8609988735936744982}
-  - component: {fileID: 863009614}
   - component: {fileID: 2980103221047465848}
   m_Layer: 0
   m_Name: GroundTorch
@@ -219,24 +234,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &863009614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8609988735936744977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b299610fcf40c44a9e6633221d40695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minRadius: 1.4
-  maxRadius: 1.6
-  lerpDuration: 2
-  light: {fileID: 720983511}
-  minIntensity: 1.5
-  maxIntensity: 2.5
 --- !u!61 &2980103221047465848
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,16 +5,21 @@ using Random = UnityEngine.Random;
 
 public class Pulsate : MonoBehaviour
 {
-    [SerializeField] private float minRadius, maxRadius;
-    // [SerializeField] private float maxRadius;
-    [SerializeField] private float lerpDuration;
-    [SerializeField] private Light2D light;
-    [SerializeField] private float minIntensity, maxIntensity;
+    [SerializeField][Tooltip("Продолжительность изменения радиуса")] private float lerpDuration;
+    [SerializeField][Tooltip("Величина изменения радиуса")] private float radiusDifference;
+    [SerializeField][Tooltip("Величина изменения интенсивности")] private float intensityDifference;
+    private float minIntensity, maxIntensity;
+    private Light2D light;
+    private float minRadius, maxRadius;
     private float timeElapsed;
 
     private void Start()
     {
-        light.pointLightOuterRadius = minRadius;
+        light = GetComponent<Light2D>();
+        minRadius = light.pointLightOuterRadius - radiusDifference;
+        maxRadius = light.pointLightOuterRadius + radiusDifference;
+        minIntensity = light.intensity - intensityDifference;
+        maxIntensity = light.intensity + intensityDifference;
         InvokeRepeating(nameof(ChangeIntensity), 0,.1f);
     }
 

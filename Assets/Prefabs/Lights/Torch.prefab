@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950757225}
   - component: {fileID: 950757226}
+  - component: {fileID: 7445139433323230440}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -111,6 +112,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7445139433323230440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950757224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b299610fcf40c44a9e6633221d40695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpDuration: 2
+  radiusDifference: 0.1
+  intensityDifference: 0.5
 --- !u!1 &6404778934977657915
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +138,6 @@ GameObject:
   - component: {fileID: 6404778934977657909}
   - component: {fileID: 6404778934977657908}
   - component: {fileID: 6404778934977657910}
-  - component: {fileID: 6031873171683248958}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -218,21 +233,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6031873171683248958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6404778934977657915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b299610fcf40c44a9e6633221d40695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minRadius: 1.4
-  maxRadius: 1.6
-  lerpDuration: 2
-  light: {fileID: 950757226}
-  minIntensity: 1.5
-  maxIntensity: 2.5
