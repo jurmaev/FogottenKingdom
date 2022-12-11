@@ -17,7 +17,7 @@ public class ColorController : MonoBehaviour
             var startTime = Time.time;
             while (Time.time <= startTime + blinkingTime)
             {
-                Debug.Log("Произошло столкновение");
+                // Debug.Log("Произошло столкновение");
                 spriteRenderer.color = new Color32(255, 255, 255, opacity);
                 yield return new WaitForSeconds(timeBetweenBlinks);
                 spriteRenderer.color = new Color32(255, 255, 255, 255);

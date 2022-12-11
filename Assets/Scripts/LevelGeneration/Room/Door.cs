@@ -13,8 +13,7 @@ public class Door : MonoBehaviour
         Left
     }
     public Position DoorPosition { get; set; }
-    public bool isActive { get; set; }
-    public RoomPrefab currentRoom;
+    public bool IsActive { get; set; }
     [SerializeField] private float TeleportDistance;
 
     private Vector3 MovePlayer(Vector3 startPos)
@@ -36,17 +35,15 @@ public class Door : MonoBehaviour
         yield return new WaitForSeconds(1.3f);
         var player = FindObjectOfType<PlayerController>();
         player.transform.position = MovePlayer(player.transform.position);
-        currentRoom.DeactivateDoors();
     }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player") && isActive)
+        Debug.Log(IsActive);
+        if (col.gameObject.CompareTag("Player") && IsActive)
         {
             EventManager.SendPlayCrossfade();
             StartCoroutine(TeleportPlayer());
-            Debug.Log($"{DoorPosition} door is activated");
         }
-            
     }
 }

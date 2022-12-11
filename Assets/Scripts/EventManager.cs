@@ -9,6 +9,7 @@ public class EventManager : MonoBehaviour
     public static UnityEvent OnPlayCrossfade = new UnityEvent();
     public static UnityEvent<int> OnChangeMagic = new UnityEvent<int>();
     public static UnityEvent<int, float> OnMagicStartCooldown = new UnityEvent<int, float>();
+    public static UnityEvent<GameObject> OnEnemyDeath = new UnityEvent<GameObject>();
 
     public static void SendCameraPosChanged(Vector2 newGridPos)
     {
@@ -33,5 +34,10 @@ public class EventManager : MonoBehaviour
     public static void SendMagicStartCooldown(int magicNumber, float magicCooldownTime)
     {
         OnMagicStartCooldown.Invoke(magicNumber, magicCooldownTime);
+    }
+
+    public static void SendEnemyDeath(GameObject enemy)
+    {
+        OnEnemyDeath.Invoke(enemy);
     }
 }

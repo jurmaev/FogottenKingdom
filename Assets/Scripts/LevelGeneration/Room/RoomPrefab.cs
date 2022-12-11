@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -14,18 +13,24 @@ public class RoomPrefab : MonoBehaviour
     [SerializeField] private Tile[] topDoor;
     [SerializeField] private Tile[] bottomDoor;
     [SerializeField] private GameObject doorPrefab;
+    private List<GameObject> enemies;
     private List<GameObject> doors;
+    private bool enemiesDefeated;
+    private bool obstaclesSpawned;
 
     private void Start()
     {
         doors = new List<GameObject>();
+        enemies = new List<GameObject>();
         PaintFloor();
         PaintDoors(false);
         if (Room.Type == Room.RoomType.EntryRoom)
         {
             ActivateDoors();
             GetComponentInChildren<ObstaclesPrefab>().GenerateLights();
+            obstaclesSpawned = true;
         }
+        else if(Room.Type != Room.RoomType.NormalRoom) ActivateDoors();
     }
 
     private void PaintFloor()
@@ -75,35 +80,73 @@ public class RoomPrefab : MonoBehaviour
         var newDoor = Instantiate(doorPrefab, new Vector3(x, y, transform.position.z), Quaternion.Euler(0, 0, angle));
         newDoor.transform.parent = transform;
         newDoor.GetComponent<Door>().DoorPosition = position;
-        newDoor.GetComponent<Door>().currentRoom = this;
         doors.Add(newDoor);
     }
 
     private void ActivateDoors()
     {
         foreach (var door in doors)
-            door.GetComponent<Door>().isActive = true;
+            door.GetComponent<Door>().IsActive = true;
     }
 
     public void DeactivateDoors()
     {
         foreach (var door in doors)
-            door.GetComponent<Door>().isActive = false;
+            door.GetComponent<Door>().IsActive = false;
+    }
+
+    private void RemoveEnemy(GameObject enemy)
+    {
+        if (enemies.Count != 0) enemies.Remove(enemy);
+        if (enemies.Count == 0)
+        {
+            enemiesDefeated = true;
+            Debug.Log("Doors activated");
+            ActivateDoors();
+            EventManager.OnEnemyDeath.RemoveListener(RemoveEnemy);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Debug.Log("Player left the room");
+            // var magic = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), Room.RoomSize / 2,
+            //     0).Where(col => col.gameObject.CompareTag("Magic"));
+            // Debug.Log(string.Join(" ", magic));
+            // Debug.Log(magic.Count());
+            // Debug.Log(activeMagic);
+            // foreach(var spell in activeMagic) Destroy(spell.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            enemies.Add(col.gameObject);
+        }
+
         if (col.gameObject.CompareTag("Player"))
         {
             var obstaclesPrefab = GetComponentInChildren<ObstaclesPrefab>();
-            if (obstaclesPrefab != null && Room.Type != Room.RoomType.EntryRoom)
+            if (obstaclesPrefab != null && Room.Type != Room.RoomType.EntryRoom && !obstaclesSpawned)
             {
                 obstaclesPrefab.SpawnEnemies();
                 obstaclesPrefab.GenerateLights();
+                obstaclesSpawned = true;
             }
-            Invoke(nameof(ActivateDoors), .5f);
+
+            if (Room.Type == Room.RoomType.NormalRoom && !enemiesDefeated)
+            {
+                Debug.Log("Doors deactivated");
+                DeactivateDoors();
+                Debug.Log(Room.Type);
+            }
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
+            EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
         }
     }
 }

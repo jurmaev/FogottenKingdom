@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1332970854, guid: f9751347d7bc15f4fa764729d5a55dce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,8 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 8
   <Damage>k__BackingField: 1
-  <CooldownTime>k__BackingField: 0.1
-  IsCooldown: 0
+  <CooldownTime>k__BackingField: 0.5
 --- !u!58 &2552156122598068887
 CircleCollider2D:
   m_ObjectHideFlags: 0

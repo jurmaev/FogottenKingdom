@@ -125,9 +125,9 @@ GameObject:
   - component: {fileID: 9014062529468532616}
   - component: {fileID: 5720732279509788795}
   - component: {fileID: 3938716411353020822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElectricBall
-  m_TagString: Untagged
+  m_TagString: Magic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1435139295, guid: 15e2c8096dd78374d80bf1ccca995de0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -263,7 +263,6 @@ MonoBehaviour:
   <StartSpeed>k__BackingField: 12
   <Damage>k__BackingField: 15
   <CooldownTime>k__BackingField: 4
-  IsCooldown: 0
   destroy:
     m_PersistentCalls:
       m_Calls: []

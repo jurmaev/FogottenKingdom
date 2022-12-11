@@ -76,9 +76,9 @@ GameObject:
   - component: {fileID: 6973623158933146679}
   - component: {fileID: 6973623158933146676}
   - component: {fileID: 79225697043237162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElectricalChain
-  m_TagString: Untagged
+  m_TagString: Magic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 846574653
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions: []
   m_Parameters:
@@ -264,8 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 0
-  <CurrentSpeed>k__BackingField: 0
   <Damage>k__BackingField: 0.001
+  <CooldownTime>k__BackingField: 0
 --- !u!68 &79225697043237162
 EdgeCollider2D:
   m_ObjectHideFlags: 0

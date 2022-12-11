@@ -9,17 +9,17 @@ public class Pulsate : MonoBehaviour
     [SerializeField][Tooltip("Величина изменения радиуса")] private float radiusDifference;
     [SerializeField][Tooltip("Величина изменения интенсивности")] private float intensityDifference;
     private float minIntensity, maxIntensity;
-    private Light2D light;
+    private Light2D pointLight;
     private float minRadius, maxRadius;
     private float timeElapsed;
 
     private void Start()
     {
-        light = GetComponent<Light2D>();
-        minRadius = light.pointLightOuterRadius - radiusDifference;
-        maxRadius = light.pointLightOuterRadius + radiusDifference;
-        minIntensity = light.intensity - intensityDifference;
-        maxIntensity = light.intensity + intensityDifference;
+        pointLight = GetComponent<Light2D>();
+        minRadius = pointLight.pointLightOuterRadius - radiusDifference;
+        maxRadius = pointLight.pointLightOuterRadius + radiusDifference;
+        minIntensity = pointLight.intensity - intensityDifference;
+        maxIntensity = pointLight.intensity + intensityDifference;
         InvokeRepeating(nameof(ChangeIntensity), 0,.1f);
     }
 
@@ -28,24 +28,24 @@ public class Pulsate : MonoBehaviour
         
         if (timeElapsed < lerpDuration)
         {
-            light.pointLightOuterRadius = Mathf.Lerp(minRadius, maxRadius, timeElapsed / lerpDuration);
+            pointLight.pointLightOuterRadius = Mathf.Lerp(minRadius, maxRadius, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
         }
-        else if (Math.Abs(light.pointLightOuterRadius - maxRadius) <= 0.1 ||
-                 Math.Abs(light.pointLightOuterAngle - minRadius) <= 0.1)
+        else if (Math.Abs(pointLight.pointLightOuterRadius - maxRadius) <= 0.1 ||
+                 Math.Abs(pointLight.pointLightOuterAngle - minRadius) <= 0.1)
         {
             (minRadius, maxRadius) = (maxRadius, minRadius);
             timeElapsed = 0;
         }
         else
-            light.pointLightOuterRadius =
-                Math.Abs(light.pointLightOuterRadius - minRadius) < Math.Abs(light.pointLightOuterRadius - maxRadius)
+            pointLight.pointLightOuterRadius =
+                Math.Abs(pointLight.pointLightOuterRadius - minRadius) < Math.Abs(pointLight.pointLightOuterRadius - maxRadius)
                     ? minRadius
                     : maxRadius;
     }
 
     private void ChangeIntensity()
     {
-        light.intensity = Random.Range(minIntensity, maxIntensity);
+        pointLight.intensity = Random.Range(minIntensity, maxIntensity);
     }
 }

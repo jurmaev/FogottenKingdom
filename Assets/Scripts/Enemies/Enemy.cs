@@ -107,6 +107,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        EventManager.SendEnemyDeath(gameObject);
         Destroy(gameObject);
     }
 }
