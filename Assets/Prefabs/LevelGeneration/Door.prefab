@@ -71,4 +71,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd65b9290031544799a118d33666547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TeleportDistance: 3
+  TeleportDistance: {x: 3, y: 3.5}

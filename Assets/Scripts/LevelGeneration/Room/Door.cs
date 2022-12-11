@@ -14,16 +14,16 @@ public class Door : MonoBehaviour
     }
     public Position DoorPosition { get; set; }
     public bool IsActive { get; set; }
-    [SerializeField] private float TeleportDistance;
+    [SerializeField] private Vector2 TeleportDistance;
 
     private Vector3 MovePlayer(Vector3 startPos)
     {
         startPos = DoorPosition switch
         {
-            Position.Top => new Vector3(startPos.x, transform.position.y + TeleportDistance, startPos.z),
-            Position.Right => new Vector3(transform.position.x + TeleportDistance, startPos.y, startPos.z),
-            Position.Bottom => new Vector3(startPos.x, transform.position.y - TeleportDistance, startPos.z),
-            Position.Left => new Vector3(transform.position.x - TeleportDistance, startPos.y, startPos.z),
+            Position.Top => new Vector3(startPos.x, transform.position.y + TeleportDistance.y, startPos.z),
+            Position.Right => new Vector3(transform.position.x + TeleportDistance.x, startPos.y, startPos.z),
+            Position.Bottom => new Vector3(startPos.x, transform.position.y - TeleportDistance.y + 1.4f, startPos.z),
+            Position.Left => new Vector3(transform.position.x - TeleportDistance.x, startPos.y, startPos.z),
             _ => throw new ArgumentException()
         };
 

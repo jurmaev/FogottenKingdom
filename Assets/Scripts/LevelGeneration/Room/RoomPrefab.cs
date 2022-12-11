@@ -30,7 +30,7 @@ public class RoomPrefab : MonoBehaviour
             GetComponentInChildren<ObstaclesPrefab>().GenerateLights();
             obstaclesSpawned = true;
         }
-        else if(Room.Type != Room.RoomType.NormalRoom) ActivateDoors();
+        else if (Room.Type != Room.RoomType.NormalRoom) ActivateDoors();
     }
 
     private void PaintFloor()
@@ -42,7 +42,7 @@ public class RoomPrefab : MonoBehaviour
 
     private void PaintDoors(bool isOpen)
     {
-        var paintIndex = isOpen ? 1 : 0;
+        var paintIndex = isOpen ? 0 : 1;
         if (Room.DoorBottom)
         {
             PaintDoor(-1, -(int) Room.RoomSize.y / 2, 0, -(int) Room.RoomSize.y / 2, bottomDoor[paintIndex]);
@@ -85,12 +85,14 @@ public class RoomPrefab : MonoBehaviour
 
     private void ActivateDoors()
     {
+        PaintDoors(true);
         foreach (var door in doors)
             door.GetComponent<Door>().IsActive = true;
     }
 
     public void DeactivateDoors()
     {
+        PaintDoors(false);
         foreach (var door in doors)
             door.GetComponent<Door>().IsActive = false;
     }
@@ -144,6 +146,7 @@ public class RoomPrefab : MonoBehaviour
                 DeactivateDoors();
                 Debug.Log(Room.Type);
             }
+
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
             EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
