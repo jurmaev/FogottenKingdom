@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 565241989}
   - component: {fileID: 6195079158904774832}
   - component: {fileID: 6195079158904774835}
-  - component: {fileID: 6195079158904774836}
+  - component: {fileID: 876122236249898927}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -258,7 +258,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6195079158904774836
+--- !u!114 &876122236249898927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,10 +267,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6195079158904774735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896fe2cd644c8cd4583dab2aab76e062, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b5d67f5c14ae5f4c9e5e6600910b23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 20
+  <MaxHealth>k__BackingField: 15
   currentHealth: 0
   <Speed>k__BackingField: 2
   <Damage>k__BackingField: 3

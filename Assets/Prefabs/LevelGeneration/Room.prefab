@@ -1269,6 +1269,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f15654042e9476d449ee4dd711e5356b, type: 2}
   - {fileID: 11400000, guid: d69c85096d46b9e4a9e8f10804ccc6ec, type: 2}
   doorPrefab: {fileID: 1503913154764850235, guid: 2ccfa8da7766b3642b5b7e65985db2aa, type: 3}
+  chestPrefab: {fileID: 2661635965241520041, guid: c605234341b918e4b84133c9cf7f7884, type: 3}
 --- !u!61 &3006617792263522593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1321,7 +1322,7 @@ MonoBehaviour:
   - {x: 16, y: -9, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 39734
+  m_InstanceId: 30514
 --- !u!1 &9087364513969388807
 GameObject:
   m_ObjectHideFlags: 0

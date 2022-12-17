@@ -13,6 +13,7 @@ public class RoomPrefab : MonoBehaviour
     [SerializeField] private Tile[] topDoor;
     [SerializeField] private Tile[] bottomDoor;
     [SerializeField] private GameObject doorPrefab;
+    [SerializeField] private GameObject chestPrefab;
     private List<GameObject> enemies;
     private List<GameObject> doors;
     private bool enemiesDefeated;
@@ -100,10 +101,11 @@ public class RoomPrefab : MonoBehaviour
     private void RemoveEnemy(GameObject enemy)
     {
         if (enemies.Count != 0) enemies.Remove(enemy);
+
         if (enemies.Count == 0)
         {
+            Instantiate(chestPrefab, enemy.transform.position, Quaternion.identity);
             enemiesDefeated = true;
-            Debug.Log("Doors activated");
             ActivateDoors();
             EventManager.OnEnemyDeath.RemoveListener(RemoveEnemy);
         }
@@ -126,9 +128,7 @@ public class RoomPrefab : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Enemy"))
-        {
             enemies.Add(col.gameObject);
-        }
 
         if (col.gameObject.CompareTag("Player"))
         {
@@ -142,14 +142,14 @@ public class RoomPrefab : MonoBehaviour
 
             if (Room.Type == Room.RoomType.NormalRoom && !enemiesDefeated)
             {
-                Debug.Log("Doors deactivated");
                 DeactivateDoors();
-                Debug.Log(Room.Type);
+                EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
             }
+               
 
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
-            EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
+            
         }
     }
 }
