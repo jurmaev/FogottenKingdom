@@ -39,7 +39,7 @@ public class Door : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(IsActive);
+        // Debug.Log(IsActive);
         if (col.gameObject.CompareTag("Player") && IsActive)
         {
             EventManager.SendPlayCrossfade();

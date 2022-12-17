@@ -17,6 +17,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
+        currentHealth = MaxHealth;
         InitializeElements();
     }
 

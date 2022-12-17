@@ -1,14 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using Update = Unity.VisualScripting.Update;
 
-public class Zombie : Enemy
+public class MovingEnemy : Enemy
 {
-    [SerializeField] private GameObject playerTarget;
+    private GameObject playerTarget;
     
     protected override void Start()
     {
@@ -18,7 +12,11 @@ public class Zombie : Enemy
 
     private void Update()
     {
-        // Debug.Log("Текущее здоровье:" + currentHealth);
+        Move();
+    }
+
+    protected void Move()
+    {
         var direction = (playerTarget.transform.position - transform.position).normalized;
         enemyRigidbody.velocity = new Vector2(direction.x, direction.y) * Speed;
     }
