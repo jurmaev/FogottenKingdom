@@ -1,15 +1,21 @@
+using System;
+using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class MinimapRoom : MonoBehaviour
 {
-    public Room Room { get;  set; }
+    public Room Room { get; set; }
     [SerializeField] private Tilemap floorTilemap;
     [SerializeField] private Tile activeTile;
     [SerializeField] private Tile inactiveTile;
+    [SerializeField] private List<GameObject> icons;
+
     private void Start()
     {
         PaintRoom(Room.Type == Room.RoomType.EntryRoom ? activeTile : inactiveTile);
+        ChooseSprite();
         EventManager.OnActiveRoomChanged.AddListener(activeRoomPos =>
         {
             PaintRoom(activeRoomPos == Room.GridPos ? activeTile : inactiveTile);
@@ -36,5 +42,23 @@ public class MinimapRoom : MonoBehaviour
         for (var i = x1; i <= x2; i++)
         for (var j = y1; j <= y2; j++)
             floorTilemap.SetTile(new Vector3Int(i, j, 0), paintTile);
+    }
+
+    private void ChooseSprite()
+    {
+        // Debug.Log(Room.Type);
+        switch (Room.Type)
+        {
+            case Room.RoomType.BossRoom:
+                Instantiate(icons[0], transform.position, quaternion.identity);
+                break;
+            case Room.RoomType.ShopRoom:
+                Instantiate(icons[1], transform.position, quaternion.identity);
+                break;
+            case Room.RoomType.TreasureRoom:
+                Instantiate(icons[2], transform.position, quaternion.identity);
+                break;
+            // default: break;
+        }
     }
 }

@@ -15,6 +15,7 @@ public class RoomPrefab : MonoBehaviour
     [SerializeField] private GameObject doorPrefab;
     [SerializeField] private GameObject chestPrefab;
     private List<GameObject> enemies;
+    private int numberOfEnemies;
     private List<GameObject> doors;
     private bool enemiesDefeated;
     private bool obstaclesSpawned;
@@ -100,30 +101,33 @@ public class RoomPrefab : MonoBehaviour
 
     private void RemoveEnemy(GameObject enemy)
     {
+        if (enemies.Count != 0 && numberOfEnemies == 0) numberOfEnemies = enemies.Count;
         if (enemies.Count != 0) enemies.Remove(enemy);
 
         if (enemies.Count == 0)
         {
-            Instantiate(chestPrefab, enemy.transform.position, Quaternion.identity);
+            var chest = Instantiate(chestPrefab, enemy.transform.position, Quaternion.identity);
+            chest.GetComponent<Chest>().CoinMultiplier = numberOfEnemies;
+            chest.GetComponent<Chest>().RoomType = Room.Type;
             enemiesDefeated = true;
             ActivateDoors();
             EventManager.OnEnemyDeath.RemoveListener(RemoveEnemy);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            // Debug.Log("Player left the room");
-            // var magic = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), Room.RoomSize / 2,
-            //     0).Where(col => col.gameObject.CompareTag("Magic"));
-            // Debug.Log(string.Join(" ", magic));
-            // Debug.Log(magic.Count());
-            // Debug.Log(activeMagic);
-            // foreach(var spell in activeMagic) Destroy(spell.gameObject);
-        }
-    }
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.gameObject.CompareTag("Player"))
+    //     {
+    //         Debug.Log("Player left the room");
+    //         var magic = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y), Room.RoomSize / 2,
+    //             0).Where(col => col.gameObject.CompareTag("Magic"));
+    //         Debug.Log(string.Join(" ", magic));
+    //         Debug.Log(magic.Count());
+    //         Debug.Log(activeMagic);
+    //         foreach(var spell in activeMagic) Destroy(spell.gameObject);
+    //     }
+    // }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -145,11 +149,15 @@ public class RoomPrefab : MonoBehaviour
                 DeactivateDoors();
                 EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
             }
-               
+
+            if (Room.Type == Room.RoomType.TreasureRoom)
+            {
+                var chest = Instantiate(chestPrefab, transform.position, Quaternion.identity);
+                chest.GetComponent<Chest>().RoomType = Room.Type;
+            }
 
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
-            
         }
     }
 }
