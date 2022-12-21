@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstaclesPrefab : MonoBehaviour
@@ -11,9 +9,12 @@ public class ObstaclesPrefab : MonoBehaviour
     public void SpawnEnemies()
     {
         if (AreSpawned) return;
-        var spawner = Instantiate(spawners[Random.Range(0, spawners.Length)], transform.position, Quaternion.identity);
-        spawner.transform.parent = transform.parent;
-        AreSpawned = true;
+        if (spawners.Length > 0)
+        {
+            var spawner = Instantiate(spawners[Random.Range(0, spawners.Length)], transform.position, Quaternion.identity);
+            spawner.transform.parent = transform.parent;
+            AreSpawned = true;
+        }
     }
 
     public void GenerateLights()

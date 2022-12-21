@@ -21,6 +21,7 @@ public class Coin : MonoBehaviour
         animator = GetComponent<Animator>();
         coinRb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        Value = 1;
         // Debug.Log(direction);
         // animator.SetTrigger("jump");
         // coinRb.AddRelativeForce(direction, ForceMode2D.Impulse);
@@ -56,6 +57,10 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
+        {
+            EventManager.SendCoinAmountChanged(Value);
+            EventManager.SendCoinPicked(Value);
             Destroy(gameObject);
+        }
     }
 }

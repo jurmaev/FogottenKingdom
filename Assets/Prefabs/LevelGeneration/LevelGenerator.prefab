@@ -66,3 +66,4 @@ MonoBehaviour:
   obstacles:
   - {fileID: 2882579770781969748, guid: 3c68a0cb174d6664c992e17fc797cc47, type: 3}
   entryRoom: {fileID: 2549368573195575749, guid: 78d92132802379443ba1c3d21e08ed39, type: 3}
+  shopRoom: {fileID: 5547409507985033460, guid: d7ea2f70e6506d04494b493e206e7336, type: 3}

@@ -24,10 +24,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    public  int Coins { get; private set; }
     
     void Start()
     {
         InitializeElements();
+        EventManager.OnCoinAmountChanged.AddListener(TryChangeCoins);
     }
 
     void Update()
@@ -47,18 +49,23 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void TryChangeCoins(int changeAmount)
+    {
+        Coins = Coins + changeAmount >= 0 ? Coins + changeAmount : 0;
+        EventManager.SendCoinPicked(Coins);
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.TryGetComponent(out Enemy enemy))
             GetDamage(enemy.Damage);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
-        {
             GetDamage(projectile.Damage);
-        }
+        if (other.gameObject.CompareTag("ShopItem")) TryChangeCoins(-other.GetComponent<ShopItem>().Value);
     }
 
     private void CheckInput()

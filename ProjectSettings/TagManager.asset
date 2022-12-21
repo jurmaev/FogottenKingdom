@@ -14,6 +14,7 @@ TagManager:
   - Enemy
   - Debuff
   - EnemyProjectile
+  - ShopItem
   layers:
   - Default
   - TransparentFX

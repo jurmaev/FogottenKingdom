@@ -15,7 +15,6 @@ public class LevelGenerator : MonoBehaviour
     private Room[,] rooms;
     private List<Vector2> takenPositions;
     private int gridSizeX, gridSizeY;
-    // private RoomSelector roomSelector;
     private ObstaclesSelector obstaclesSelector;
     private List<Room> deadEnds;
 
@@ -30,7 +29,6 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        // roomSelector = GetComponent<RoomSelector>();
         obstaclesSelector = GetComponent<ObstaclesSelector>();
         if (numberOfRooms >= worldSize.x * 2 * worldSize.y * 2)
             numberOfRooms = Mathf.RoundToInt(worldSize.x * 2 * worldSize.y * 2);
@@ -51,9 +49,10 @@ public class LevelGenerator : MonoBehaviour
             var randomCompare = Mathf.Lerp(randomCompareStart, randomCompareEnd, lerpValue);
             var checkPos = NewPosition(false);
             if (NumberOfNeighbors(checkPos, takenPositions) > 1 &&
-                Random.value > randomCompare) 
+                Random.value > randomCompare)
                 checkPos = NewPosition(true);
-            rooms[(int) checkPos.x + gridSizeX, (int) checkPos.y + gridSizeY] = new Room(checkPos, Room.RoomType.NormalRoom);
+            rooms[(int) checkPos.x + gridSizeX, (int) checkPos.y + gridSizeY] =
+                new Room(checkPos, Room.RoomType.NormalRoom);
             takenPositions.Insert(0, checkPos);
         }
     }
@@ -75,9 +74,11 @@ public class LevelGenerator : MonoBehaviour
                     randIndex = Mathf.RoundToInt(Random.value * (takenPositions.Count - 1));
                     counter++;
                 }
+
                 if (counter >= 100)
                     print("Error: could not find position with only one neighbor");
             }
+
             x = (int) takenPositions[randIndex].x;
             y = (int) takenPositions[randIndex].y;
             var axis = Random.value < 0.5f;
@@ -113,12 +114,13 @@ public class LevelGenerator : MonoBehaviour
             roomStats.Room = room;
             newRoom.transform.parent = mapRoot;
 
-            if (roomStats.Room.Type == Room.RoomType.NormalRoom || roomStats.Room.Type == Room.RoomType.EntryRoom)
+            if (roomStats.Room.Type is Room.RoomType.NormalRoom or Room.RoomType.EntryRoom or Room.RoomType.ShopRoom)
             {
-                var obstacles = Instantiate(obstaclesSelector.PickObstacles(roomStats.Room.Type == Room.RoomType.EntryRoom), drawPos, quaternion.identity);
+                var obstacles = Instantiate(obstaclesSelector.PickObstacles(roomStats.Room.Type), drawPos,
+                    quaternion.identity);
                 obstacles.transform.parent = newRoom.transform;
             }
-            
+
             var minimapDrawPos = room.GridPos;
             minimapDrawPos.x *= Room.MinimapRoomSize.x + 2;
             minimapDrawPos.y *= Room.MinimapRoomSize.y + 2;
@@ -141,8 +143,8 @@ public class LevelGenerator : MonoBehaviour
                 rooms[x, y].DoorTop = y + 1 < gridSizeY * 2 && rooms[x, y + 1] != null;
                 rooms[x, y].DoorLeft = x - 1 >= 0 && rooms[x - 1, y] != null;
                 rooms[x, y].DoorRight = x + 1 < gridSizeX * 2 && rooms[x + 1, y] != null;
-                if(rooms[x,y].GetDoorCount() == 1)
-                    deadEnds.Add(rooms[x,y]);
+                if (rooms[x, y].GetDoorCount() == 1)
+                    deadEnds.Add(rooms[x, y]);
             }
         }
     }

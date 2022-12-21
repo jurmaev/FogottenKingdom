@@ -10,6 +10,8 @@ public class EventManager : MonoBehaviour
     public static UnityEvent<int> OnChangeMagic = new UnityEvent<int>();
     public static UnityEvent<int, float> OnMagicStartCooldown = new UnityEvent<int, float>();
     public static UnityEvent<GameObject> OnEnemyDeath = new UnityEvent<GameObject>();
+    public static UnityEvent<int> OnCoinAmountChanged = new UnityEvent<int>();
+    public static UnityEvent<int> OnCoinPicked = new UnityEvent<int>();
 
     public static void SendCameraPosChanged(Vector2 newGridPos)
     {
@@ -39,5 +41,15 @@ public class EventManager : MonoBehaviour
     public static void SendEnemyDeath(GameObject enemy)
     {
         OnEnemyDeath.Invoke(enemy);
+    }
+
+    public static void SendCoinAmountChanged(int value)
+    {
+        OnCoinAmountChanged.Invoke(value);
+    }
+    
+    public static void SendCoinPicked(int value)
+    {
+        OnCoinPicked.Invoke(value);
     }
 }
