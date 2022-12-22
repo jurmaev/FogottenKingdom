@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicScroll : Artifact
+public class CrystalHeart : Artifact
 {
-    [SerializeField] private GameObject magic;
+    [SerializeField]private float amountOfHealth;
     protected override void UpgradePlayer(PlayerController player)
     {
-        player.LearnNewMagic(magic);
+        player.IncreaseMaximumHealth(amountOfHealth);
     }
 }

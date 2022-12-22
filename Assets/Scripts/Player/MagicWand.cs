@@ -29,6 +29,7 @@ public class MagicWand : MonoBehaviour
     {
         camera = Camera.main;
         SwitchCurrentMagic(0);
+        EventManager.SendChangeMagic(currentMagicIndex);
         magicController = GetComponent<MagicController>();
         magicController.SetMagic(availableMagic);
     }
