@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d25829615e160242ab097c6ddf29d7e
+guid: d483659a2966ac042aedf042364841c7
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Galvanic
+  - Press Start 2P
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

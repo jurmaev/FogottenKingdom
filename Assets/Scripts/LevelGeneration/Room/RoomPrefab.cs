@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
@@ -14,6 +15,7 @@ public class RoomPrefab : MonoBehaviour
     [SerializeField] private Tile[] bottomDoor;
     [SerializeField] private GameObject doorPrefab;
     [SerializeField] private GameObject chestPrefab;
+    [SerializeField] private GameObject portal;
     private List<GameObject> enemies;
     private int numberOfEnemies;
     private List<GameObject> doors;
@@ -155,6 +157,8 @@ public class RoomPrefab : MonoBehaviour
                 var chest = Instantiate(chestPrefab, transform.position, Quaternion.identity);
                 chest.GetComponent<Chest>().RoomType = Room.Type;
             }
+
+            if (Room.Type == Room.RoomType.BossRoom) Instantiate(portal, transform.position, quaternion.identity);
 
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
