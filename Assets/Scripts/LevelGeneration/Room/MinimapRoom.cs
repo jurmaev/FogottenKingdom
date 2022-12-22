@@ -15,11 +15,19 @@ public class MinimapRoom : MonoBehaviour
     private void Start()
     {
         PaintRoom(Room.Type == Room.RoomType.EntryRoom ? activeTile : inactiveTile);
-        ChooseSprite();
+        ChooseIcon();
         EventManager.OnActiveRoomChanged.AddListener(activeRoomPos =>
         {
             PaintRoom(activeRoomPos == Room.GridPos ? activeTile : inactiveTile);
         });
+        if (Room.DoorBottom)
+            PaintDoor(-1, -(int) Room.MinimapRoomSize.y / 2 - 1, 0, -(int) Room.MinimapRoomSize.y / 2 - 1, inactiveTile);
+        if (Room.DoorTop)
+            PaintDoor(-1, (int) Room.MinimapRoomSize.y / 2, 0, (int) Room.MinimapRoomSize.y / 2, inactiveTile);
+        if (Room.DoorLeft)
+            PaintDoor(-(int) Room.MinimapRoomSize.x / 2 - 1, -1, -(int) Room.MinimapRoomSize.x / 2 - 1, 0, inactiveTile);
+        if (Room.DoorRight)
+            PaintDoor((int) Room.MinimapRoomSize.x / 2, -1, (int) Room.MinimapRoomSize.x / 2, 0, inactiveTile);
     }
 
     private void PaintRoom(Tile paintTile)
@@ -27,14 +35,7 @@ public class MinimapRoom : MonoBehaviour
         for (var x = -(int) Room.MinimapRoomSize.x / 2; x < (int) Room.MinimapRoomSize.x / 2; x++)
         for (var y = -(int) Room.MinimapRoomSize.y / 2; y < (int) Room.MinimapRoomSize.y / 2; y++)
             floorTilemap.SetTile(new Vector3Int(x, y, 0), paintTile);
-        if (Room.DoorBottom)
-            PaintDoor(-1, -(int) Room.MinimapRoomSize.y / 2 - 1, 0, -(int) Room.MinimapRoomSize.y / 2 - 1, paintTile);
-        if (Room.DoorTop)
-            PaintDoor(-1, (int) Room.MinimapRoomSize.y / 2, 0, (int) Room.MinimapRoomSize.y / 2, paintTile);
-        if (Room.DoorLeft)
-            PaintDoor(-(int) Room.MinimapRoomSize.x / 2 - 1, -1, -(int) Room.MinimapRoomSize.x / 2 - 1, 0, paintTile);
-        if (Room.DoorRight)
-            PaintDoor((int) Room.MinimapRoomSize.x / 2, -1, (int) Room.MinimapRoomSize.x / 2, 0, paintTile);
+        
     }
 
     private void PaintDoor(int x1, int y1, int x2, int y2, Tile paintTile)
@@ -44,9 +45,8 @@ public class MinimapRoom : MonoBehaviour
             floorTilemap.SetTile(new Vector3Int(i, j, 0), paintTile);
     }
 
-    private void ChooseSprite()
+    private void ChooseIcon()
     {
-        // Debug.Log(Room.Type);
         switch (Room.Type)
         {
             case Room.RoomType.BossRoom:
@@ -58,7 +58,6 @@ public class MinimapRoom : MonoBehaviour
             case Room.RoomType.TreasureRoom:
                 Instantiate(icons[2], transform.position, quaternion.identity);
                 break;
-            // default: break;
         }
     }
 }

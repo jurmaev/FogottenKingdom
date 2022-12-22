@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorTilemap: {fileID: 1977428006616039868}
-  activeTile: {fileID: 11400000, guid: 46ae92d83ec8cb646bc84e3347178964, type: 2}
-  inactiveTile: {fileID: 11400000, guid: 90975b842ffcf1d499f335e7ccc60ab9, type: 2}
+  activeTile: {fileID: 11400000, guid: cbbf48c36bb548745aea50d78cbd22ae, type: 2}
+  inactiveTile: {fileID: 11400000, guid: 3f410b7ba55a7e54c8247742a75a2a10, type: 2}
   icons:
   - {fileID: 5231352562828183950, guid: 80a42484ccbfffb41b2b0c6be78fecf2, type: 3}
   - {fileID: 4956948838033136700, guid: 85ce84ef303748e4cb5e3ff271c41b9b, type: 3}

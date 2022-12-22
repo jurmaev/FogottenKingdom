@@ -18,7 +18,7 @@ public class Room
     public bool DoorLeft { get; set; }
     public Vector2 GridPos { get; }
     public static Vector2 RoomSize { get; } = new(32, 18);
-    public static Vector2 MinimapRoomSize { get; } = new(6, 6);
+    public static Vector2 MinimapRoomSize { get; } = new(4, 4);
     public RoomType Type { get; set; }
 
     public Room(Vector2 gridPos, RoomType type)

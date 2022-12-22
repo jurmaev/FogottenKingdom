@@ -122,8 +122,8 @@ public class LevelGenerator : MonoBehaviour
             }
 
             var minimapDrawPos = room.GridPos;
-            minimapDrawPos.x *= Room.MinimapRoomSize.x + 2;
-            minimapDrawPos.y *= Room.MinimapRoomSize.y + 2;
+            minimapDrawPos.x *= Room.MinimapRoomSize.x + 1;
+            minimapDrawPos.y *= Room.MinimapRoomSize.y + 1;
             var newMinimapRoom = Instantiate(minimapRoom, minimapDrawPos, quaternion.identity);
             var minimapRoomStats = newMinimapRoom.GetComponent<MinimapRoom>();
             minimapRoomStats.Room = room;
