@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Artifact : MonoBehaviour
+public abstract class Artifact : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [field: SerializeField] public string ArtifactName { get; protected set; }
+    [field: SerializeField] public string Description { get; protected set; }
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            UpgradePlayer(col.gameObject.GetComponent<PlayerController>());
+            EventManager.SendArtifactSelection(this);
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected abstract void UpgradePlayer(PlayerController player);
 }

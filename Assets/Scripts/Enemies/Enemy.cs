@@ -30,7 +30,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// Возращает локльные координаты полоски здоровья, нужел для того, чтобы 
+    /// Возращает локльные координаты полоски здоровья, нужен для того, чтобы ставить дебаффы над ней
     /// </summary>
     /// <returns></returns>
     public Vector3 GetHealthBarCoordinates()

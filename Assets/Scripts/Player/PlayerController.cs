@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+
+    public UnityAction<Enemy> OnEnemyCollision;
     
     void Start()
     {
@@ -33,6 +37,22 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CheckInput();
+    }
+
+    public void IncreaseMaximumHealth(float  amountOfHealth)
+    {
+        maxHealth += amountOfHealth;
+        currentHealth += amountOfHealth;
+    }
+    
+    public void IncreaseSpeed(float  amountSpeed)
+    {
+        movementSpeed += amountSpeed;
+    }
+
+    public void LearnNewMagic(GameObject magic)
+    {
+        magicWand.availableMagic.Add(magic);
     }
 
     private void FixedUpdate()
