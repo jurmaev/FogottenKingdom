@@ -6,7 +6,7 @@ public class MagicController : MonoBehaviour
 {
     private Dictionary<GameObject, CooldownTimer> magicCooldown;
 
-    void Start()
+    void Awake()
     {
         magicCooldown = new Dictionary<GameObject, CooldownTimer>();
     }

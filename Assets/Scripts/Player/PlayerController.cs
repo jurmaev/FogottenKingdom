@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateHealthbar()
     {
-        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth / maxHealth, 0.3f);
+        healthBar.value = currentHealth / maxHealth;
         var healthColor = Color.Lerp(Color.red, Color.green, currentHealth / maxHealth);
         fillImage.color = healthColor;
     }
