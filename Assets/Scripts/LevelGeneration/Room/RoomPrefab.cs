@@ -104,13 +104,18 @@ public class RoomPrefab : MonoBehaviour
     private void RemoveEnemy(GameObject enemy)
     {
         if (enemies.Count != 0 && numberOfEnemies == 0) numberOfEnemies = enemies.Count;
-        if (enemies.Count != 0) enemies.Remove(enemy);
+        if (enemies.Count != 0)
+        {
+            EventManager.SendCoinAmountChanged(1);
+            // EventManager.SendCoinPicked(1);
+            enemies.Remove(enemy);
+        }
 
         if (enemies.Count == 0)
         {
-            var chest = Instantiate(chestPrefab, enemy.transform.position, Quaternion.identity);
-            chest.GetComponent<Chest>().CoinMultiplier = numberOfEnemies;
-            chest.GetComponent<Chest>().RoomType = Room.Type;
+            // var chest = Instantiate(chestPrefab, enemy.transform.position, Quaternion.identity);
+            // chest.GetComponent<Chest>().CoinMultiplier = numberOfEnemies;
+            // chest.GetComponent<Chest>().RoomType = Room.Type;
             enemiesDefeated = true;
             ActivateDoors();
             EventManager.OnEnemyDeath.RemoveListener(RemoveEnemy);
