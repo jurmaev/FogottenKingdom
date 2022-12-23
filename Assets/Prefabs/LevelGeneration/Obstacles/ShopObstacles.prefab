@@ -322,7 +322,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 1758915288093983645, guid: 8f15d2c6ea2c21f44b2bcecbaf8097cd, type: 3}
+  - {fileID: 585924778964779028, guid: f5c1d51ae1c9c774098ab1fba549cdf1, type: 3}
+  - {fileID: 5650586152757200882, guid: fea8f8286d242ba498b6c2d57b1258aa, type: 3}
+  - {fileID: 1259518629886431136, guid: 5337f965604bbde4ab696b6ae66a2ea0, type: 3}
+  - {fileID: 6911980711545757701, guid: c75dc79a2c06886459d12d00e4df6cbd, type: 3}
   spawnPoints:
   - {fileID: 5547409507568857387}
   - {fileID: 5547409507038853436}

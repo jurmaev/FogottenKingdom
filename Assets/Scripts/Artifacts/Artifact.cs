@@ -10,10 +10,11 @@ public abstract class Artifact : MonoBehaviour
     [field: SerializeField] public string ArtifactName { get; protected set; }
     [field: SerializeField] public string Description { get; protected set; }
     [field: SerializeField] public int Price { get; protected set; }
-    [SerializeField]private TextMeshPro priceText;
+    private TextMeshProUGUI priceText;
 
     private void Start()
     {
+        priceText = GetComponentInChildren<TextMeshProUGUI>();
         if (Price == 0)
             priceText.text = "";
         else
@@ -26,7 +27,7 @@ public abstract class Artifact : MonoBehaviour
         {
             if (player.Coins >= Price)
             {
-                player.TryChangeCoins(Price);
+                // EventManager.SendCoinAmountChanged(Price);
                 UpgradePlayer(col.gameObject.GetComponent<PlayerController>());
                 EventManager.SendArtifactSelection(this);
                 Destroy(gameObject);

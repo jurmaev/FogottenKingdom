@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void TryChangeCoins(int changeAmount)
+    private void TryChangeCoins(int changeAmount)
     {
         Coins = Coins + changeAmount >= 0 ? Coins + changeAmount : 0;
         EventManager.SendCoinPicked(Coins);
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
             GetDamage(projectile.Damage);
-        if (other.gameObject.CompareTag("ShopItem")) TryChangeCoins(-other.GetComponent<ShopItem>().Value);
+        if (other.gameObject.CompareTag("ShopItem")) TryChangeCoins(-other.GetComponent<Artifact>().Price);
     }
 
     private void CheckInput()
