@@ -17,6 +17,7 @@ public class MovingEnemy : Enemy
 
     protected void Move()
     {
+        if (playerTarget == null) return;
         var direction = (playerTarget.transform.position - transform.position).normalized;
         enemyRigidbody.velocity = new Vector2(direction.x, direction.y) * Speed;
     }

@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        EventManager.SendPlayerDeath();
         Destroy(gameObject);
     }
 }
