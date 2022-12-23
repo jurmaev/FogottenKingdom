@@ -231,4 +231,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners: []
   lights:
-  - {fileID: 3731766880583840034, guid: 7d6f7fade55bab84a80e53abb66cdbe9, type: 3}
+  - {fileID: 8946322913149048284, guid: d088dd9563bdd4d4396ca7d412fd0717, type: 3}

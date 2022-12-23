@@ -106,7 +106,7 @@ public class RoomPrefab : MonoBehaviour
         if (enemies.Count != 0 && numberOfEnemies == 0) numberOfEnemies = enemies.Count;
         if (enemies.Count != 0)
         {
-            EventManager.SendCoinAmountChanged(1);
+            EventManager.SendCoinAmountChanged(2);
             // EventManager.SendCoinPicked(1);
             enemies.Remove(enemy);
         }

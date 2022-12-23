@@ -81,11 +81,17 @@ public class PlayerController : MonoBehaviour
             GetDamage(enemy.Damage);
     }
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.TryGetComponent(out Enemy enemy))
+            GetDamage(enemy.Damage);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
             GetDamage(projectile.Damage);
-        if (other.gameObject.CompareTag("ShopItem")) TryChangeCoins(-other.GetComponent<Artifact>().Price);
+        if (other.gameObject.TryGetComponent(out Artifact artifact)) TryChangeCoins(-artifact.Price);
     }
 
     private void CheckInput()

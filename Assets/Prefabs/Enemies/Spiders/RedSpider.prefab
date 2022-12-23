@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4164220445749367172}
   m_Layer: 0
   m_Name: RedSpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
