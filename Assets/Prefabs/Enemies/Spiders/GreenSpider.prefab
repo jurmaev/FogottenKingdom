@@ -376,6 +376,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 2.5
   <Damage>k__BackingField: 2
   healthBar: {fileID: 6597473889175996178}
+  value: 2
 --- !u!1001 &4686828946038066327
 PrefabInstance:
   m_ObjectHideFlags: 0

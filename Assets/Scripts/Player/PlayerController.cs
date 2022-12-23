@@ -71,7 +71,9 @@ public class PlayerController : MonoBehaviour
 
     private void TryChangeCoins(int changeAmount)
     {
+        print(Coins);
         Coins = Coins + changeAmount >= 0 ? Coins + changeAmount : 0;
+        print(Coins);
         EventManager.SendCoinPicked(Coins);
     }
 

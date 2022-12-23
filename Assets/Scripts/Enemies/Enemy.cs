@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Slider healthBar;
     protected Rigidbody2D enemyRigidbody;
     private DebuffController debuffController;
+    [SerializeField] private int value;
 
     protected virtual void Start()
     {
@@ -52,7 +53,6 @@ public abstract class Enemy : MonoBehaviour
     {
         return currentHealth / MaxHealth;
     }
-
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -109,6 +109,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Die()
     {
         EventManager.SendEnemyDeath(gameObject);
+        EventManager.SendCoinAmountChanged(value);
         Destroy(gameObject);
     }
 }

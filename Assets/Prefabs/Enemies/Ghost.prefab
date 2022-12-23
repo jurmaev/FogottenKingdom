@@ -275,6 +275,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 2
   <Damage>k__BackingField: 3
   healthBar: {fileID: 5727820303889259241}
+  value: 2
 --- !u!1 &6195079159151646235
 GameObject:
   m_ObjectHideFlags: 0
