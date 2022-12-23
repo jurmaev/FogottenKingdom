@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 2661635965241520041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.2, y: -1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.52, y: 1.52, z: 1.52}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -169,6 +169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 4660968876363620779, guid: 2b4fa308534578f4c90e155512b66de0, type: 3}
+  artefacts:
+  - {fileID: 585924778964779028, guid: a9f5647eba66bdf4693e56e3b332fb6d, type: 3}
+  - {fileID: 5650586152757200882, guid: 92d2a33377fa6fe40b2ac80d24e94f67, type: 3}
+  - {fileID: 1259518629886431136, guid: 9d7fd95735db51f4b9a569fa79cf97b3, type: 3}
+  - {fileID: 6911980711545757701, guid: de0f9ed2a4f1ff0468dcd05cfa037924, type: 3}
 --- !u!58 &1508135185
 CircleCollider2D:
   m_ObjectHideFlags: 0
