@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
     [SerializeField] private float movementSpeed;
-    
+
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
     [SerializeField] private Slider healthBar;
@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     public UnityAction<Enemy> OnEnemyCollision;
-    public  int Coins { get; private set; }
-    
+    public int Coins { get; private set; }
+
     void Start()
     {
         InitializeElements();
@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
         CheckInput();
     }
 
-    public void IncreaseMaximumHealth(float  amountOfHealth)
+    public void IncreaseMaximumHealth(float amountOfHealth)
     {
         maxHealth += amountOfHealth;
         currentHealth += amountOfHealth;
     }
-    
-    public void IncreaseSpeed(float  amountSpeed)
+
+    public void IncreaseSpeed(float amountSpeed)
     {
         movementSpeed += amountSpeed;
     }
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void TryChangeCoins(int changeAmount)
+    public void TryChangeCoins(int changeAmount)
     {
         Coins = Coins + changeAmount >= 0 ? Coins + changeAmount : 0;
         EventManager.SendCoinPicked(Coins);
@@ -94,13 +94,13 @@ public class PlayerController : MonoBehaviour
         UpdateAnimation();
     }
 
-    
+
     private void Move()
     {
         playerRb.velocity = new Vector2(moveDirection.x, moveDirection.y) * movementSpeed;
     }
 
-    
+
     private void UpdateAnimation()
     {
         if (moveDirection.x != 0 || moveDirection.y != 0)

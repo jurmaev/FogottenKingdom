@@ -126,4 +126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ArtifactName>k__BackingField: Spike Armor
   <Description>k__BackingField: Deals damage to the enemy
+  <Price>k__BackingField: 0
+  priceText: {fileID: 0}
   amountOfDamage: 5
