@@ -13,6 +13,7 @@ public class SkillBarController : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         frames = GetAllFrames();
         DrawStartPlayerSkills();
+        ActivateFrame(0);
         EventManager.OnChangeMagic.AddListener(ActivateFrame);
         EventManager.OnMagicStartCooldown.AddListener(ActivateFrameCooldown);
     }

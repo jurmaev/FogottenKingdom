@@ -8,14 +8,7 @@ public class FrameController : MonoBehaviour
 {
     public bool IsActive
     {
-        get => isActive;
-        set
-        {
-            if (value)
-                frameImage.GetComponent<Image>().color = new Color(1, 0.9549635f, 0.4188679f);
-            else
-                frameImage.GetComponent<Image>().color = new Color(1, 1, 1);
-        }
+        set => frameImage.GetComponent<Image>().color = value ? new Color(1, 0.9549635f, 0.4188679f) : new Color(1, 1, 1);
     }
     
     private bool isActive;

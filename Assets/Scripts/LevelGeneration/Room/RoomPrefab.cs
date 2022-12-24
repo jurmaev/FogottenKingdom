@@ -28,6 +28,7 @@ public class RoomPrefab : MonoBehaviour
         enemies = new List<GameObject>();
         PaintFloor();
         PaintDoors(false);
+        SetDoors();
         if (Room.Type == Room.RoomType.EntryRoom)
         {
             ActivateDoors();
@@ -48,28 +49,29 @@ public class RoomPrefab : MonoBehaviour
     {
         var paintIndex = isOpen ? 0 : 1;
         if (Room.DoorBottom)
-        {
             PaintDoor(-1, -(int) Room.RoomSize.y / 2, 0, -(int) Room.RoomSize.y / 2, bottomDoor[paintIndex]);
-            SetDoor(transform.position.x, transform.position.y - Room.RoomSize.y / 2 + 1, 90, Door.Position.Bottom);
-        }
+
 
         if (Room.DoorTop)
-        {
             PaintDoor(-1, (int) Room.RoomSize.y / 2 - 1, 0, (int) Room.RoomSize.y / 2 - 1, topDoor[paintIndex]);
-            SetDoor(transform.position.x, transform.position.y + Room.RoomSize.y / 2 - 1, 270, Door.Position.Top);
-        }
 
         if (Room.DoorLeft)
-        {
             PaintDoor(-(int) Room.RoomSize.x / 2, -1, -(int) Room.RoomSize.x / 2, 0, leftDoor[paintIndex]);
-            SetDoor(transform.position.x - Room.RoomSize.x / 2 + 1, transform.position.y, 0, Door.Position.Left);
-        }
 
         if (Room.DoorRight)
-        {
             PaintDoor((int) Room.RoomSize.x / 2 - 1, -1, (int) Room.RoomSize.x / 2 - 1, 0, rightDoor[paintIndex]);
+    }
+
+    private void SetDoors()
+    {
+        if (Room.DoorBottom)
+            SetDoor(transform.position.x, transform.position.y - Room.RoomSize.y / 2 + 1, 90, Door.Position.Bottom);
+        if (Room.DoorTop)
+            SetDoor(transform.position.x, transform.position.y + Room.RoomSize.y / 2 - 1, 270, Door.Position.Top);
+        if (Room.DoorLeft)
+            SetDoor(transform.position.x - Room.RoomSize.x / 2 + 1, transform.position.y, 0, Door.Position.Left);
+        if (Room.DoorRight)
             SetDoor(transform.position.x + Room.RoomSize.x / 2 - 1, transform.position.y, 180, Door.Position.Right);
-        }
     }
 
     private void PaintDoor(int x1, int y1, int x2, int y2, Tile doorTile)
@@ -156,13 +158,14 @@ public class RoomPrefab : MonoBehaviour
                 EventManager.OnEnemyDeath.AddListener(RemoveEnemy);
             }
 
-            if (Room.Type == Room.RoomType.TreasureRoom)
+            if (Room.Type == Room.RoomType.TreasureRoom && !obstaclesSpawned)
             {
                 var chest = Instantiate(chestPrefab, transform.position, Quaternion.identity);
                 chest.GetComponent<Chest>().RoomType = Room.Type;
             }
 
-            if (Room.Type == Room.RoomType.BossRoom) Instantiate(portal, transform.position, quaternion.identity);
+            if (Room.Type == Room.RoomType.BossRoom && !obstaclesSpawned)
+                Instantiate(portal, transform.position, quaternion.identity);
 
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
