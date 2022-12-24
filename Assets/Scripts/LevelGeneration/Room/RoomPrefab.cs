@@ -162,10 +162,14 @@ public class RoomPrefab : MonoBehaviour
             {
                 var chest = Instantiate(chestPrefab, transform.position, Quaternion.identity);
                 chest.GetComponent<Chest>().RoomType = Room.Type;
+                obstaclesSpawned = true;
             }
 
             if (Room.Type == Room.RoomType.BossRoom && !obstaclesSpawned)
+            {
                 Instantiate(portal, transform.position, quaternion.identity);
+                obstaclesSpawned = true;
+            }
 
             EventManager.SendCameraPosChanged(Room.GridPos);
             EventManager.SendActiveRoomChanged(Room.GridPos);
