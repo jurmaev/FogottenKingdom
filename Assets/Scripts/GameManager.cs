@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private Animator crossfadeTransition;
     private bool isPaused;
+    private MagicWand magicWand;
+    private PlayerController playerController;
+
+    private void Start()
+    {
+        magicWand = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MagicWand>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerController>();
+    }
 
     private void Update()
     {
@@ -27,6 +35,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         isPaused = true;
+        magicWand.IsPaused = true;
+        playerController.IsPaused = true;
     }
 
     private void PlayCrossfade()
@@ -39,6 +49,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         isPaused = false;
+        magicWand.IsPaused = false;
+        playerController.IsPaused = false;
     }
 
     public void ExitToMenu()

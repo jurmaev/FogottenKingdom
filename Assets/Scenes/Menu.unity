@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 0}
+  deathPanel: {fileID: 0}
   crossfadeTransition: {fileID: 1474211298}
 --- !u!4 &145328458
 Transform:

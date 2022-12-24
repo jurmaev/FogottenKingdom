@@ -13,6 +13,9 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public MagicWand magicWand;
+    public UnityAction<Enemy> OnEnemyCollision;
+    public bool IsPaused { get; set; }
+    public int Coins { get; private set; }
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
     [SerializeField] private float movementSpeed;
@@ -26,9 +29,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
-    public UnityAction<Enemy> OnEnemyCollision;
-    public int Coins { get; private set; }
 
     void Start()
     {
@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour
     private void CheckInput()
     {
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (IsPaused) return;
         UpdateAnimation();
     }
 
