@@ -32,6 +32,7 @@ public class RoomPrefab : MonoBehaviour
         if (Room.Type == Room.RoomType.EntryRoom)
         {
             ActivateDoors();
+            PaintDoors(true);
             GetComponentInChildren<ObstaclesPrefab>().GenerateLights();
             obstaclesSpawned = true;
         }
@@ -47,19 +48,18 @@ public class RoomPrefab : MonoBehaviour
 
     private void PaintDoors(bool isOpen)
     {
-        var paintIndex = isOpen ? 0 : 1;
+        var paintIndex = isOpen ? 2 : 0;
         if (Room.DoorBottom)
-            PaintDoor(-1, -(int) Room.RoomSize.y / 2, 0, -(int) Room.RoomSize.y / 2, bottomDoor[paintIndex]);
-
-
+            PaintDoor(-1, -(int) Room.RoomSize.y / 2, 0, -(int) Room.RoomSize.y / 2, bottomDoor, paintIndex);
+        
         if (Room.DoorTop)
-            PaintDoor(-1, (int) Room.RoomSize.y / 2 - 1, 0, (int) Room.RoomSize.y / 2 - 1, topDoor[paintIndex]);
+            PaintDoor(-1, (int) Room.RoomSize.y / 2 - 1, 0, (int) Room.RoomSize.y / 2 - 1, topDoor, paintIndex);
 
         if (Room.DoorLeft)
-            PaintDoor(-(int) Room.RoomSize.x / 2, -1, -(int) Room.RoomSize.x / 2, 0, leftDoor[paintIndex]);
+            PaintDoor(-(int) Room.RoomSize.x / 2, -1, -(int) Room.RoomSize.x / 2, 0, leftDoor, paintIndex);
 
         if (Room.DoorRight)
-            PaintDoor((int) Room.RoomSize.x / 2 - 1, -1, (int) Room.RoomSize.x / 2 - 1, 0, rightDoor[paintIndex]);
+            PaintDoor((int) Room.RoomSize.x / 2 - 1, -1, (int) Room.RoomSize.x / 2 - 1, 0, rightDoor, paintIndex);
     }
 
     private void SetDoors()
@@ -74,11 +74,12 @@ public class RoomPrefab : MonoBehaviour
             SetDoor(transform.position.x + Room.RoomSize.x / 2 - 1, transform.position.y, 180, Door.Position.Right);
     }
 
-    private void PaintDoor(int x1, int y1, int x2, int y2, Tile doorTile)
+    private void PaintDoor(int x1, int y1, int x2, int y2, Tile[] doors, int paintIndex)
     {
+        var off = 0;
         for (var i = x1; i <= x2; i++)
         for (var j = y1; j <= y2; j++)
-            floorTilemap.SetTile(new Vector3Int(i, j, 0), doorTile);
+            floorTilemap.SetTile(new Vector3Int(i, j, -90), doors[paintIndex + off++]);
     }
 
     private void SetDoor(float x, float y, float angle, Door.Position position)

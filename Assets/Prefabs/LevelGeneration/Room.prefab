@@ -1257,17 +1257,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
   - {fileID: 11400000, guid: a0ff4dbbc4e9b9c4ba2339f4589a5842, type: 2}
   rightDoor:
-  - {fileID: 11400000, guid: a5d1aea035875244fbc03ea32e56b95d, type: 2}
-  - {fileID: 11400000, guid: f0dc425be4f84564faf28237f458d26a, type: 2}
+  - {fileID: 11400000, guid: 39f05e692b675f545b3946f5c5186906, type: 2}
+  - {fileID: 11400000, guid: e6053d8b4c8549442926075b5a7fe4ad, type: 2}
+  - {fileID: 11400000, guid: efadf4dc7fbd21b4e823906850c01d9f, type: 2}
+  - {fileID: 11400000, guid: 03a27ee1f2065fc47b4ac0063b164752, type: 2}
   leftDoor:
-  - {fileID: 11400000, guid: 0c7fe2a29441df84da660cbcec9c7dfa, type: 2}
-  - {fileID: 11400000, guid: 4868003910ea70145a7a0ef91ce9f708, type: 2}
+  - {fileID: 11400000, guid: 769bb213c7baf0e42a020e204cc90ae4, type: 2}
+  - {fileID: 11400000, guid: 9fdaab5134ef5f1409d1e82ad0599d1e, type: 2}
+  - {fileID: 11400000, guid: 387f22aadfd4bdf4db5b96f27fb62715, type: 2}
+  - {fileID: 11400000, guid: b62885b04ff4e784a85cdad81ddbf151, type: 2}
   topDoor:
-  - {fileID: 11400000, guid: ed82998a1b6193a42b68f5e2b27c18fd, type: 2}
-  - {fileID: 11400000, guid: b15e85445297a104ca2134dc1c5d004e, type: 2}
+  - {fileID: 11400000, guid: 522e085a2b5213c49910ba13699267bf, type: 2}
+  - {fileID: 11400000, guid: 8a96c8b4354a9ec4fbe9929065dc2b06, type: 2}
+  - {fileID: 11400000, guid: 1640fa7818176bd45bcc33fe923aca47, type: 2}
+  - {fileID: 11400000, guid: 0f83b17713683af498cb72c35b930658, type: 2}
   bottomDoor:
-  - {fileID: 11400000, guid: f15654042e9476d449ee4dd711e5356b, type: 2}
-  - {fileID: 11400000, guid: d69c85096d46b9e4a9e8f10804ccc6ec, type: 2}
+  - {fileID: 11400000, guid: 05ff2bdb5dca3ab4c8aabdef4e6a233a, type: 2}
+  - {fileID: 11400000, guid: d226b1db0370bc54b8e9a527e9ac3545, type: 2}
+  - {fileID: 11400000, guid: 777141881038d1e46abb6187d8e8f5cb, type: 2}
+  - {fileID: 11400000, guid: 54a8041b40f2d9143a6a72d4c31569d0, type: 2}
   doorPrefab: {fileID: 1503913154764850235, guid: 2ccfa8da7766b3642b5b7e65985db2aa, type: 3}
   chestPrefab: {fileID: 2661635965241520041, guid: c605234341b918e4b84133c9cf7f7884, type: 3}
   portal: {fileID: 5081200676424272728, guid: ad1d573c75c8cba4d8f6e7eb1647e433, type: 3}
