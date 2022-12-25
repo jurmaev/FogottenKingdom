@@ -63,9 +63,9 @@ public class MagicWand : MonoBehaviour
 
     private void CheckMagicChange()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             SwitchCurrentMagic(true);
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             SwitchCurrentMagic(false);
         else if (Input.GetKeyDown(KeyCode.Alpha1))
             SwitchCurrentMagic(0);
