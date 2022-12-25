@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (!GameObject.FindGameObjectWithTag("Player")) return;
         magicWand = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MagicWand>();
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerController>();
     }
