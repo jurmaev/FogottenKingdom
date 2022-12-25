@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public  class EventManager : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
     public static UnityEvent<Vector2> OnCameraPosChanged = new UnityEvent<Vector2>();
     public static UnityEvent<Vector2> OnActiveRoomChanged = new UnityEvent<Vector2>();
@@ -13,6 +13,7 @@ public  class EventManager : MonoBehaviour
     public static UnityEvent<int> OnCoinAmountChanged = new UnityEvent<int>();
     public static UnityEvent<int> OnCoinPicked = new UnityEvent<int>();
     public static UnityEvent<Artifact> OnArtifactSelection = new UnityEvent<Artifact>();
+    public static UnityEvent OnPlayerDeath = new UnityEvent();
 
     public static void SendCameraPosChanged(Vector2 newGridPos)
     {
@@ -53,9 +54,14 @@ public  class EventManager : MonoBehaviour
     {
         OnCoinAmountChanged.Invoke(value);
     }
-    
+
     public static void SendCoinPicked(int value)
     {
         OnCoinPicked.Invoke(value);
+    }
+
+    public static void SendPlayerDeath()
+    {
+        OnPlayerDeath.Invoke();
     }
 }

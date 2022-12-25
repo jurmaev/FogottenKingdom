@@ -15,6 +15,7 @@ public class Door : MonoBehaviour
     public Position DoorPosition { get; set; }
     public bool IsActive { get; set; }
     [SerializeField] private Vector2 TeleportDistance;
+    [SerializeField] private float teleportDelay;
 
     private Vector3 MovePlayer(Vector3 startPos)
     {
@@ -32,7 +33,7 @@ public class Door : MonoBehaviour
     
     IEnumerator TeleportPlayer()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(teleportDelay);
         var player = FindObjectOfType<PlayerController>();
         player.transform.position = MovePlayer(player.transform.position);
     }

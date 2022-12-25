@@ -7,12 +7,22 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject deathPanel;
     [SerializeField] private Animator crossfadeTransition;
     private bool isPaused;
+    private MagicWand magicWand;
+    private PlayerController playerController;
+
+    private void Start()
+    {
+        magicWand = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MagicWand>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerController>();
+    }
 
     private void Update()
     {
         EventManager.OnPlayCrossfade.AddListener(PlayCrossfade);
+        EventManager.OnPlayerDeath.AddListener(ActivateDeathPanel);
         if (pausePanel != null && Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPaused) PauseGame();
@@ -25,6 +35,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         isPaused = true;
+        magicWand.IsPaused = true;
+        playerController.IsPaused = true;
     }
 
     private void PlayCrossfade()
@@ -37,6 +49,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.SetActive(false);
         isPaused = false;
+        magicWand.IsPaused = false;
+        playerController.IsPaused = false;
     }
 
     public void ExitToMenu()
@@ -44,6 +58,12 @@ public class GameManager : MonoBehaviour
         Destroy(pausePanel);
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
+    }
+
+    private void ActivateDeathPanel()
+    {
+        Time.timeScale = 0;
+        deathPanel.SetActive(true);
     }
 
     public void ExitGame()
@@ -54,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
     }
 }

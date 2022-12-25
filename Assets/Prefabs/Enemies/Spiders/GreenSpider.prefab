@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4795415647167824670}
   m_Layer: 0
   m_Name: GreenSpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,6 +376,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 2.5
   <Damage>k__BackingField: 2
   healthBar: {fileID: 6597473889175996178}
+  value: 2
 --- !u!1001 &4686828946038066327
 PrefabInstance:
   m_ObjectHideFlags: 0

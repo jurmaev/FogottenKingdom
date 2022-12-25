@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 876122236249898927}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 2
   <Damage>k__BackingField: 3
   healthBar: {fileID: 5727820303889259241}
+  value: 2
 --- !u!1 &6195079159151646235
 GameObject:
   m_ObjectHideFlags: 0

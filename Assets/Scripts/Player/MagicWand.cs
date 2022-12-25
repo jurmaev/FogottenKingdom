@@ -12,16 +12,14 @@ public enum Hand
 
 public class MagicWand : MonoBehaviour
 {
+    public bool IsPaused { get; set; }
     [field: SerializeField] public List<GameObject> availableMagic { get; protected set; }
     [SerializeField] private int currentMagicIndex;
-    private GameObject currentMagic => availableMagic[currentMagicIndex];
-    private MagicController magicController;
-    
-    
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform rightHandPoint;
     [SerializeField] private Transform leftHandPoint;
-
+    private GameObject currentMagic => availableMagic[currentMagicIndex];
+    private MagicController magicController;
     private Vector2 mousePos;
     private Camera camera;
 
@@ -36,6 +34,7 @@ public class MagicWand : MonoBehaviour
 
     private void Update()
     {
+        if (IsPaused) return;
         RotateFirepoint();
         CheckInput();
     }

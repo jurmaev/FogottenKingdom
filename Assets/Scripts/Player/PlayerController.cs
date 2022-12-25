@@ -13,10 +13,13 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public MagicWand magicWand;
+    public UnityAction<Enemy> OnEnemyCollision;
+    public bool IsPaused { get; set; }
+    public int Coins { get; private set; }
     [SerializeField] private float maxHealth;
     [SerializeField] private float currentHealth;
     [SerializeField] private float movementSpeed;
-    
+
     [SerializeField] private float invincibleTime;
     [SerializeField] private bool isInvincible;
     [SerializeField] private Slider healthBar;
@@ -27,9 +30,6 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    public UnityAction<Enemy> OnEnemyCollision;
-    public  int Coins { get; private set; }
-    
     void Start()
     {
         InitializeElements();
@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
         CheckInput();
     }
 
-    public void IncreaseMaximumHealth(float  amountOfHealth)
+    public void IncreaseMaximumHealth(float amountOfHealth)
     {
         maxHealth += amountOfHealth;
         currentHealth += amountOfHealth;
     }
-    
-    public void IncreaseSpeed(float  amountSpeed)
+
+    public void IncreaseSpeed(float amountSpeed)
     {
         movementSpeed += amountSpeed;
     }
@@ -71,7 +71,9 @@ public class PlayerController : MonoBehaviour
 
     private void TryChangeCoins(int changeAmount)
     {
+        print(Coins);
         Coins = Coins + changeAmount >= 0 ? Coins + changeAmount : 0;
+        print(Coins);
         EventManager.SendCoinPicked(Coins);
     }
 
@@ -81,26 +83,33 @@ public class PlayerController : MonoBehaviour
             GetDamage(enemy.Damage);
     }
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.TryGetComponent(out Enemy enemy))
+            GetDamage(enemy.Damage);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out Projectile projectile))
             GetDamage(projectile.Damage);
-        if (other.gameObject.CompareTag("ShopItem")) TryChangeCoins(-other.GetComponent<ShopItem>().Value);
+        if (other.gameObject.TryGetComponent(out Artifact artifact)) TryChangeCoins(-artifact.Price);
     }
 
     private void CheckInput()
     {
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (IsPaused) return;
         UpdateAnimation();
     }
 
-    
+
     private void Move()
     {
         playerRb.velocity = new Vector2(moveDirection.x, moveDirection.y) * movementSpeed;
     }
 
-    
+
     private void UpdateAnimation()
     {
         if (moveDirection.x != 0 || moveDirection.y != 0)
@@ -136,7 +145,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateHealthbar()
     {
-        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth / maxHealth, 0.3f);
+        healthBar.value = currentHealth / maxHealth;
         var healthColor = Color.Lerp(Color.red, Color.green, currentHealth / maxHealth);
         fillImage.color = healthColor;
     }
@@ -158,6 +167,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        EventManager.SendPlayerDeath();
         Destroy(gameObject);
     }
 }

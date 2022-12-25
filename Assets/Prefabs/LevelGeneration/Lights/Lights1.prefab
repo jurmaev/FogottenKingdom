@@ -170,9 +170,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6938600955198239257}
     m_Modifications:
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 360
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LightVolumeIntensityEnabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6404778934977657909, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
       propertyPath: m_RootOrder
@@ -236,6 +256,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6938600955198239257}
     m_Modifications:
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6404778934977657909, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -298,6 +338,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6938600955198239257}
     m_Modifications:
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6404778934977657909, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -360,6 +420,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6938600955198239257}
     m_Modifications:
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757225, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 950757226, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6404778934977657909, guid: 224fda984d381f24fb4efb044eb5cd34, type: 3}
       propertyPath: m_RootOrder
       value: 2
