@@ -25,8 +25,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image fillImage;
 
+    
     private Vector2 moveDirection;
     private Rigidbody2D playerRb;
+    private PlayerSoundsController soundsController;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
     private void InitializeElements()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        soundsController = GetComponent<PlayerSoundsController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -107,6 +110,8 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         playerRb.velocity = new Vector2(moveDirection.x, moveDirection.y) * movementSpeed;
+        if(moveDirection.x != 0 || moveDirection.y != 0)
+            soundsController.PlayWalkSound();
     }
 
 
@@ -138,6 +143,7 @@ public class PlayerController : MonoBehaviour
             currentHealth -= amountOfDamage;
             if (currentHealth <= 0)
                 Die();
+            soundsController.PlayGetDamageSound();
             UpdateHealthbar();
             StartCoroutine(nameof(BecomeInvincible));
         }
@@ -167,6 +173,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        soundsController.PlayDeathSound();
         EventManager.SendPlayerDeath();
         Destroy(gameObject);
     }

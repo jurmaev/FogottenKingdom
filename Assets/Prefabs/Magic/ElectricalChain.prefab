@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <StartSpeed>k__BackingField: 0
-  <Damage>k__BackingField: 0.001
+  <Damage>k__BackingField: 1
   <CooldownTime>k__BackingField: 0
 --- !u!68 &79225697043237162
 EdgeCollider2D:

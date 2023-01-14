@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     [field: SerializeField] public float Damage { get; private set; }
     [SerializeField] protected Slider healthBar;
     protected Rigidbody2D enemyRigidbody;
+    protected EnemySoundsController soundsController;
     private DebuffController debuffController;
     [SerializeField] private int value;
 
@@ -28,6 +29,7 @@ public abstract class Enemy : MonoBehaviour
         if (currentHealth <= 0)
             Die();
         healthBar.value = GetSliderFill();
+        soundsController.PlayGetDamageSound();
     }
 
     /// <summary>
@@ -69,6 +71,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void InitializeElements()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
+        soundsController = GetComponent<EnemySoundsController>();
         debuffController = GameObject.FindWithTag("DebuffController").GetComponent<DebuffController>();
     }
 

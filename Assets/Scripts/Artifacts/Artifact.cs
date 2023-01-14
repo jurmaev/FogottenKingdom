@@ -10,15 +10,15 @@ public abstract class Artifact : MonoBehaviour
     [field: SerializeField] public string ArtifactName { get; protected set; }
     [field: SerializeField] public string Description { get; protected set; }
     [field: SerializeField] public int Price { get; protected set; }
+    private AudioSource audioSource;
     private TextMeshProUGUI priceText;
+    
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         priceText = GetComponentInChildren<TextMeshProUGUI>();
-        if (Price == 0)
-            priceText.text = "";
-        else
-            priceText.text = Price.ToString();
+        priceText.text = Price == 0 ? "" : Price.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -28,11 +28,11 @@ public abstract class Artifact : MonoBehaviour
             if (player.Coins >= Price)
             {
                 // EventManager.SendCoinAmountChanged(Price);
+                audioSource.Play();
                 UpgradePlayer(col.gameObject.GetComponent<PlayerController>());
                 EventManager.SendArtifactSelection(this);
                 Destroy(gameObject);
             }
-            
         }
     }
 
